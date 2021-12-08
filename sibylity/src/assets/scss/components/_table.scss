@@ -1,0 +1,139 @@
+div.dataTables_wrapper {
+    table {
+        margin-top: 1rem;
+        width: 100%;
+        word-wrap: break-word;
+
+        thead {
+            background-color: white;
+            border: 0;
+            border-bottom: 1px solid $medium-gray;
+        }
+        
+        tbody {
+            border: none;
+
+            tr:nth-child(even) {
+                background-color: $sib-table-stripe;
+            }
+        }
+    }
+
+    div.dataTables_length {
+        label {
+            font-weight: normal;
+        }
+    }
+
+    div.dataTables_filter {
+        .searchIconContainer {
+            position: relative;
+            right: -2.5rem;
+        }
+
+        input[type='search'] {
+            padding-left: 3rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    div.dataTables_info {
+        display: inline-block;
+        margin-top: 1rem; 
+    }
+
+    div.dataTables_paginate {
+        display: inline-block;
+        padding-top: 1rem;
+        margin-bottom: 2rem;
+
+        .paginate_button {
+
+            &.current {
+                border: 1px solid $primary-color;
+                color: $primary-color;
+                font-weight: bold;
+                border-radius: 3px;
+            }
+
+            &:hover {
+                background-color: scale-color($primary-color, $lightness: 95%);
+            }
+
+            &.previous {
+                padding: 0;
+            }
+
+            &.next {
+                padding: 0;
+            }
+
+            &.secondary {
+                color: $secondary-color;
+
+                &.current {
+                    color: $secondary-color;
+                    border-color: $secondary-color;
+                }
+
+                &:hover {
+                    background-color: scale-color($secondary-color, $lightness: 95%);
+                }
+            }
+
+            padding: 1rem;
+            padding-top: 0.85rem;
+            padding-bottom: 0.85rem;
+            color: $dark-gray;
+        }
+    }
+}
+
+div .table-add-button {
+    margin-left: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.no-sort::after { display: none!important; }
+
+.no-sort { pointer-events: none!important; cursor: default!important; background-image: none !important;}
+
+.static-table {
+    border: 0;
+
+    td {
+        border: 0;
+    }
+
+    thead {
+        background: transparent;
+        border: 0;
+    }
+
+    tbody {
+        border: 0;
+        background: transparent;
+    }
+
+    th {
+        background-color: transparent;
+        font-weight: bold;
+        border: 0;
+        border-bottom: 1px solid $medium-gray;
+    }
+}
+
+table tbody tr.even {
+    background-color: $sib-table-stripe;
+}
+
+table tbody tr.odd {
+    background-color: white;
+}
+
+#informationTypeWorksheetTable {
+    td, th {
+        vertical-align: top;
+    }
+}

@@ -1,0 +1,19 @@
+.modalContent {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.fixed-height-modal {
+    .modalContent {
+        height: 80vh;
+        overflow: auto;
+        
+    }
+}
+
+.reveal-overlay {
+    position: fixed;
+}

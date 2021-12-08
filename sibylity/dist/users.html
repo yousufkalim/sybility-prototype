@@ -1,0 +1,851 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sibylity</title>
+    <link rel="icon" type="image/png" href="assets/img/logo-SibylSoft-icon.svg"/>
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="assets/css/all.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+<body>
+
+
+<div class="flex-container">
+  <div class="flex-child-shrink sib-leftnav">
+    <img class="logo-navbar" src="assets/img/logo-Sibylity.svg"/>
+    <img class="logo-compact-navbar" src="assets/img/logo-SibylSoft-icon.svg"/>
+    <ul class="vertical menu hide-for-small" data-responsive-menu="drilldown medium-accordion">
+      
+      <li >
+        <a href="dashboard.html" class="hide-for-small"><i class="fas fa-chart-area"></i> Dashboard</a>
+      </li>
+      <li >
+        <a href="workspace.html"><i class="fas fa-toolbox"></i> Workspace</a>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-cogs"></i>Cyber-Risk</a>
+        <ul class="vertical menu ">
+          <li ><a href="projects.html" role="menuitem">Projects</a></li>
+          <li ><a href="controls.html" role="menuitem">Controls</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-lock"></i> Administrator</a>
+        <ul class="vertical menu is-active">
+          <li  class="is-selected" ><a href="users.html" role="menuitem">Users</a></li>
+          <li ><a href="groups.html" role="menuitem">Groups</a></li>
+          <li ><a href="settings.html" role="menuitem">Settings</a></li>
+        </ul>
+      </li>
+      <!--li>
+        <a href="#"><i class="fas fa-user"></i> Account Settings</a>
+        <ul class="vertical menu">
+          <li><a href="#" role="menuitem">User Profile</a></li>
+          <li><a href="#" role="menuitem">Application Settings</a></li>
+          <li><a href="#" role="menuitem">Logout</a></li>
+        </ul>
+      </li-->
+    </ul>
+  </div>  <div class="flex-child-grow">
+    <!--div class="title-bar" data-responsive-toggle="top-bar" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle="top-bar"></button>
+      <div class="title-bar-title">Menu</div>
+    </div-->
+    
+    <div class="top-bar sib-top-bar">
+      <div class="top-bar-left">
+        <button class="button clear" type="button" onClick="sib.collapseLeftNav();"><i class="fas fa-bars"></i></button>
+      </div>
+      <div class="top-bar-right">
+        <button class="button clear" type="button" data-toggle="user-menu" data-options="align:down"><i class="fas fa-lg fa-user-circle"></i></button>
+        <div class="dropdown-pane" id="user-menu" data-dropdown data-auto-focus="true">
+          <ul class="vertical menu drop-down" data-close-on-click>
+            <li><a href="#" role="menuitem" data-open="userProfileModal" data-close>User Profile</a></li>
+            <li><a href="#" role="menuitem" data-open="applicationSettingsModal" data-close>Notification Settings</a></li>
+            <li><a href="login.html" role="menuitem" data-close>Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="reveal" id="userProfileModal" data-reveal>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h5>User Profile</h5>
+      <div class="modalContent">
+        <div class="grid-x">
+            <div class="cell large-4 text-center padding-right-1 position-relative">
+                <i class="fas fa-user-circle fa-9x profilePlaceholder"></i>
+                <button class="button link margin-top-1"><i class="fas fa-upload"></i> Upload Image</button>
+                <button class="button link margin-top-1"><i class="fas fa-trash"></i> Delete Image</button>
+                <!--button class="button primary deleteImageButton" style="
+                    position: absolute;
+                    top: 0;
+                    right: 0.5rem;
+                    margin: 0;
+                    /* padding: 0; */
+                    margin-top: 0;
+                    border-radius: 100%;
+                "><i class="fas fa-trash"></i><span class="show-for-sr"> Delete Image</span></button-->
+            </div>
+            <div class="cell large-8">
+                <div>
+                    <label for="email-input" class="margin-top-0">Name</label>
+                    <p>George Harrison</p>
+                </div>
+                <div class="floated-label-wrapper">
+                    <label for="email-input">Preferred Name</label>
+                    <input type="text" id="email-input" name="email input" placeholder="Preferred Name">
+                </div>
+                <div>
+                    <label for="email-input">Title</label>
+                    <p>Director of Information Security</p>
+                </div>
+                <div>
+                    <label for="email-input">Department</label>
+                    <p>Information Security Office</p>
+                </div>
+                <div>
+                    <label for="email-input">Email</label>
+                    <p>gHarrison@customer.com</p>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="modalFooter float-right">
+        <button class="button clear" data-close>Cancel</button>
+        <button class="button primary" data-close>Save</button>
+      </div>
+    </div>
+    <div class="reveal" id="applicationSettingsModal" data-reveal>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h5>Notification Settings</h5>
+      <div class="modalContent">
+        Notifications settings here
+      </div>
+      <div class="modalFooter float-right">
+        <button class="button clear" data-close>Cancel</button>
+        <button class="button primary" data-close>Save</button>
+      </div>
+    </div>    <section class="main">
+        <div class="grid-x">
+          <div class="cell large-12">
+            <div class="sib-card">
+              <h5>User Management</h5>
+              <button class="button primary float-right table-add-button" data-open="inviteUserModal">Invite User</button>
+              <table id="usersTable" class="display dataTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Title</th>
+                        <th>Department</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>Governance, Risk, and Compliance Office</td>
+                        <td>tnixon@company.com</td>
+                        <td>Pending</td>
+                        <td>
+                          <button class="button clear has-tip" data-tooltip title="Edit User" data-open="editUserModal"><i class="fas fa-edit"></i></button>
+                          <button class="button clear has-tip" data-tooltip title="Delete User" data-open="userDeletionConfirmationModal"><i class="fas fa-trash"></i></button>                        </td>
+                    </tr>
+                    <tr>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>Operations</td>
+                        <td>gwinters@company.com</td>
+                        <td>Pending</td>
+                        <td>
+                          <button class="button clear has-tip" data-tooltip title="Edit User" data-open="editUserModal"><i class="fas fa-edit"></i></button>
+                          <button class="button clear has-tip" data-tooltip title="Delete User" data-open="userDeletionConfirmationModal"><i class="fas fa-trash"></i></button>                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ashton Cox</td>
+                        <td>Junior Technical Author</td>
+                        <td>Information Security Office</td>
+                        <td>acox@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          <button class="button clear has-tip" data-tooltip title="Edit User" data-open="editUserModal"><i class="fas fa-edit"></i></button>
+                          <button class="button clear has-tip" data-tooltip title="Delete User" data-open="userDeletionConfirmationModal"><i class="fas fa-trash"></i></button>                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cedric Kelly</td>
+                        <td>Senior Javascript Developer</td>
+                        <td>Human Resources</td>
+                        <td>ckelly@company.com</td>
+                        <td>Pending</td>
+                        <td>
+                          <button class="button clear has-tip" data-tooltip title="Edit User" data-open="editUserModal"><i class="fas fa-edit"></i></button>
+                          <button class="button clear has-tip" data-tooltip title="Delete User" data-open="userDeletionConfirmationModal"><i class="fas fa-trash"></i></button>                        </td>
+                    </tr>
+                    <tr>
+                        <td>Airi Satou</td>
+                        <td>Accountant</td>
+                        <td>Department</td>
+                        <td>asatou@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          <button class="button clear has-tip" data-tooltip title="Edit User" data-open="editUserModal"><i class="fas fa-edit"></i></button>
+                          <button class="button clear has-tip" data-tooltip title="Delete User" data-open="userDeletionConfirmationModal"><i class="fas fa-trash"></i></button>                        </td>
+                    </tr>
+                    <tr>
+                        <td>Brielle Williamson</td>
+                        <td>Integration Specialist</td>
+                        <td>Information Security Office</td>
+                        <td>bwill@company.com</td>
+                        <td>Pending</td>
+                        <td>
+                          <button class="button clear has-tip" data-tooltip title="Edit User" data-open="editUserModal"><i class="fas fa-edit"></i></button>
+                          <button class="button clear has-tip" data-tooltip title="Delete User" data-open="userDeletionConfirmationModal"><i class="fas fa-trash"></i></button>                        </td>
+                    </tr>
+                    <tr>
+                        <td>Herrod Chandler</td>
+                        <td>Sales Assistant</td>
+                        <td>Human Resources</td>
+                        <td>hchandler@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          <button class="button clear has-tip" data-tooltip title="Edit User" data-open="editUserModal"><i class="fas fa-edit"></i></button>
+                          <button class="button clear has-tip" data-tooltip title="Delete User" data-open="userDeletionConfirmationModal"><i class="fas fa-trash"></i></button>                        </td>
+                    </tr>
+                    <tr>
+                        <td>Rhona Davidson</td>
+                        <td>Integration Specialist</td>
+                        <td>Information Security Office</td>
+                        <td>rDavidson@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          <button class="button clear has-tip" data-tooltip title="Edit User" data-open="editUserModal"><i class="fas fa-edit"></i></button>
+                          <button class="button clear has-tip" data-tooltip title="Delete User" data-open="userDeletionConfirmationModal"><i class="fas fa-trash"></i></button>                        </td>
+                    </tr>
+                    <tr>
+                        <td>Colleen Hurst</td>
+                        <td>Javascript Developer</td>
+                        <td>Human Resources</td>
+                        <td>churst@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          <button class="button clear has-tip" data-tooltip title="Edit User" data-open="editUserModal"><i class="fas fa-edit"></i></button>
+                          <button class="button clear has-tip" data-tooltip title="Delete User" data-open="userDeletionConfirmationModal"><i class="fas fa-trash"></i></button>                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sonya Frost</td>
+                        <td>Software Engineer</td>
+                        <td>Information Security Office</td>
+                        <td>sfrostcompany.com</td>
+                        <td>Activated</td>
+                        <td>
+                          <button class="button clear has-tip" data-tooltip title="Edit User" data-open="editUserModal"><i class="fas fa-edit"></i></button>
+                          <button class="button clear has-tip" data-tooltip title="Delete User" data-open="userDeletionConfirmationModal"><i class="fas fa-trash"></i></button>                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jena Gaines</td>
+                        <td>Office Manager</td>
+                        <td>Governance, Risk, and Compliance Office</td>
+                        <td>jGaines@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          <button class="button clear has-tip" data-tooltip title="Edit User" data-open="editUserModal"><i class="fas fa-edit"></i></button>
+                          <button class="button clear has-tip" data-tooltip title="Delete User" data-open="userDeletionConfirmationModal"><i class="fas fa-trash"></i></button>                        </td>
+                    </tr>
+                    <tr>
+                        <td>Quinn Flynn</td>
+                        <td>Support Lead</td>
+                        <td>Information Security Office</td>
+                        <td>qflynn@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          <button class="button clear has-tip" data-tooltip title="Edit User" data-open="editUserModal"><i class="fas fa-edit"></i></button>
+                          <button class="button clear has-tip" data-tooltip title="Delete User" data-open="userDeletionConfirmationModal"><i class="fas fa-trash"></i></button>                        </td>
+                    </tr>
+                    <tr>
+                        <td>Charde Marshall</td>
+                        <td>Regional Director</td>
+                        <td>Human Resources</td>
+                        <td>cmarshall@company.com</td>
+                        <td>Pending</td>
+                        <td>
+                          <button class="button clear has-tip" data-tooltip title="Edit User" data-open="editUserModal"><i class="fas fa-edit"></i></button>
+                          <button class="button clear has-tip" data-tooltip title="Delete User" data-open="userDeletionConfirmationModal"><i class="fas fa-trash"></i></button>                        </td>
+                    </tr>
+                    <tr>
+                        <td>Haley Kennedy</td>
+                        <td>Senior Marketing Designer</td>
+                        <td>Department</td>
+                        <td>hkennedy@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          <button class="button clear has-tip" data-tooltip title="Edit User" data-open="editUserModal"><i class="fas fa-edit"></i></button>
+                          <button class="button clear has-tip" data-tooltip title="Delete User" data-open="userDeletionConfirmationModal"><i class="fas fa-trash"></i></button>                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tatyana Fitzpatrick</td>
+                        <td>Regional Director</td>
+                        <td>Information Security Office</td>
+                        <td>tfitz@company.com</td>
+                        <td>Pending</td>
+                        <td>
+                          <button class="button clear has-tip" data-tooltip title="Edit User" data-open="editUserModal"><i class="fas fa-edit"></i></button>
+                          <button class="button clear has-tip" data-tooltip title="Delete User" data-open="userDeletionConfirmationModal"><i class="fas fa-trash"></i></button>                        </td>
+                    </tr>
+                    <tr>
+                        <td>Michael Silva</td>
+                        <td>Marketing Designer</td>
+                        <td>Human Resources</td>
+                        <td>msilva@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          <button class="button clear has-tip" data-tooltip title="Edit User" data-open="editUserModal"><i class="fas fa-edit"></i></button>
+                          <button class="button clear has-tip" data-tooltip title="Delete User" data-open="userDeletionConfirmationModal"><i class="fas fa-trash"></i></button>                        </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <footer class="sib-footer">
+            <div class="text-center footer-links padding-left-2 padding-bottom-1">
+                <a class="small" href="http://sibylsoft.com">Sibylsoft.com</a> 
+                <a class="small" href="#" data-open="termsOfUseModal">Terms of Use</a> 
+                <a class="small" href="#" data-open="privacyPolicyModal">Privacy Policy</a>
+            </div>
+            <div class="text-center padding-bottom-1 small">
+                © 2021 Sibylsoft. All rights reserved.
+            </div>
+            <div class="text-center ">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </footer>
+        
+        <div class="reveal large fixed-height-modal" id="termsOfUseModal" data-reveal>
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h5>Terms of Use</h5>
+          <div class="modalContent padding-2">
+            <div class="large-12 medium-12 small-12 dmRespCol" id="1429139792">
+              <div class="u_1826577706 dmRespRow" id="1826577706">
+                 <div class="dmRespColsWrapper" id="1083516390">
+                    <div class="dmRespCol small-12 medium-12 large-12" id="1830825098">
+                       <div class="dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" data-version="5" id="1975238097" data-uialign="center">
+                          <h3 class="text-align-center"><span style="display: unset; font-weight: 700;">SibylSoft, Inc. – Terms and Conditions of Use</span></h3>
+                       </div>
+                       <div class="dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" data-version="5" id="1895175193" style="transition: opacity 1s ease-in-out 0s;">
+                          <h4 class="text-align-center"><span style="display: unset;">Last Revised April 2, 2021</span></h4>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="dmRespRow" id="1109665171">
+                 <div class="dmRespColsWrapper" id="1203487930">
+                    <div class="dmRespCol large-12 medium-12 small-12" id="1453616662">
+                       <div class="dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" data-version="5" id="1698373692" style="transition: opacity 1s ease-in-out 0s;">
+                          <p><span style="display: unset;">NOTICE: THE FOLLOWING TERMS AND CONDITIONS APPLY TO YOUR USE OF SIBYLSOFT, INC. ONLINE SERVICES.</span></p>
+                       </div>
+                       <div class="dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" data-version="5" id="1985682371" style="transition: opacity 1s ease-in-out 0s;">
+                          <p><span style="display: unset;">The terms and conditions contained herein and incorporated by reference (“</span><span style="display: unset; font-weight: 700;">Terms and Conditions</span><span style="display: unset;">”) govern use of the online services (the “</span><span style="display: unset; font-weight: 700;">Online Services</span><span style="display: unset;">”) and materials available therein (“</span><span style="display: unset; font-weight: 700;">Materials</span><span style="display: unset;">”) provided by SibylSoft, Inc., an Arizona corporation and its affiliated entities, (collectively “</span><span style="display: unset; font-weight: 700;">SibylSoft</span><span class="" style="display: unset;"><span style="display: unset;">”) at</span> 
+                             </span><a href="http://www.sibylity.com" target="_blank" style="display: unset;">www.sibylity.com</a><span class="" style="display: unset;"><span style="display: unset;">,</span> 
+                             </span><a href="http://www.sibylsoft.com" target="_blank" style="display: unset;">www.sibylsoft.com</a><span style="display: unset;">, and related sites (collectively, the “</span><span style="display: unset; font-weight: 700;">Site</span><span style="display: unset;">”).&nbsp; The terms “</span><span style="display: unset; font-weight: 700;">you</span><span style="display: unset;">” and “</span><span style="display: unset; font-weight: 700;">your</span><span style="display: unset;">” in uppercase or lowercase means the entity (e.g., company, corporation, partnership, sole proprietor, etc.) or government agency entering into a Subscription Agreement with SibylSoft and, as context allows, may include Authorized Users.&nbsp; The “</span><span style="display: unset; font-weight: 700;">Subscription Agreement</span><span style="display: unset;">” consists of these Terms and Conditions, and the transactional rates applicable to you (the “</span><span style="display: unset; font-weight: 700;">Price Schedule</span><span class="" style="display: unset;"><span style="display: unset;">”) as provided in that certain</span> 
+                             </span><span style="display: unset; font-style: italic;">Beta Participation Agreement</span><span class="" style="display: unset;"><span style="display: unset;">,</span> 
+                             </span><span style="display: unset; font-style: italic;">Subscription Agreement</span><span class="" style="display: unset;"><span style="display: unset;">,</span> 
+                             </span><span style="display: unset; font-style: italic;">Services Agreement</span><span style="display: unset;">, or similar agreement between you and SibylSoft.&nbsp; In the event of a conflict between any term or condition of these Terms and Conditions and your Subscription Agreement, the terms of your Subscription Agreement will control.</span>
+                          </p>
+                       </div>
+                       <div class="dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" data-version="5" id="1647973482" style="transition: opacity 1s ease-in-out 0s;">
+                          <p><span style="display: unset;">EACH PERSON, BY ACCESSING OR USING THE SITE, IS HEREBY DEEMED TO HAVE ACCEPTED THESE GENERAL TERMS AND CONDITIONS AND TO FURTHER REPRESENT AND WARRANT THAT SUCH PERSON IS AN AUTHORIZED USER AND HAS THE RIGHT, AUTHORITY, AND CAPACITY TO ENTER INTO THESE GENERAL TERMS AND CONDITIONS.&nbsp; ANY PERSON THAT DOES NOT AGREE WITH ALL OF THE PROVISIONS OF THESE TERMS, SHALL NOT ACCESS AND/OR USE THE SITE.</span></p>
+                       </div>
+                       <div class="dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" data-version="5" id="1861164985" data-uialign="center">
+                          <ol class="defaultList">
+                             <li><span style="font-weight: 700; display: unset;">GRANT OF RIGHTS; RESTRICTIONS ON USE</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">In order to use the Site, you must register for an account (“</span><span style="display: initial; font-weight: 700;">Account</span><span class="" style="display: initial;"><span style="display: initial;">”), enter into a Subscription Agreement, and provide certain information about yourself and your Authorized Users as prompted by the account registration form.&nbsp; You represent and warrant that: (a) all required registration information you submit is truthful and accurate; (b) you will maintain the accuracy of such information.&nbsp; You may delete your Account at any time, for any reason, by following the instructions on the Site.&nbsp; You and your Authorized Users (defined below in</span> 
+                                </span><span style="display: initial; text-decoration: underline; font-weight: 700;">Section 2.1</span><span style="display: initial;">) are granted a nonexclusive, nontransferable, limited right to access the Site and use for internal cybersecurity purposes the Online Services and Materials made available to you.&nbsp; The rights granted to each Authorized User are as follows:</span>
+                             </li>
+                             <li class="ql-indent-2"><span class="" style="display: initial;"><span style="display: initial;">The right to electronically display Materials retrieved from the Online Services for the Authorized User’s individual use (e.g., no Authorized User may network others via LANs, WANs, intranets or the Internet), subject to the</span> 
+                                </span><span style="display: initial; font-style: italic;">Supplemental Terms for Specific Materials</span><span class="" style="display: initial;"> <span style="display: initial;">(“</span></span><span style="display: initial; font-weight: 700;">Supplemental Terms</span><span class="" style="display: initial;"><span style="display: initial;">”).&nbsp; Notwithstanding the foregoing, an Authorized User may display a</span> 
+                                </span><span style="display: initial; font-style: italic;">de minimis</span><span class="" style="display: initial;"> <span style="display: initial;">amount of the Materials on an incidental, infrequent, basis for non-commercial purposes to other Authorized Users so long as the other Authorized Users are in the same physical location and the mode of display is not through the Internet, an intranet, or other types of networking communication like LANs or WANs;</span></span>
+                             </li>
+                             <li class="ql-indent-2"><span style="display: initial;">The right to email, fax, download, or make printouts using the commands of the Online Services and the right to create a single printout of Materials accessed or downloaded by any other means (collectively, “</span><span style="display: initial; font-weight: 700;">Authorized Printouts</span><span style="display: initial;">”);</span></li>
+                             <li class="ql-indent-2"><span style="display: initial;">With respect to Materials that the user interface indicates are available for download using the commands of the Online Services (collectively, “</span><span style="display: initial; font-weight: 700;">Authorized Downloadable Materials</span><span style="display: initial;">”), the right to download using the commands of the Online Services and store in machine-readable form, primarily for that Authorized User’s exclusive use, a single copy of insubstantial portions of those Authorized Downloadable Materials included in any individually searchable file or content source in the Online Services to the extent the storage of those Authorized Downloadable Materials is not further limited or prohibited by the Supplemental Terms.&nbsp; The storage may continue only for so long as the Authorized Downloadable Materials are needed for purposes contemplated under this Subscription Agreement;</span></li>
+                             <li class="ql-indent-2"><span style="display: initial;">Notwithstanding anything to the contrary herein, the right to excerpt or quote insubstantial portions of Materials in documents prepared in the ordinary course of your business, provided that distribution of such is limited only to Authorized Users, and provided further that all such excerpted Materials are purged promptly upon the expiration of this Subscription Agreement; and</span></li>
+                             <li class="ql-indent-2"><span style="display: initial;">For the avoidance of doubt, downloading and storing Materials in an archival database is prohibited.&nbsp; The Online Services and the Materials are protected by copyright, intellectual property laws, and other laws that prevent unauthorized access and use.&nbsp; No person that is not an Authorized User is permitted to access or use the Online Services for any purpose whatsoever.&nbsp; If you nevertheless access and use the Online Services or Materials without authorization, your access and use will be governed by these Terms and Conditions and you will be liable to SibylSoft for any breach of the Terms and Conditions as well as for unauthorized access and payment for use at the highest applicable rates in the Price Schedule.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">To the extent not limited or prohibited by the Supplemental Terms, you and your Authorized Users may make copies of Authorized Printouts and distribute Authorized Printouts and copies for your internal use only.</span></li>
+                             <li class="ql-indent-1"><span class="" style="display: initial;"><span style="display: initial;">Except as specifically provided in</span> 
+                                </span><span style="display: initial; text-decoration: underline; font-weight: 700;">Sections 1.1</span><span class="" style="display: initial; font-weight: 700;"> <span style="display: initial; font-weight: 700;">and</span> 
+                                </span><span style="display: initial; font-weight: 700; text-decoration: underline;">1.2</span><span style="display: initial;">, you and your Authorized Users are prohibited from downloading, emailing, faxing, storing, reproducing, transmitting, displaying, copying, distributing, or using Materials retrieved from the Online Services.&nbsp; You may not exploit the goodwill of SibylSoft, including its trademarks, service marks, or logos without the express written consent of SibylSoft.&nbsp; Additionally, under no circumstances may you or any Authorized User offer any part of the Online Services or Materials for commercial resale or commercial redistribution in any medium or use the Online Services or the Materials to compete with the business of SibylSoft.</span>
+                             </li>
+                             <li class="ql-indent-1"><span style="display: initial;">All right, title, and interest (including all copyrights, trademarks, and other intellectual property rights) in the Online Services and Materials in any medium belongs to SibylSoft or its third-party suppliers of Materials.&nbsp; Neither you nor your Authorized Users acquire any proprietary interest in the Online Services, Materials, or copies thereof, except the limited rights granted herein.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">If you or any of your Authorized Users provides SibylSoft with any feedback or suggestions regarding the Site, the Materials, or the Online Services (collectively “</span><span style="display: initial; font-weight: 700;">Feedback</span><span style="display: initial;">”), you, and each Authorized User, hereby assigns to Company all rights in such Feedback and agrees that SibylSoft will have the right to use and fully exploit such Feedback and related information in any manner it deems appropriate.&nbsp; You and each Authorized User shall treat any Feedback so provided to SibylSoft as SibylSoft’s confidential and proprietary information.&nbsp; You agree that neither you nor any Authorized User will submit to Company any information or ideas that you consider to be your confidential or proprietary information.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">Neither you nor your Authorized Users may use the Online Services or Materials in any fashion that infringes the intellectual property rights, privacy rights, or proprietary interests of SibylSoft or any third party.&nbsp; Your use of the Online Services and Materials must comply with all applicable laws, rules, and regulations.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">Neither you nor your Authorized Users may remove or obscure the copyright notice or other notices contained in Materials.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">“</span><span style="display: initial; font-weight: 700;">User Content</span><span style="display: initial;">” means any and all information and content that an Authorized User submits to, or uses with, the Site (e.g., content in the user’s profile or postings).&nbsp; Some or all User Content may not be available for deletion by you or your Authorized Users through the user interface available via the Online Services.&nbsp; You are solely responsible for your Authorized Users’ User Content.&nbsp; You assume all risks associated with use of your User Content, including any reliance on its accuracy, completeness or usefulness by others, or any disclosure of your User Content that personally identifies you or any third party.&nbsp; You hereby represent and warrant that your User Content does not, and covenant and agree that it will not, violate any provision of these Terms and Conditions or any applicable law.&nbsp; You may not represent or imply to others that your User Content is in any way provided, sponsored, or endorsed by SibylSoft.&nbsp; Because you alone are responsible for your User Content, you may expose yourself to liability if, for example, your User Content violates any of these Terms and Conditions.&nbsp; SibylSoft is not obligated to backup any User Content, and your User Content may be deleted at any time without prior notice.&nbsp; You are solely responsible for creating and maintaining your own backup copies of your User Content if you desire.&nbsp; SibylSoft reserves the right (but has no obligation) to review any User Content, and to investigate and/or take appropriate action against you in our sole discretion if you violate any provision of these Terms and Conditions or otherwise create liability for us or any other person.&nbsp; Such action may include removing or modifying your User Content, terminating your Account in accordance with your Subscription Agreement, and/or reporting you to law enforcement authorities.&nbsp; SibylSoft may use certain User Data in accordance with these Terms and Conditions and the Privacy Policy.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">Other provisions that govern use of the Materials may be set forth in the applicable Price Schedule, Subscription Agreement, Supplemental Terms, online descriptions of files, online notices following Site activities of Authorized Users, and individual documents retrieved from the Online Services (collectively, the “</span><span style="display: initial; font-weight: 700;">Additional Terms</span><span style="display: initial;">”), all of which are incorporated by reference into this Subscription Agreement.</span></li>
+                             <li><span style="display: initial; font-weight: 700;">ACCESS TO SERVICES</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">Only your employees, temporary employees, students, partners/members, and contractors dedicated to performing work primarily for you (to the extent those categories of persons are appropriate to your situation) and to whom you have issued an official email address (i.e., an email address that ends with an official domain owned or controlled by you) are eligible to access and use the Online Services and Materials (“</span><span style="display: initial; font-weight: 700;">Eligible Persons</span><span style="display: initial;">”).&nbsp; Without limitation, external professional service providers such as attorneys, accountants, outsourcers, and public relations firms are specifically excluded from being Eligible Persons.&nbsp; The term “</span><span style="display: initial; font-weight: 700;">Authorized User</span><span style="display: initial;">” means an Eligible Person to whom you have assigned a SibylSoft ID in accordance with your Subscription Agreement.&nbsp; You agree that each SibylSoft ID may only be used by the Authorized User to whom SibylSoft assigns it and that the SibylSoft ID may not be shared with or used by any other person, including other Authorized Users.&nbsp; You covenant and agree that you will actively manage your roster of Authorized Users and will promptly deactivate an Authorized User’s SibylSoft ID if the Authorized User is no longer an Eligible Person or you otherwise wish to terminate the Authorized User’s access to the Online Services.&nbsp; You are responsible for all use of the Online Services accessed with SibylSoft IDs issued to your Authorized Users, including associated charges, whether by Authorized Users or others.&nbsp; You will use reasonable commercial efforts to prevent unauthorized use of SibylSoft IDs assigned to your Authorized Users and will promptly notify SibylSoft, in writing, if you suspect that a SibylSoft ID is lost, stolen, compromised, or misused.&nbsp; You are neither identified on, nor shall you provide access to the Online Services to any individuals or entities identified on, (a) OFAC’s list of Specially Designated Nationals, (b) the UK’s HM Treasury’s Consolidated List of Sanctions Targets, (c) the EU’s Consolidated List of Persons, Groups, and Entities Subject to EU Financial Sanctions, (d) any other applicable sanctions lists, or (e) any person 50 percent or more owned, directly or indirectly, individually or in the aggregate by a person(s) identified in (a) through (d).&nbsp; The total number of Authorized Users that you may have is limited by your Pricing Plan.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">Use of the Online Services via mechanical, programmatic, robotic, scripted, or any other automated means is strictly prohibited.&nbsp; Use of the Online Services is permitted only via manually conducted, discrete, individual participation, search, and retrieval activities.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">To comply with local privacy, data protection, and other laws, each SibylSoft ID is country specific and may not be used outside the country for which it is issued, except for short periods not to exceed 30 continuous days.&nbsp; If SibylSoft suspects use of a SibylSoft ID outside the country of issue for a period in excess of 30 continuous days, SibylSoft may suspend your account, suspend the SibylSoft ID, or require you to use and pay for a SibylSoft ID for the relevant country.&nbsp; On request, SibylSoft will issue a geographically compliant SibylSoft ID.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">The Online Services, Materials, and feature functionality within the Online Services may be enhanced, added to, withdrawn, or otherwise changed by SibylSoft without notice.</span></li>
+                             <li class="ql-indent-1"><span class="" style="display: initial;"><span style="display: initial;">Subject to</span> 
+                                </span><span style="display: initial; text-decoration: underline; font-weight: 700;">Section 2.4</span><span class="" style="display: initial;"> <span style="display: initial;">above, the Online Services may contain a feature that will allow your Authorized Users to access or create work folders or workspaces (“</span></span><span style="display: initial; font-weight: 700;">Folders</span><span style="display: initial;">”) during participation sessions that are associated with their respective SibylSoft IDs.&nbsp; The Folders are designed to allow your Authorized Users to collaborate and to access copies of Materials made available by SibylSoft.&nbsp; Applicable charges for the Folders (if any) are listed in the Price Schedule.&nbsp; You acknowledge and agree that: (a) the content of Folders will be under the control of your Authorized Users; and (b) SibylSoft may, subject to the Privacy Policy, access or otherwise review the content of Folders without your authorization to improve the Services or Materials and to ensure compliance with these Terms and Conditions and applicable law.&nbsp; Further, SibylSoft may access or disclose the content of Folders to the extent necessary to facilitate features and functions of the Online Services and to comply with contractual and legal obligations including, but not limited to, an administrative or judicial proceeding.&nbsp; Authorized Users are solely responsible for the content of their respective Folders.</span>
+                             </li>
+                             <li><span style="display: initial; font-weight: 700;">LIMITED WARRANTY</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">SibylSoft represents and warrants that it has the right and authority to make the Online Services and Materials available to you and your Authorized Users as authorized expressly by this Subscription Agreement.</span></li>
+                             <li class="ql-indent-1"><span class="" style="display: initial;"><span style="display: initial;">EXCEPT AS OTHERWISE PROVIDED IN</span> 
+                                </span><span style="display: initial; text-decoration: underline; font-weight: 700;">SECTION 3.1</span><span style="display: initial;">, THE ONLINE SERVICES AND MATERIALS ARE PROVIDED ON AN “AS IS,” “AS AVAILABLE” BASIS AND SIBYLSOFT AND EACH THIRD-PARTY SUPPLIER OF MATERIALS EXPRESSLY DISCLAIMS ALL OTHER WARRANTIES, INCLUDING THE WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</span>
+                             </li>
+                             <li><span style="display: initial; font-weight: 700;">LIMITATION OF LIABILITY</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">A Covered Party (as defined below) will not be liable for any loss, injury, claim, liability, or damage of any kind resulting in any way from (a) any errors in or omissions from the Online Services or any Materials available or not included therein, (b) the unavailability or interruption of the Online Service or any features thereof or any Materials, (c) your or an Authorized User’s use of the Online Services or Materials, (d) the loss or corruption of any data or equipment in connection with the Online Services, (e) the content, accuracy, or completeness of Materials, all regardless of whether you received assistance in the use of the Online Service from a Covered Party, (f) any delay or failure in performance beyond the reasonable control of a Covered Party, or (g) any content retrieved from the Internet even if retrieved or linked to from within the Online Services.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">“</span><span style="display: initial; font-weight: 700;">Covered Party</span><span style="display: initial;">” means (a) SibylSoft and any officer, director, employee, subcontractor, agent, successor, or assign of SibylSoft; and (b) each third-party supplier of Materials, third-party alliance entities, their affiliates, and any officer, director, employee, subcontractor, agent, successor, or assign of any third-party supplier of Materials or third-party alliance entity or any of their affiliates.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">TO THE FULLEST EXTENT PERMISSIBLE BY APPLICABLE LAW, UNDER NO CIRCUMSTANCES WILL THE AGGREGATE LIABILITY OF THE COVERED PARTIES IN CONNECTION WITH ANY CLAIM ARISING OUT OF OR RELATING TO THE ONLINE SERVICES OR MATERIALS OR YOUR SUBSCRIPTION AGREEMENT EXCEED THE LESSER OF YOUR ACTUAL DIRECT DAMAGES OR THE AMOUNT YOU PAID FOR THE ONLINE SERVICES IN THE TWELVE-MONTH PERIOD IMMEDIATELY PRECEDING THE DATE THE CLAIM AROSE.&nbsp; YOUR RIGHT TO MONETARY DAMAGES IN THAT AMOUNT WILL BE IN LIEU OF ALL OTHER REMEDIES WHICH YOU MAY HAVE AGAINST ANY COVERED PARTY.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">TO THE FULLEST EXTENT PERMISSIBLE BY APPLICABLE LAW, NEITHER YOU NOR THE COVERED PARTIES WILL BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY KIND WHATSOEVER (INCLUDING, WITHOUT LIMITATION, ATTORNEYS’ FEES) IN ANY WAY DUE TO, RESULTING FROM, OR ARISING IN CONNECTION WITH THE ONLINE SERVICES, MATERIALS, OR THE FAILURE OF ANY COVERED PARTY TO PERFORM ITS OBLIGATIONS.&nbsp; THE FOREGOING LIMITATION OF LIABILITY WILL NOT APPLY TO A PARTY’S INDEMNITY OBLIGATIONS OR YOUR (AND YOUR AUTHORIZED USERS’) INFRINGEMENT OF INTELLECTUAL PROPERTY OR MISAPPROPRIATION OF PROPRIETARY DATA BELONGING TO SIBYLSOFT OR ITS THIRD-PARTY SUPPLIERS.</span></li>
+                             <li class="ql-indent-1"><span class="" style="display: initial;"><span style="display: initial;">Notwithstanding anything to the contrary in this</span> 
+                                </span><span style="display: initial; text-decoration: underline; font-weight: 700;">Section 4</span><span style="display: initial;">:</span>
+                             </li>
+                             <li class="ql-indent-2"><span class="" style="display: initial;"><span style="display: initial;">If there is a breach of the warranty in</span> 
+                                </span><span style="display: initial; text-decoration: underline; font-weight: 700;">Section 3.1</span><span class="" style="display: initial;"> <span style="display: initial;">above, then SibylSoft at its option and expense, shall either defend or settle any action and hold you harmless against proceedings or damages of any kind or description based on a third party’s claim of patent, trademark, service mark, copyright, or trade secret infringement related to use of the Online Services or Materials, asserted against you by such third party provided that: (i) all use of the Online Services and Materials was in accordance with your Subscription Agreement and these Terms and Conditions; (ii) the claim, cause of action, or infringement was not caused by you modifying or combining the Online Services or Materials with or into other products or applications not approved by SibylSoft; (iii) you give SibylSoft prompt notice of any such claim; and (iv) you give SibylSoft the right to control and direct the investigation, defense, and settlement of each such claim.&nbsp; You, at SibylSoft’s expense, shall reasonably cooperate with SibylSoft in connection with the foregoing.</span></span>
+                             </li>
+                             <li class="ql-indent-2"><span class="" style="display: initial;"><span style="display: initial;">In addition to</span> 
+                                </span><span style="display: initial; text-decoration: underline; font-weight: 700;">Section 4.5(a)</span><span class="" style="display: initial;"><span style="display: initial;">, if the Online Services or the operation thereof become, or in the opinion of SibylSoft are likely to become, the subject of a claim of infringement, SibylSoft may, at its option and expense, either: (i) procure for you the right to continue using the Online Services, (ii) replace or modify the Online Services so that they become non-infringing, or (iii) terminate your Subscription Agreement on notice to you and grant you a</span> 
+                                </span><span style="display: initial; font-style: italic;">pro rata</span><span class="" style="display: initial;"> <span style="display: initial;">refund or credit (whichever is applicable) for any pre-paid fees or fixed charges.</span></span>
+                             </li>
+                             <li class="ql-indent-2"><span class="" style="display: initial;"><span style="display: initial;">The provisions of</span> 
+                                </span><span style="display: initial; text-decoration: underline; font-weight: 700;">Sections 4.5(a) and (b)</span><span class="" style="display: initial;"> <span style="display: initial;">constitutes your sole and exclusive remedy for the respective matters specified therein.</span></span>
+                             </li>
+                             <li><span style="display: initial; font-weight: 700;">DISPUTE RESOLUTION</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">All claims and disputes (excluding claims for injunctive or other equitable relief as set forth below) in connection with your Subscription Agreement, these Terms and Conditions, or the use of any product or service provided by SibylSoft that cannot be resolved informally or in small claims court must be resolved by binding arbitration on an individual basis under the terms of this Arbitration Agreement.&nbsp; Unless otherwise agreed to, all arbitration proceedings will be held in English.&nbsp; This Arbitration Agreement applies to you and SibylSoft, and to any subsidiaries, affiliates, agents, employees, predecessors in interest, successors, and assigns, as well as all Authorized Users or unauthorized users or beneficiaries of services or Materials provided by SibylSoft.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">Before either party may seek arbitration, the party must first send to the other party a written Notice of Dispute (</span><span style="display: initial; font-weight: 700;">“Notice”</span><span style="display: initial;">) describing the nature and basis of the claim or dispute, and the requested relief.&nbsp; A Notice to SibylSoft should be sent to: Hecker Pew, PLLC, 405 W. Franklin St., Tucson, AZ 85701.&nbsp; After the Notice is received, you and SibylSoft may attempt to resolve the claim or dispute informally.&nbsp; If you and SibylSoft do not resolve the claim or dispute within thirty (30) days after the Notice is received, either party may begin an arbitration proceeding.&nbsp; The amount of any settlement offer made by any party may not be disclosed to the arbitrator until after the arbitrator has determined the amount of the award, if any, to which either party is entitled.</span></li>
+                             <li class="ql-indent-1"><span class="" style="display: initial;"><span style="display: initial;">Any dispute arising out of this Agreement not resolved in accordance with</span> 
+                                </span><span style="display: initial; text-decoration: underline; font-weight: 700;">Section 5.2</span><span class="" style="display: initial;"> <span style="display: initial;">will be resolved through binding arbitration before a single arbitrator in the City of Tucson in accordance with the then-current Arizona Revised Uniform Arbitration Act, A.R.S. §§ 12-3001</span> 
+                                </span><span style="display: initial; font-style: italic;">et seq</span><span style="display: initial;">. (the “</span><span style="display: initial; font-weight: 700;">Act</span><span style="display: initial;">”).&nbsp; The arbitrator will have full authority to grant legal and/or equitable relief, including preliminary injunctive relief.&nbsp; The Parties acknowledge and agree that a primary function of arbitration is the timely resolution of any such dispute.</span>
+                             </li>
+                             <li class="ql-indent-1"><span style="display: initial;">If the Parties cannot agree to an arbitrator within five (5) business days of service of a Demand for Arbitration, then the arbitrator will be appointed by the presiding civil judge of the Pima County Superior Court upon motion by any Party.&nbsp; Judgment upon the award rendered by the arbitrator may be entered in the highest court or forum having jurisdiction over such party.&nbsp; The Pima County Superior Court has exclusive original jurisdiction of all court proceedings relating to the arbitration.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">If you or SibylSoft pursue arbitration, the arbitration action must be initiated and/or demanded within the statute of limitations (i.e., the legal deadline for filing a claim) and submitted for determination within thirty (30) days after the arbitrator has been selected.&nbsp; The arbitrator shall use best efforts to render decision within thirty (30) days after the conclusion of the arbitration hearing.&nbsp; The decision of the arbitrator must be in writing and must specify the factual and legal basis for the decision.&nbsp; Upon stipulation of the Parties, or upon a showing of good cause by either Party, the arbitrator may lengthen or shorten the time periods set forth herein for conducting the hearing or for rendering a decision.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">If arbitration is initiated, the arbitrator will decide the rights and liabilities, if any, of you and SibylSoft, and the dispute will not be consolidated with any other matters or joined with any other cases or parties.&nbsp; The arbitrator shall have the authority to grant motions dispositive of all or part of any claim.&nbsp; The arbitrator shall have the authority to award monetary damages, and to grant any non-monetary remedy or relief available to an individual under your Subscription Agreement, these Terms and Conditions, the Act, and applicable law.&nbsp; The arbitrator shall issue a written award and statement of decision describing the essential findings and conclusions on which the award is based, including the calculation of any damages awarded.&nbsp; The arbitrator has the same authority to award relief on an individual basis that a judge in a court of law would have.&nbsp; The award of the arbitrator is final and binding upon you and SibylSoft.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">THE PARTIES HEREBY WAIVE THEIR CONSTITUTIONAL AND STATUTORY RIGHTS TO GO TO COURT AND HAVE A TRIAL IN FRONT OF A JUDGE OR A JURY, instead electing that all claims and disputes shall be resolved by arbitration under this Arbitration Agreement.&nbsp; Arbitration procedures are typically more limited, more efficient, and less costly than rules applicable in a court and are subject to very limited review by a court.&nbsp; In the event any litigation should arise between you and SibylSoft in any state or federal court in a suit to vacate or enforce an arbitration award or otherwise, YOU AND THE COMPANY WAIVE ALL RIGHTS TO A JURY TRIAL, instead electing that the dispute be resolved by a judge.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">ALL CLAIMS AND DISPUTES WITHIN THE SCOPE OF THIS ARBITRATION AGREEMENT MUST BE ARBITRATED OR LITIGATED ON AN INDIVIDUAL BASIS AND NOT ON A CLASS BASIS, AND CLAIMS OF MORE THAN ONE CUSTOMER OR USER CANNOT BE ARBITRATED OR LITIGATED JOINTLY OR CONSOLIDATED WITH THOSE OF ANY OTHER CUSTOMER OR USER.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">All aspects of the arbitration proceeding, including but not limited to the award of the arbitrator and compliance therewith, will be strictly confidential.&nbsp; The parties agree to maintain confidentiality unless otherwise required by law.&nbsp; This paragraph will not prevent a party from submitting to a court of law any information necessary to enforce this Agreement, to enforce an arbitration award, or to seek injunctive or equitable relief.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">If any part or parts of this Arbitration Agreement are found under the law to be invalid or unenforceable by a court of competent jurisdiction, then such specific part or parts shall be of no force and effect and shall be severed and the remainder of the Agreement will continue in full force and effect.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">Any or all of the rights and limitations set forth in this Arbitration Agreement may be waived by the party against whom the claim is asserted.&nbsp; Such waiver shall not waive or affect any other portion of this Arbitration Agreement.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">This Arbitration Agreement will survive the termination of your relationship with SibylSoft.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">Notwithstanding the foregoing, either party may seek emergency equitable relief before a state or federal court in order to maintain the status quo pending arbitration.&nbsp; A request for interim measures will not be deemed a waiver of any other rights or obligations under this Arbitration Agreement.</span></li>
+                             <li class="ql-indent-1"><span class="" style="display: initial;"><span style="display: initial;">Notwithstanding the foregoing, claims of defamation, violation of the Computer Fraud and Abuse Act, and infringement or misappropriation of the other party’s patent, copyright, trademark, or trade secrets will not be subject to this Arbitration Agreement and may be brought in court pursuant to</span> 
+                                </span><span style="display: initial; text-decoration: underline; font-weight: 700;">Section 5.15</span><span style="display: initial;">.</span>
+                             </li>
+                             <li class="ql-indent-1"><span style="display: initial;">In any circumstances where the foregoing Arbitration Agreement permits the parties to litigate in court, the parties hereby agree to submit to the personal jurisdiction of the courts located within Pima County, Arizona, for such purpose.</span></li>
+                             <li><span style="display: initial; font-weight: 700;">MISCELLANEOUS</span></li>
+                             <li class="ql-indent-1"><span class="" style="display: initial;"><span style="display: initial;">These Terms and Conditions, including the Additional Terms may be changed from time to time as described below or by written agreement.&nbsp; Charges and payment terms may be changed in accordance with the terms of your Subscription Agreement or Price Schedule; all other provisions may be changed by SibylSoft immediately upon notice to you.&nbsp; If any changes are made to your Subscription Agreement or these Terms and Conditions, such changes will: (a) only be applied prospectively; and (b) not be specifically directed against you or your Authorized Users but will apply to all similarly situated SibylSoft customers using the Online Services.&nbsp; You may terminate your Subscription Agreement upon written notice to SibylSoft if any change to these Terms and Conditions is unacceptable to you.&nbsp; For termination to be effective under this</span> 
+                                </span><span style="display: initial; text-decoration: underline; font-weight: 700;">Section 6.1</span><span style="display: initial;">, written notice of termination must be provided to SibylSoft within 60 days of the effective date of the change.&nbsp; Continued use of the Online Services following the effective date of any change constitutes acceptance of the change but does not affect the foregoing termination right.&nbsp; Except as provided above, your Subscription Agreement may not be supplemented, modified, or otherwise revised unless signed by duly authorized representatives of both parties.&nbsp; Furthermore, your Subscription Agreement may not be supplemented, modified, or otherwise revised by email exchange even if the email contains a printed name or signature line bearing signature-like font.&nbsp; The foregoing does not prohibit the execution of electronic contracts bearing electronic signatures of authorized representatives of both parties, provided such signatures include digital certifications or are otherwise authenticated.</span>
+                             </li>
+                             <li class="ql-indent-1"><span class="" style="display: initial;"><span style="display: initial;">You or SibylSoft may terminate your Subscription Agreement at any time in accordance with this</span> 
+                                </span><span style="display: initial; text-decoration: underline; font-weight: 700;">Section 6.2</span><span style="display: initial;">.&nbsp; The effective date of termination will be at the conclusion of the then-current term as provided in your Subscription Agreement, provided that the terminating party has given not less than ninety (90) days’ advance written notice of termination.&nbsp; SibylSoft may temporarily suspend or discontinue providing access to the Online Services to any or all Authorized Users in breach of this Subscription Agreement without notice and SibylSoft may pursue any other legal remedies available to it.</span>
+                             </li>
+                             <li class="ql-indent-1"><span style="display: initial;">All notices and other communications hereunder must be in writing or displayed electronically in the Online Services by SibylSoft.&nbsp; Notices will be deemed to have been properly given on the date delivered if sent by mail, which delivery must be certified with return receipt; on the date first made available, if displayed in the Online Services; or on the date received, if delivered in any other manner, as demonstrated through conclusive documentary evidence.&nbsp; Legal notices to SibylSoft should be sent to Hecker Pew, PLLC, 405 W. Franklin St., Tucson, AZ 85701.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">The failure of you, SibylSoft, or any third-party supplier of Materials to enforce any provision hereof will not constitute or be construed as a waiver of such provision or of the right to enforce it at a later time.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">Neither you nor any Authorized User may assign your rights or delegate your duties under this Subscription Agreement without the prior written consent of SibylSoft, which consent may be given or withheld in SibylSoft’s sole and absolute discretion.&nbsp; Your Subscription Agreement and these Terms and Conditions, and any amendment hereto or thereto will be binding on and will inure to the benefit of the parties and their respective successors and permitted assigns.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">SibylSoft’s ability to provide Materials may be regulated by a variety of privacy, data protection, and other laws in a variety of jurisdictions (“</span><span style="display: initial; font-weight: 700;">Data Laws</span><span style="display: initial;">”) and by licenses under which it may obtain certain of the Materials (“</span><span style="display: initial; font-weight: 700;">Licenses</span><span style="display: initial;">”).&nbsp; You acknowledge that SibylSoft will perform periodic reviews of you and your Authorized Users’ use of Materials subject to Data Laws or Licenses (“</span><span style="display: initial; font-weight: 700;">Regulated Data</span><span class="" style="display: initial;"><span style="display: initial;">”) in order to comply with Data Laws and license restrictions, and that the review may include asking you or your Authorized Users to verify that use of Regulated Data was for a permissible purpose.&nbsp; You and your Authorized Users will cooperate with SibylSoft in any such due diligence or regulatory review and will promptly produce all relevant records and documentation and other assistance reasonably requested by SibylSoft to enable SibylSoft to fulfill its obligations under Data Laws and Licenses.&nbsp; All reviews will be at SibylSoft’s expense.&nbsp; If there is any failure to cooperate with SibylSoft, or if any review reveals the lack of a permissible purpose to access Regulated Data, SibylSoft may deny access to the Online Services or to Regulated Data.&nbsp; SibylSoft will be under no obligation to reduce the fees payable by you to the extent that it is unable to provide Regulated Data to you based solely on your non-cooperation.&nbsp; You will comply with all applicable laws and regulations in supplying any personal data to SibylSoft, including providing any required notices and obtaining any required consents, permissions, and authorizations for SibylSoft processing such personal data.&nbsp; If and to the extent that your Authorized Users provide their personal data to SibylSoft during account registration or otherwise, the parties acknowledge that such information will be processed by SibylSoft in accordance with the SibylSoft privacy policy available at</span> 
+                                </span><a href="/privacy-policy" runtime_url="/privacy-policy" type="page" style="display: initial;">http://www.sibylsoft.com/privacy-policy</a><span class="" style="display: initial;"> <span style="display: initial;">(the “</span></span><span style="display: initial; font-weight: 700;">Privacy Policy</span><span style="display: initial;">”).&nbsp; The Privacy Policy, as such may be amended or modified from time to time in accordance with its terms is hereby incorporated into these Terms and Conditions.</span>
+                             </li>
+                             <li class="ql-indent-1"><span style="display: initial;">If you, any of your Authorized Users, or any person you or your Authorized Users permits to use the Online Services or who gains access through an Authorized User’s failure to properly secure his or her SibylSoft ID or computer (a “</span><span style="display: initial; font-weight: 700;">User</span><span style="display: initial;">”) should access or use Regulated Data in an unauthorized manner (a “</span><span style="display: initial; font-weight: 700;">Security Event</span><span style="display: initial;">”), then the following provisions will apply: (a) if required by applicable law, you will notify the individuals whose information has potentially been accessed or used that a Security Event has occurred; (b) you will notify any other parties (including but not limited to regulatory entities and credit reporting agencies) as may be required by law; (c) the notification will not reference SibylSoft or the product through which the Regulated Data was provided, nor will SibylSoft be otherwise identified or referenced in connection with the Security Event, without the express written consent of SibylSoft; (d) you will be solely liable for all claims that may arise from a Security Event caused by you, your Authorized Users or a User and you will indemnify SibylSoft for any third party claims directed against SibylSoft that arise from the Security Event; and (e) all notifications and indemnity claims related to the Security Event will be solely at your expense.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">Your Subscription Agreement and these Terms and Conditions shall be governed by and construed in accordance with the laws of the State of Arizona regardless of the law that might otherwise apply under applicable principles of conflicts of law.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">Your Subscription Agreement and these Terms and Conditions will be enforced to the fullest extent permitted by applicable law.&nbsp; If any provision of your Subscription Agreement or these Terms and Conditions is held to be invalid or unenforceable to any extent, then (a) such provision will be interpreted, construed, and reformed to the extent reasonably required to render it valid, enforceable, and consistent with its original intent and (b) such invalidity or unenforceability will not affect any other provision of this Subscription Agreement.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">Where applicable, each affiliated company of SibylSoft and each third-party supplier of Materials has the right to assert and enforce the provisions of your Subscription Agreement and these Terms and Conditions directly on its own behalf as a third-party beneficiary.</span></li>
+                             <li class="ql-indent-1"><span style="display: initial;">Your Subscription Agreement, including these Terms and Conditions, constitutes the entire agreement of the parties with respect to its subject matter and replaces and supersedes any prior written or verbal communications, representations, proposals or quotations on that subject matter.</span></li>
+                          </ol>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+          </div>
+          <div class="modalFooter float-right">
+            <button class="button clear" data-close>Close</button>
+          </div>
+        </div>
+        <div class="reveal large fixed-height-modal" id="privacyPolicyModal" data-reveal>
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h5>Privacy Policy</h5>
+          <div class="modalContent padding-2">
+            <div class="large-12 medium-12 small-12 dmRespCol" id="1294419954">
+              <div class="u_1019379887 dmRespRow" id="1019379887">
+                 <div class="dmRespColsWrapper" id="1061082760">
+                    <div class="dmRespCol small-12 medium-12 large-12" id="1095067152">
+                       <div class="dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" data-version="5" id="1091192403" style="transition: opacity 1s ease-in-out 0s;">
+                          <h3 class="text-align-center"><span style="display: unset; font-weight: 700;">SibylSoft Privacy Policy</span></h3>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="dmRespRow" id="1229312125">
+                 <div class="dmRespColsWrapper" id="1750403535">
+                    <div class="dmRespCol small-12 medium-12 large-12" id="1094222889">
+                       <div class="dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" data-version="5" id="1914610373" style="transition: opacity 1s ease-in-out 0s;" data-uialign="center">
+                          <p class="size-18 m-size-14"><span style="display: unset; font-weight: 700;" class="font-size-18 m-font-size-14">Overview</span></p>
+                          <p><span style="display: initial;">SibylSoft, Inc. (“</span><span style="display: initial; font-weight: 700;">we</span><span style="display: initial;">” or “</span><span style="display: initial; font-weight: 700;">us</span><span style="display: initial;">” or “</span><span style="display: initial; font-weight: 700;">our</span><span style="display: initial;">”) is serious about protecting the privacy of its clients and their Authorized Users.&nbsp; Under this SibylSoft Privacy Policy (this “</span><span style="display: initial; font-weight: 700;">Privacy Policy</span><span style="display: initial;">”), “</span><span style="display: initial; font-weight: 700;">you</span><span style="display: initial;">” or “</span><span style="display: initial; font-weight: 700;">your</span><span class="" style="display: initial;"><span style="display: initial;">” refers to the entity with which we have entered into a Subscription Agreement (as defined in our</span> 
+                             </span><a href="/terms-of-use" runtime_url="/terms-of-use" type="page" style="display: initial; font-style: italic;">Terms and Conditions of Use</a><span style="display: initial;">&nbsp; the “</span><span style="display: initial; font-weight: 700;">Terms of Use</span><span style="display: initial;">”) as well as your Authorized Users as applicable.&nbsp; We understand your concerns regarding how information about you is used and shared, and we appreciate your trust that we will do so carefully and sensibly.&nbsp; This Privacy Policy describes what information we collect about you from your use of the Site (as defined below), how we collect it, how we use it, with whom we may share it, and what choices you have regarding it.&nbsp; This Privacy Policy does not pertain to, or govern, our collection, use, storage, or protection of any personal information you submit to us via any other means, including, but not limited to, by phone, e-mail other than through use of the Site, or the United States Postal Service.&nbsp; This Privacy Policy is incorporated into and is a part of the Terms of Use of our site (</span><a href="http://www.sibylsoft.com" target="_blank" style="display: initial;">www.SibylSoft.com</a><span class="" style="display: initial;"><span style="display: initial;">,</span> 
+                             </span><a href="http://www.sibylity.com" target="_blank" style="display: initial;">www.Sibylity.com</a><span style="display: initial;">, or any related or replacement site, the “</span><span style="display: initial; font-weight: 700;">Site</span><span style="display: initial;">”).&nbsp; We encourage you to become familiar with the terms and conditions of both this Privacy Policy and the Terms of Use.&nbsp; Capitalized Terms used, but not otherwise defined herein have the meanings given to such terms in the Terms of Use.</span>
+                          </p>
+                          <p><br></p>
+                          <p><span style="font-weight: 700; display: initial;">BY ACCESSING AND USING THE SITE, YOU AGREE THAT YOU HAVE READ AND UNDERSTAND THIS PRIVACY POLICY AND YOU ACCEPT AND CONSENT TO THE PRIVACY PRACTICES (AND ANY USES AND DISCLOSURES OF INFORMATION ABOUT YOU) THAT ARE DESCRIBED IN THIS PRIVACY POLICY.</span></p>
+                          <p><br></p>
+                          <p class="size-18 m-size-14"><span style="font-weight: 700; display: initial;" class="font-size-18 m-font-size-14">Changes to Privacy Policy</span></p>
+                          <p><span style="display: initial;">Due to changes in relevant and applicable legal or regulatory requirements, our business practices; or in our attempt to better serve your needs, we may change our privacy practices and this Notice of Website Practices.&nbsp; Notice of such changes to our privacy practices will be given in the manner described in the Terms of Use and a revised Privacy Policy will be posted on the Site.</span></p>
+                          <p><br></p>
+                          <p class="size-18 m-size-14"><span style="font-weight: 700; display: initial;" class="font-size-18 m-font-size-14">What Information Do We Collect?</span></p>
+                          <p style="line-height: 1.295;"><span style="display: initial;">We may collect certain identifying information from or about you in connection with your use of the Site.&nbsp; For example, we may retain the content of, and metadata regarding, any correspondence you may have with us or our representatives, regardless of the subject matter or the mode of communication by which such correspondence is made.&nbsp; This information helps us to improve our products and services, as well as the Site and the content, materials, opportunities, and services that we feature or describe on the Site, and to more effectively and efficiently respond to both current and future inquiries.</span></p>
+                          <p style="line-height: 1.295;"><br></p>
+                          <p style="line-height: 1.295;"><span style="display: initial;">Certain information on our Site is collected automatically by means of various software tools.&nbsp; We have a legitimate interest in using such information to assist in log-in, systems administration purposes, information security and abuse prevention, to track user trends, and to analyze the effectiveness of our Online Services.&nbsp; Alone or in combination with other information, such automatically collected information may constitute personal data.</span></p>
+                          <p style="line-height: 1.295;"><br></p>
+                          <p style="line-height: 1.295;"><span style="display: initial;">Certain aspects of the Site may allow you to voluntarily submit information to us.&nbsp; For example, providing personally identifiable information for the purpose of Site support is a voluntary submission of information under applicable law.&nbsp; We may use and keep the information that you submit on file as necessary and appropriate for the purposes for which it was submitted.&nbsp; You should be mindful of the information that you choose to submit to us and make sure that this information is complete and accurate.</span></p>
+                          <p style="line-height: 1.295;"><br></p>
+                          <p style="line-height: 1.295;"><span style="display: initial;">As with many other websites, the web servers used to operate the Site may collect certain data pertaining to you and the equipment and communications method that you use to access the Internet and the Site.&nbsp; Without combining these data with other sources of information, they do not readily or personally identify you.&nbsp; They may reveal such things as the Internet protocol (“IP”) address assigned to your computer, specific pages that you accessed on the Site or immediately prior to visiting the Site, and the length of time you spend in a visit to the Site.&nbsp; The purposes for which this information is collected and used include facilitating Site operation and system administration, generating aggregate, non-identifiable statistical information, monitoring and analyzing Site traffic and usage patterns, and improving the content and content delivery with regard to the Site and the content, materials, opportunities, and services that we describe or make available on the Site.</span></p>
+                          <p style="line-height: 1.295;"><br></p>
+                          <p style="line-height: 1.295;"><span style="display: initial;">We may also use “cookies” (that is, small text files stored on your computer) to help track and customize your access and use of the Site.&nbsp; Cookies store and retain information that helps us recognize you when you return to the Site following a previous visit.&nbsp; Most popular Internet browser packages allow you to configure the browser so as not to accept cookies.&nbsp; However, setting your browser to reject cookies may, in certain instances, prevent you from taking full advantage of the Site and the materials, products, and services that we make available on the Site.</span></p>
+                          <p style="line-height: 1.295;"><br></p>
+                          <p style="line-height: 1.295;"><span style="display: initial;">Authorized Users may also provide certain User Content in connection with the services that we provide.&nbsp; We may de-identify and aggregate such User Content for our internal use including, but not limited to improve our services, content, user interface and Online Services.</span></p>
+                          <p><br></p>
+                          <p class="size-18 m-size-14"><span style="display: initial; font-weight: 700;" class="font-size-18 m-font-size-14">How Do We Use The Information That We Collect?</span></p>
+                          <p><span style="display: initial;">In addition to the uses mentioned or described above, or otherwise described in our Terms of Use, we may use the information that we collect from or about you to analyze and improve the content, features, materials, and opportunities that we make available on the Site, to notify you of changes made to the Site or new opportunities made available on or through the Site, to evaluate your needs and customize the Site content delivered to you according to those needs, to send you promotional materials that you request from us, and for other legitimate and lawful business purposes.&nbsp; If you contact us for support or assistance in connection with using the Site, we may use information about you or your system for purposes such as verifying whether your system meets the minimum requirements needed to use the Site and our various services.</span></p>
+                          <p><br></p>
+                          <p class="size-18 m-size-14"><span style="display: initial; font-weight: 700;" class="font-size-18 m-font-size-14">With Whom Do We Share Information That We Collect?</span></p>
+                          <p style="line-height: 1.295;"><span style="display: initial;">In addition to the uses mentioned or described above or otherwise described in our Terms of Use, in the course of conducting our business, we may transfer the information that we collect or that you submit to us, whether solicited or unsolicited, among our various offices and to the trusted business and marketing partners and service providers that we utilize in operating, maintaining, and further developing the Site and in delivering the content, materials, and opportunities that we make available on or through the Site.&nbsp; The sharing of such information is only to the extent necessary and appropriate, including, for example, for purposes of communicating with you or fulfilling your requests for Site content and materials.&nbsp; We may also produce reports on Site traffic or usage patterns and share these reports with our business partners and others, but the information contained in these reports is anonymous and does not allow identification of any specific individual.&nbsp; Please rest assured that, other than as expressly provided in this Privacy Policy, any personal information that we obtain about you through the Site will be reported outside our organization only in de-identified, aggregated formats that do not identify any particular individual or company.</span></p>
+                          <p style="line-height: 1.295;"><br></p>
+                          <p style="line-height: 1.295;"><span style="display: initial;">We may disclose information about you if we become subject to a subpoena or court order or if we are otherwise legally required to disclose such information.&nbsp; We may also use and disclose information about you to establish or exercise our legal rights, to enforce the Terms of Use, to assert and defend against legal claims, or if we believe such disclosure is necessary to investigate, prevent, or take other action regarding actual or suspected illegal or fraudulent activities or potential threats to the physical safety or well-being of any person.</span></p>
+                          <p style="line-height: 1.295;"><br></p>
+                          <p style="line-height: 1.295;"><span style="display: initial;">It is possible that the structure of our business might change or that it might merge or otherwise combine with, or that it or portions of our business might be acquired by, another company.&nbsp; In any such transactions, customer information generally is, will most probably be, and should be expected to be one of the transferred business assets.</span></p>
+                          <p><br></p>
+                          <p class="size-18 m-size-14"><span style="display: initial; font-weight: 700;" class="font-size-18 m-font-size-14">What Choices Do You Have?</span></p>
+                          <p style="line-height: 1.295;"><span style="display: initial;">In general, in order to use any functionality of the Site, you must login using your unique email address and password, which we track to unsure only Authorized Users are accessing the Site.&nbsp; We may track the internet address of the domains from which users visit the Site and analyze this data for trends and statistics, but, in such an event, the individual user, in most cases, remains anonymous.&nbsp; The information collected and analyzed is used to improve our products and services.&nbsp; If you provide information to us through the Site, that information will be used in the normal course of our business to provide services to you or on your behalf.&nbsp; The information will be shared only as described in the Terms of Use and this Privacy Policy.&nbsp; If you choose not to provide information through the Site you may not be able to use certain functions, or maximize the benefits, of the Site including those for which you have subscribed.</span></p>
+                          <p style="line-height: 1.295;"><br></p>
+                          <p style="line-height: 1.295;"><span style="display: initial;">When corresponding with us or our representatives, or when making a request for information, submitting information, or otherwise interacting with us or others through the Site, you choose what information to supply, what questions to pose and comments to make, whether you wish to receive further information, and by what method of communication that information should be delivered to you.&nbsp; Please take care to share only such information as is needed or that you believe is appropriate.</span></p>
+                          <p class="size-18 m-size-14"><span style="display: initial;"><br></span><span style="display: initial; font-weight: 700;" class="font-size-18 m-font-size-14">How Do We Protect Information Collected About You?</span></p>
+                          <p><span style="display: initial;">We take commercially reasonable measures to secure and protect information transmitted via or stored on the Site.&nbsp; However, we cannot and do not guarantee that any such transmissions or information will be totally secure.&nbsp; Unencrypted Internet communications are not secure, and no security measures are impenetrable.&nbsp; You agree to immediately notify us of any breach, or suspected breach, of Site security, this Privacy Policy, or the Terms of Use of which you become aware.</span></p>
+                          <p><br></p>
+                          <p style="line-height: 1.295;"><span style="display: initial; font-weight: 700;" class="font-size-18 m-font-size-14">Cookies</span><span style="display: initial;"><br>Cookies are small text files that are placed on your computer by websites that you visit.&nbsp; Cookies are widely used in order to make websites and applications work, or work more efficiently, and help such websites and applications remember certain information about you, either for the duration of your visit (using a “session” cookie) or for repeat visits (using a “persistent” cookie).</span></p>
+                          <p style="line-height: 1.295;"><br></p>
+                          <p style="line-height: 1.295;"><span style="display: initial;">As detailed in this Privacy Policy, our use of cookies may involve the collection and use of your information, such as IP addresses, or other online mobile identifiers.&nbsp; The cookies used on this website are as follows:</span></p>
+                          <p style="line-height: 1.295;"><br></p>
+                          <ol class="defaultList">
+                             <li style="line-height: 1.295;"><span style="display: initial;">Strictly necessary cookies:&nbsp; These are cookies that are required for the operation of our websites and cannot be switched off in our systems.&nbsp; They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in, or filling in forms.&nbsp; You can set your browser to block or alert you about these cookies, but some parts of the Service will not then work.&nbsp; These cookies do not store any personal data.</span></li>
+                             <li style="line-height: 1.295;"><span style="display: initial;">Functionality cookies:&nbsp; These are used to recognize you when you return to our websites.&nbsp; This enables us to personalize our content for you and remember your preferences (e.g., your choice of language or region).</span></li>
+                             <li style="line-height: 1.295;"><span style="display: initial;">Performance/Analytical cookies:&nbsp; These allow us to recognize and count the number of website visitors and to see how visitors move around our websites when they are using them.&nbsp; This helps us to improve the way our websites work, for example, by ensuring that users are finding what they are looking for easily.&nbsp; All information these cookies collect is aggregated and therefore anonymous.&nbsp; If you do not allow these cookies, we will not know when you have visited our site and will not be able to monitor its performance.</span></li>
+                             <li style="line-height: 1.295;"><span style="display: initial;">Targeting cookies:&nbsp; These cookies record your visit to our websites, the pages you have visited and the links you have followed.&nbsp; We will use this information to make our websites and the advertising displayed on it more relevant to your interests.&nbsp; We may also share this information with third parties for this purpose.&nbsp;</span></li>
+                             <li style="line-height: 1.295;"><span style="display: initial;">Third Party and Social Media Cookies:</span></li>
+                             <li style="line-height: 1.295;"><span style="display: initial;">Flash Cookies:</span></li>
+                             <li style="line-height: 1.295;"><span style="display: initial;">Tracking Technologies Including Pixels, Script, Web Beacons/Gifs, Page Tags:</span></li>
+                             <li style="line-height: 1.295;"><span style="display: initial;">Tracking Via Mobile Apps:</span></li>
+                          </ol>
+                          <p style="line-height: 1.295;"><br></p>
+                          <p style="line-height: 1.295;"><span style="display: initial;">If you access the service through a subscription agreement or other contract administered by your organization, cookies may be placed in accordance with the contract with your organization.</span></p>
+                          <p><br></p>
+                          <p><span style="display: initial; font-weight: 700;" class="font-size-18 m-font-size-14">Linked Sites</span><span style="display: initial;"><br>For your convenience, some hyperlinks may be posted on the Site that link to other websites not under our control.&nbsp; We are not responsible for, and this Privacy Policy does not apply to, the privacy practices of those websites or of any companies that we do not own or control.&nbsp; We encourage you to seek out and read the privacy policy of each website that you visit.&nbsp; In addition, should you happen to initiate a transaction on a website that our Site links to, even if you reached that website through our Site, the information that you submit to complete that transaction becomes subject to the privacy practices of the operator of that linked website. You should read that website’s privacy policies to understand how personal information that is collected about you is used and protected.</span></p>
+                          <p><br></p>
+                          <p class="m-size-14 size-18"><span style="display: initial; font-weight: 700;" class="font-size-18 m-font-size-14">Whom Can You Contact For More Information?</span></p>
+                          <p><span class="" style="display: initial;"><span style="display: initial;">If you have any questions or suggestions about us, the Site, or our products, services, or privacy practices, please contact us</span> 
+                             </span><a href="mailto:feedback@sibylsoft.com" runtime_url="mailto:feedback@sibylsoft.com" type="email" style="display: initial;">feedback@sibylsoft.com</a><span style="display: initial;">.</span>
+                          </p>
+                          <p><br></p>
+                          <p class="size-18 m-size-14"><span style="display: initial; font-weight: 700;" class="font-size-18 m-font-size-14">Acknowledgement</span></p>
+                          <p><span style="display: initial; font-weight: 700;">BY ACCESSING OR USING THE SITE, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTAND, AND CONSENT TO THE PRIVACY PRACTICES, AND TO THE USES AND DISCLOSURES OF INFORMATION WE OBTAIN ABOUT YOU, THAT ARE DESCRIBED IN THIS NOTICE OF WEBSITE PRIVACY PRACTICES, AND YOU AGREE TO BE BOUND BY THE TERMS OF USE.</span><span style="display: initial;"><br></span></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+          </div>
+          <div class="modalFooter float-right">
+            <button class="button clear" data-close>Close</button>
+          </div>
+        </div>    </section>
+  </div>
+</div>
+
+<div class="reveal large" id="inviteUserModal" data-reveal>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h5>Invite User</h5>
+  <div class="modalContent">
+    <ul class="tabs" data-tabs id="invite-users-tabs">
+        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Individual</a></li>
+        <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Batch</a></li>
+    </ul>
+    <div class="tabs-content" data-tabs-content="invite-users-tabs">
+        <div class="tabs-panel is-active" id="panel1">
+            <p class="note-text">All required fields are marked with asterisks (<span class="required">*</span>)</p>
+            <div class="grid-x grid-margin-x">
+                <div class="cell large-12">
+                    <div class="floated-label-wrapper">
+                        <label for="fn-input">Name <span class="required">*</span></label>
+                        <input type="text" id="fn-input" name="Name" placeholder="Name *">
+                    </div>
+                </div>
+                <div class="cell large-12">
+                    <div class="floated-label-wrapper">
+                        <label for="pn-input">Preferred Name</label>
+                        <input type="text" id="pn-input" name="Preferred Name" placeholder="Preferred Name">
+                    </div>
+                </div>
+                <div class="cell large-6">
+                    <div class="floated-label-wrapper">
+                        <label for="title-input">Title</label>
+                        <input type="text" id="title-input" name="Title" placeholder="Title">
+                    </div>
+                </div>
+                <div class="cell large-6">
+                    <div class="floated-label-wrapper">
+                        <label for="department-input">Department</label>
+                        <input type="text" id="department-input" name="Department" placeholder="Department">
+                    </div>
+                </div>
+                <div class="cell large-12">
+                    <div class="floated-label-wrapper">
+                        <label for="email-input">Email <span class="required">*</span></label>
+                        <input type="text" id="email-input" name="Email" placeholder="Email *">
+                        <p class="help-text">An email will be sent to the address above with instructions to activate the account</p>
+                    </div>
+                </div>
+                <div class="cell large-12 padding-top-1">
+                    <h5 class="float-left margin-top-1">User Roles</h5>
+                    <div class="rolesTableContainer">
+                        <button class="button hollow float-right table-add-button" data-open="addRoleModal">Add User Role</button>
+                        <table id="rolesTable" class="display dataTable">
+                            <thead>
+                                <tr>
+                                    <th>Group</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="rolesTableEnteredContainer hide">
+                        <button class="button hollow float-right table-add-button" data-open="addRoleModal">Add User Role</button>
+                        <table id="rolesTableEntered" class="display dataTable">
+                            <thead>
+                                <tr>
+                                    <th>Group</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Incident Response Services</td>
+                                    <td>Group Admin</td>
+                                    <td>Pending</td>
+                                    <td>
+                                        <button class="button clear" data-open="roleDeletionConfirmationModal"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tabs-panel" id="panel2">
+            <div class="floated-label-wrapper">
+                <label>Email addresses to invite</label>
+                <textarea placeholder="Email addresses to invite"></textarea>
+                <p class="help-text">Example: John@Doe.com, Jane@Doe.com, etc.</p>
+            </div>
+            <div class="margin-top-2">
+                <label>Import Users</label>
+                <button class="button primary"><i class="fas fa-paperclip"></i> Upload CSV</button>
+            </div>
+        </div>
+      </div>
+  </div>
+  <div class="modalFooter float-right">
+    <button class="button clear" data-close>Cancel</button>
+    <button class="button primary" data-close onClick="sib.displaySuccessToast('Invite sent to JakeFinn@company.com');">Invite</button>
+  </div>
+</div>
+
+<div class="reveal" id="addRoleModal" data-reveal>
+  <button class="close-button" data-open="inviteUserModal" aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h5>Add User Role</h5>
+  <div class="modalContent">
+    <p class="note-text">All required fields are marked with asterisks (<span class="required">*</span>)</p>
+    <div class="grid-x">
+        <div class="cell large-12">
+            <div class="floated-label-wrapper">
+              <label>Group *</label>
+              <select>
+                  <option value="" disabled selected>Group <span class="required">*</span></option>
+                  <option>Group 1</option>
+                  <option>Group 2</option>
+                  <option>Group 3</option>
+              </select>
+            </div>
+        </div>
+        <div class="cell large-12">
+          <div class="floated-label-wrapper">
+            <label>User Role *</label>
+            <select>
+                <option value="" disabled selected>User Role <span class="required">*</span></option>
+                <option>Role 1</option>
+                <option>Role 2</option>
+                <option>Role 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="cell large-12">
+          <label class="inline"><input type="checkbox"/> Include Subgroups <span class="has-tip" data-tooltip title="xx"><i class="fas fa-info-circle"></i></span></label>
+        </div>
+    </div>
+  </div>
+  <div class="modalFooter float-right">
+    <button class="button clear" data-open="inviteUserModal">Cancel</button>
+    <button class="button primary" data-open="inviteUserModal" onClick="sib.displaySuccessToast('User Role Added'); window.sib.toggleRolesTables();">Add</button>
+  </div>
+</div>
+
+<div class="reveal large" id="editUserModal" data-reveal>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h5>Edit User</h5>
+  <div class="modalContent">
+    <div class="grid-x grid-margin-x">
+        <div class="cell large-12">
+            <div class="floated-label-wrapper">
+                <label for="fn-input" class="show">Name <span class="required">*</span></label>
+                <input type="text" id="fn-input" name="Name" placeholder="Name *" value="Airi Satou">
+            </div>
+        </div>
+        <div class="cell large-12">
+            <div class="floated-label-wrapper">
+                <label for="pn-input">Preferred Name</label>
+                <input type="text" id="pn-input" name="Preferred Name" placeholder="Preferred Name">
+            </div>
+        </div>
+        <div class="cell large-6">
+            <div class="floated-label-wrapper">
+                <label for="title-input" class="show">Title</label>
+                <input type="text" id="title-input" name="Title" placeholder="Title" value="Accountant">
+            </div>
+        </div>
+        <div class="cell large-6">
+            <div class="floated-label-wrapper">
+                <label for="department-input" class="show">Department</label>
+                <input type="text" id="department-input" name="Department" placeholder="Department" value="Department">
+            </div>
+        </div>
+        <div class="cell large-12">
+            <div class="floated-label-wrapper">
+                <label for="email-input" class="show">Email <span class="required">*</span></label>
+                <input type="text" id="email-input" name="Email" placeholder="Email *" value="asatou@company.com">
+            </div>
+        </div>
+        <div class="cell large-12 padding-top-1">
+            <h5 class="float-left margin-top-1">User Roles</h5>
+            <div class="rolesTableEnteredContainer">
+                <button class="button hollow float-right table-add-button" data-open="addRoleModal">Add User Role</button>
+                <table id="rolesTableEntered" class="display dataTable">
+                    <thead>
+                        <tr>
+                            <th>Group</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Incident Response Services</td>
+                            <td>Group Admin</td>
+                            <td>Pending</td>
+                            <td>
+                                <button class="button clear" data-open="roleDeletionConfirmationModal"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="modalFooter float-right">
+    <button class="button clear" data-close>Cancel</button>
+    <button class="button primary" data-close onClick="sib.displaySuccessToast('User updated');">Save</button>
+  </div>
+</div>
+
+<div class="reveal" id="addRoleModal" data-reveal>
+  <button class="close-button" data-open="inviteUserModal" aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h5>Add User Role</h5>
+  <div class="modalContent">
+    <p class="note-text">All required fields are marked with asterisks (<span class="required">*</span>)</p>
+    <div class="grid-x">
+        <div class="cell large-12">
+            <div class="floated-label-wrapper">
+              <label>Group *</label>
+              <select>
+                  <option value="" disabled selected>Group <span class="required">*</span></option>
+                  <option>Group 1</option>
+                  <option>Group 2</option>
+                  <option>Group 3</option>
+              </select>
+            </div>
+        </div>
+        <div class="cell large-12">
+          <div class="floated-label-wrapper">
+            <label>User Role *</label>
+            <select>
+                <option value="" disabled selected>User Role <span class="required">*</span></option>
+                <option>Role 1</option>
+                <option>Role 2</option>
+                <option>Role 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="cell large-12">
+          <label class="inline"><input type="checkbox"/> Include Subgroups <span class="has-tip" data-tooltip title="xx"><i class="fas fa-info-circle"></i></span></label>
+        </div>
+    </div>
+  </div>
+  <div class="modalFooter float-right">
+    <button class="button clear" data-open="inviteUserModal">Cancel</button>
+    <button class="button primary" data-open="inviteUserModal" onClick="sib.displaySuccessToast('User Role Added'); window.sib.toggleRolesTables();">Add</button>
+  </div>
+</div>
+<div class="callout success toast hide" data-closable>
+    <span class="toast-content">And when you're done with me, I can be closed using a Motion UI animation.</span>
+    <!--button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+    </button-->
+</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

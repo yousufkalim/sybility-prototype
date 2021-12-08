@@ -1,0 +1,16 @@
+footer {
+    margin-top: 5rem;
+    padding-left: 1rem;
+    position: absolute; 
+    width: calc(100% - 1rem);//100%;
+    bottom: 0;
+
+    .fab {
+        margin-right: 1rem;
+    }
+
+    .footer-links a {
+        display: inline-block;
+        margin-right: 3rem;
+    }
+}

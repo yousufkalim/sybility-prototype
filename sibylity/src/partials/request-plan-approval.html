@@ -1,0 +1,82 @@
+
+<div class="reveal large fixed" id="requestPlanApprovalModal" data-reveal>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h5>Request Security Plan Approval</h5>
+  <div class="modalContent">
+    <p class="note-text">The following team members will be asked to review and approve the security plan. </p>
+    <h5>Resource Owner</h5>
+    <div class="flex-container collaborator-analysis">
+        <div class="flex-child-shrink user-image-placeholder">
+            <i class="fas fa-3x fa-user-circle"></i>
+        </div>
+        <div class="flex-child-grow">
+            <label>Troy Hollar</label>
+            <p class="margin-bottom-2">
+                Risk Management Program Lead<br/>
+                Information Security Office<br/>
+                thollar@sibylsoft.com
+            </p>
+        </div>
+    </div>
+    <h5>Approvers</h5>
+    <div class="grid-x">
+        <div class="cell large-4">
+            <div class="flex-container collaborator-analysis">
+                <div class="flex-child-shrink user-image-placeholder">
+                    <i class="fas fa-3x fa-user-circle"></i>
+                </div>
+                <div class="flex-child-grow">
+                    <label>William Seccombe</label>
+                    <p class="margin-bottom-2">
+                        Cyber-Risk Manager<br/>
+                        Information Security Office<br/>
+                        wseccombe@sibylsoft.com
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="cell large-4">
+            <div class="flex-container collaborator-analysis">
+                <div class="flex-child-shrink user-image-placeholder">
+                    <i class="fas fa-3x fa-user-circle"></i>
+                </div>
+                <div class="flex-child-grow">
+                    <label>Scott Kuehnert</label>
+                    <p class="margin-bottom-2">
+                        Cyber-Risk Manager<br/>
+                        Information Security Office<br/>
+                        skuehnert@sibylsoft.com
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="cell large-4">
+            <div class="flex-container collaborator-analysis">
+                <div class="flex-child-shrink user-image-placeholder">
+                    <i class="fas fa-3x fa-user-circle"></i>
+                </div>
+                <div class="flex-child-grow">
+                    <label>Teresa Banks</label>
+                    <p class="margin-bottom-2">
+                        Cyber-Risk Manager<br/>
+                        Information Security Office<br/>
+                        tbanks@sibylsoft.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  </div>
+  <div class="modalFooter">
+    <div class="float-left">
+        <button class="button hollow secondary" data-open="previewPlanModal"><i class="fas fa-eye"></i> Preview Plan</button>
+      </div>
+    <div class="float-right">
+      <button class="button clear secondary" data-close>Cancel</button>
+      <button class="button primary secondary" data-close onClick="sib.displaySuccessToast('Security plan Human Resources Process and Data has been submitted!');"> Submit Request</button>
+    </div>
+  </div>
+</div>

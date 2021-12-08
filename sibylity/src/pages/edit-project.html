@@ -1,0 +1,1852 @@
+
+<div class="flex-container">
+  {{> leftnav}}
+  <div class="flex-child-grow">
+    {{> topbar}}
+    <section class="main">
+        <div class="grid-x">
+          <div class="cell large-12">
+            <div class="subpage-header">
+                <button class="button secondary clear float-right" data-open="editProjectModal"><i class="fas fa-edit"></i> Edit</button>
+                <h4>Human Resources Process and Data</h4>
+                <div class="flex-container subpage-header-fields">
+                    <div>
+                        <label>Responsible Group</label>
+                        <p>Human Resources</p>
+                    </div>
+                    <div>
+                        <label>Resource Owner</label>
+                        <p>Will Seccombe</p>
+                    </div>
+                    <div>
+                        <label>Cyber-Risk Manager</label>
+                        <p>Teresa Banks</p>
+                    </div>
+                    <div>
+                        <label>Step</label>
+                        <p>Analyze</p>
+                    </div>
+                    <div>
+                        <label>Step Date</label>
+                        <p>10/01/2021</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="sib-card">
+                <div class="cyber-risk-progress-indicator flex-container">
+                    <div class="flex-child-grow">
+                        <ul class="timeline">
+                            <li class="selected"><span>Define</span></li>
+                            <li><span>Assess</span></li>
+                            <li><span>Analyze</span></li>
+                            <li><span>Plan</span></li>
+                        </ul>
+                    </div>
+                    <div class="flex-child-shrink project-navigation">
+                        <button class="button hollow secondary left"><i class="fas fa-lg fa-chevron-left"></i></button>
+                        <button class="button hollow secondary right"><i class="fas fa-lg fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="cyber-risk-project-page page-1">
+                    <div class="callout info">
+                        <p><span class="bold">Project definition</span> is the first step of the cyberrisk management process.</p>
+                        <p>This preparation step allows the cyberrisk manager to define what will be assessed, identify the people that will participate, and document important context.</p>
+                        <p>It is a best practice to group resources together under the same project when there are similarities between them that would make it most efficient to manage their security under a single security plan. When doing this grouping for your project, consider the following attributes of the resources:</p>
+                        <ol>
+                            <li>Function or Purpose</li>
+                            <li>Criticality 
+                            <li>Target or Current Data Classification</li>
+                            <li>Ownership</li>
+                        </ol>
+                    </div>
+                    <ul class="accordion secondary margin-top-1" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                        <li class="accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title">Project Stakeholders</a>
+                        <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                            <button class="button secondary float-right table-add-button" data-open="addStakeholderModal">Add Stakeholder</button>
+                            <div class="stakeholdersTableContainer">
+                                <table id="stakeholdersTable" class="display dataTable secondary">
+                                    <thead>
+                                        <tr>
+                                            <th>Stakeholders</th>
+                                            <th>Title</th>
+                                            <th>Department</th>
+                                            <th>Stakeholder Type</th>
+                                            <th>Is Designee</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="stakeholdersTableEnteredContainer hide">
+                                <table id="stakeholdersTableEntered" class="display dataTable secondary">
+                                    <thead>
+                                        <tr>
+                                            <th>Stakeholders</th>
+                                            <th>Title</th>
+                                            <th>Department</th>
+                                            <th>Stakeholder Type</th>
+                                            <th>Is Designee</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>System Architect</td>
+                                            <td>Governance, Risk, and Compliance Office</td>
+                                            <td>Approver</td>
+                                            <td>No</td>
+                                            <td>
+                                            {{> stakeholder-actions}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garrett Winters</td>
+                                            <td>Accountant</td>
+                                            <td>Operations</td>
+                                            <td>Technical Stakeholder</td>
+                                            <td>No</td>
+                                            <td>
+                                            {{> stakeholder-actions}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ashton Cox</td>
+                                            <td>Junior Technical Author</td>
+                                            <td>Information Security Office</td>
+                                            <td>Technical Stakeholder</td>
+                                            <td>Yes</td>
+                                            <td>
+                                            {{> stakeholder-actions}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cedric Kelly</td>
+                                            <td>Senior Javascript Developer</td>
+                                            <td>Human Resources</td>
+                                            <td>Technical Stakeholder</td>
+                                            <td>Yes</td>
+                                            <td>
+                                            {{> stakeholder-actions}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Airi Satou</td>
+                                            <td>Accountant, <br/>Marketing Assistant</td>
+                                            <td>Department</td>
+                                            <td>User Stakeholder</td>
+                                            <td>Yes</td>
+                                            <td>
+                                            {{> stakeholder-actions}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Brielle Williamson</td>
+                                            <td>Integration Specialist</td>
+                                            <td>Information Security Office</td>
+                                            <td>User Stakeholder</td>
+                                            <td>No</td>
+                                            <td>
+                                            {{> stakeholder-actions}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Herrod Chandler</td>
+                                            <td>Sales Assistant</td>
+                                            <td>Human Resources</td>
+                                            <td>Technical Stakeholder</td>
+                                            <td>Yes</td>
+                                            <td>
+                                            {{> stakeholder-actions}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rhona Davidson</td>
+                                            <td>Integration Specialist</td>
+                                            <td>Information Security Office</td>
+                                            <td>Technical Stakeholder</td>
+                                            <td>No</td>
+                                            <td>
+                                            {{> stakeholder-actions}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Colleen Hurst</td>
+                                            <td>Javascript Developer</td>
+                                            <td>Human Resources</td>
+                                            <td>Approver</td>
+                                            <td>No</td>
+                                            <td>
+                                            {{> stakeholder-actions}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sonya Frost</td>
+                                            <td>Software Engineer</td>
+                                            <td>Information Security Office</td>
+                                            <td>Technical Stakeholder</td>
+                                            <td>No</td>
+                                            <td>
+                                            {{> stakeholder-actions}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jena Gaines</td>
+                                            <td>Office Manager</td>
+                                            <td>Governance, Risk, and Compliance Office</td>
+                                            <td>User Stakeholder</td>
+                                            <td>No</td>
+                                            <td>
+                                            {{> stakeholder-actions}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Quinn Flynn</td>
+                                            <td>Support Lead</td>
+                                            <td>Information Security Office</td>
+                                            <td>Technical Stakeholder</td>
+                                            <td>No</td>
+                                            <td>
+                                            {{> stakeholder-actions}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Charde Marshall</td>
+                                            <td>Regional Director</td>
+                                            <td>Human Resources</td>
+                                            <td>Approver</td>
+                                            <td>No</td>
+                                            <td>
+                                            {{> stakeholder-actions}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Haley Kennedy</td>
+                                            <td>Senior Marketing Designer</td>
+                                            <td>Department</td>
+                                            <td>Technical Stakeholder</td>
+                                            <td>No</td>
+                                            <td>
+                                            {{> stakeholder-actions}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tatyana Fitzpatrick</td>
+                                            <td>Regional Director</td>
+                                            <td>Information Security Office</td>
+                                            <td>Technical Stakeholder</td>
+                                            <td>Yes</td>
+                                            <td>
+                                            {{> stakeholder-actions}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Michael Silva</td>
+                                            <td>Marketing Designer</td>
+                                            <td>Human Resources</td>
+                                            <td>Technical Stakeholder</td>
+                                            <td>No</td>
+                                            <td>
+                                            {{> stakeholder-actions}}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Resource Description</a>
+                            <div class="accordion-content" data-tab-content>
+                                <p class="note-text">All required fields are marked with asterisks (<span class="required">*</span>)</p>
+                                <div class="resource-description-fields">
+                                    <div class="floated-label-wrapper">
+                                        <label>Resource Purpose <span class="required">*</span></label>
+                                        <textarea placeholder="Resource Purpose *"></textarea>
+                                        <p class="help-text contextual-hint">Describe the role of the included resources within a broader context. What is the purpose?</p>
+                                    </div>
+                                    <div class="floated-label-wrapper">
+                                        <label>Resource Function <span class="required">*</span></label>
+                                        <textarea placeholder="Resource Function *"></textarea>
+                                        <p class="help-text contextual-hint">Describe what the included resources do. What is their function?</p>
+                                    </div>
+                                    <div class="floated-label-wrapper">
+                                        <label>Resource Capabilities</label>
+                                        <textarea placeholder="Resource Capabilities"></textarea>
+                                        <p class="help-text contextual-hint">Describe any additional capabilities of the resource.</p>
+                                    </div>
+                                    <div class="floated-label-wrapper">
+                                        <label>Resource Hardware <span class="required">*</span></label>
+                                        <textarea placeholder="Resource Hardware *"></textarea>
+                                        <p class="help-text contextual-hint">Describe the hardware components of the resource. Describe the facilities, if it is on premises, or name any third-parties responsible for physical security of the hardware.</p>
+                                    </div>
+                                    <div class="floated-label-wrapper">
+                                        <label>Resource Software</label>
+                                        <textarea placeholder="Resource Software"></textarea>
+                                        <p class="help-text contextual-hint">Describe the software components of the resource.  Include any clarifications of ownership or responsibility for the components.</p>
+                                    </div>
+                                    <div class="floated-label-wrapper">
+                                        <label>Network Configuration</label>
+                                        <textarea placeholder="Network Configuration"></textarea>
+                                        <p class="help-text contextual-hint">Describe the network configuration of the resource.  Include any clarifications of ownership or responsibility for the networks or subnets.</p>
+                                    </div>
+                                    <div class="floated-label-wrapper">
+                                        <label>Boundaries and Interfaces</label>
+                                        <textarea placeholder="Boundaries and Interfaces"></textarea>
+                                        <p class="help-text contextual-hint">Describe the boundaries of the resource.  Include any clarifications of what is excluded from the scope of the resource for the purpose of this activity.</p>
+                                    </div>
+                                    <div class="floated-label-wrapper">
+                                        <label>Resource Dependencies</label>
+                                        <textarea placeholder="Resource Dependencies"></textarea>
+                                        <p class="help-text contextual-hint">Describe any dependencies the included resources have on other systems or processes.</p>
+                                    </div>
+                                    <div class="floated-label-wrapper">
+                                        <label>Information Sharing and Delegation</label>
+                                        <textarea placeholder="Information Sharing and Delegation"></textarea>
+                                        <p class="help-text contextual-hint">Describe any information sharing the resource implements with other resources and any tasks the resource delegates outside of its boundaries.</p>
+                                    </div>
+                                    <div class="floated-label-wrapper">
+                                        <label>Regulatory Environment</label>
+                                        <textarea placeholder="Regulatory Environment"></textarea>
+                                        <p class="help-text contextual-hint">Describe any regulatory or statutory obligations that are known to apply to the resource.</p>
+                                    </div>
+                                    <div class="floated-label-wrapper">
+                                        <label>Applicable Policies</label>
+                                        <textarea placeholder="Applicable Policies"></textarea>
+                                        <p class="help-text contextual-hint">Describe any extraordinary policies that apply to the resource.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Resource Attributes</a>
+                            <div class="accordion-content" data-tab-content>
+                                <div class="grid-x grid-margin-x">
+                                    <div class="cell large-6">
+                                        <div>
+                                            <label>Resource Types</label>
+                                            <div>
+                                                <div>
+                                                    <input type="checkbox" id="cloudBasedApps" class="sib-check secondary"/>
+                                                    <label for="cloudBasedApps" class="inline">Cloud-based applications or infrastructure</label>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="onPremisesHardware" class="sib-check secondary"/>
+                                                    <label for="onPremisesHardware" class="inline">On-premises hardware</label>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="laptopsOrPortables" class="sib-check secondary"/>
+                                                    <label for="laptopsOrPortables" class="inline">Laptops or portable devices</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="margin-top-1">
+                                            <div class="floated-label-wrapper">
+                                                <label>Notes <span class="has-tip" data-tooltip title="Notes do not appear in security plans. Notes are for you, the resource owner, and other risk managers and resource owners in the same group as you. Notes are also carried forward when you do reassessment so you can use them as reminders of why you made certain decisions."><i class="fas fa-info-circle"></i></span></label>
+                                                <textarea placeholder="Notes"></textarea>
+                                                <p class="help-text contextual-hint">Include any notes that might help explain the selections made.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell large-6">
+                                        <div>
+                                            <label>Personal Information collected?</label>
+                                            <div>
+                                                <div>
+                                                    <input type="radio" id="personal-information-collected-yes" class="sib-radio secondary" name="personal-info"/>
+                                                    <label for="personal-information-collected-yes" class="inline">Yes</label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio" id="personal-information-collected-no" class="sib-radio secondary" name="personal-info"/>
+                                                    <label for="personal-information-collected-no" class="inline">No</label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio" id="personal-information-collected-unknown" class="sib-radio secondary" name="personal-info"/>
+                                                    <label for="personal-information-collected-unknown" class="inline">Unknown</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="margin-top-1">
+                                            <div class="floated-label-wrapper">
+                                                <label>Notes <span class="has-tip" data-tooltip title="Notes do not appear in security plans. Notes are for you, the resource owner, and other risk managers and resource owners in the same group as you. Notes are also carried forward when you do reassessment so you can use them as reminders of why you made certain decisions."><i class="fas fa-info-circle"></i></span></label>
+                                                <textarea placeholder="Notes"></textarea>
+                                                <p class="help-text contextual-hint">Include any notes that might help explain the selections made.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell large-6">
+                                        <div class="padding-top-1">
+                                            <label>Remote Access</label>
+                                            <div>
+                                                <div>
+                                                    <input type="radio" id="remote-access-yes" class="sib-radio secondary" name="remote-access"/>
+                                                    <label for="remote-access-yes" class="inline">Yes</label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio" id="remote-access-no" class="sib-radio secondary" name="remote-access"/>
+                                                    <label for="remote-access-no" class="inline">No</label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio" id="remote-access-for-admins" class="sib-radio secondary" name="remote-access"/>
+                                                    <label for="remote-access-for-admins" class="inline">For administrator users only</label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio" id="remote-access-for-non-admins" class="sib-radio secondary" name="remote-access"/>
+                                                    <label for="remote-access-for-non-admins" class="inline">For non-administrator users only</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="margin-top-1">
+                                            <div class="floated-label-wrapper">
+                                                <label>Notes <span class="has-tip" data-tooltip title="Notes do not appear in security plans. Notes are for you, the resource owner, and other risk managers and resource owners in the same group as you. Notes are also carried forward when you do reassessment so you can use them as reminders of why you made certain decisions."><i class="fas fa-info-circle"></i></span></label>
+                                                <textarea placeholder="Notes"></textarea>
+                                                <p class="help-text contextual-hint">Include any notes that might help explain the selections made.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Resource Classification</a>
+                            <div class="accordion-content" data-tab-content>
+                                <h4>Security Categorization (FIPS 199)</h4>
+                                <fieldset class="security-categorization fieldset margin-top-2">
+                                    <legend>Expression</legend>
+                                    <button class="button secondary float-right" data-open="editSecurityCategorizationModal"><i class="fas fa-edit"></i> Edit</button>
+                                    <p>
+                                        <span>SC</span><sub>Human Resources Process and Data</sub> = {(<span>confidentiality</span>, None), (<span>integrity</span>, None), (<span>availability</span>, None)}
+                                    </p>
+                                </fieldset>
+                                <div class="text-accordion margin-bottom-2 hide">
+                                    <span>+</span><span class="hide">-</span> View Resource Classification Reccommendations
+                                    <div class="text-accordion-content hide">
+                                    </div>
+                                </div>
+                                <br/><br/>
+                                <h4 class="float-left">Information Type Worksheet</h4>
+                                <div class="informationTypeWorksheetDefault">
+                                    <div class="clear"></div>
+                                    <p>Please select one or more information category to begin the worksheet. </p>
+                                    <button class="button secondary hollow margin-top-1" data-open="selectInformationCategoriesModal">Select Information Categories</button>
+                                </div>
+                                <div class="informationTypeWorksheetContent hide">
+                                    <div class="float-right">
+                                        <button class="secondary clear button" data-open="selectInformationCategoriesModal">Select Information Categories</button>
+                                        <button class="secondary button" data-open="engageStakeholdersInformationTypesModal">Engage Stakeholders</button>
+                                    </div>
+                                    <p class="hide">The Information Type worksheet is designed to assess the confidentiality, integrity, and availability of Information Types. <a href="#" data-opne="learnMoreModal">Learn more</a></p>
+                                    <div class="clear"></div>
+                                    <div class="flex-container margin-top-1">
+                                        <div class="vertical-tabs-left-col flex-child-shrink">
+                                        <ul class="vertical tabs secondary" data-tabs id="business-impact-tabs">
+                                            <li class="tabs-title is-active"><a href="#it-panel-1" aria-selected="true">Controls and Oversight</a></li>
+                                            <li class="tabs-title"><a href="#it-panel-2">Information &amp; Technology Management</a></li>
+                                            <li class="tabs-title"><a href="#it-panel-3">Disaster Management</a></li>
+                                            <li class="tabs-title"><a href="#it-panel-4">Economic Development</a></li>
+                                            <li class="tabs-title"><a href="#it-panel-5">Workforce Management</a></li>
+                                            <li class="tabs-title"><a href="#it-panel-6">Planning &amp; Budgeting</a></li>
+                                            <li class="tabs-title"><a href="#it-panel-7">Knowledge Creation &amp; Management</a></li>
+                                        </ul>
+                                        </div>
+                                        <div class="vertical-tabs-container">
+                                            <div class="tabs-content vertical" data-tabs-content="business-impact-tabs">
+                                            <div class="tabs-panel is-active" id="it-panel-1">
+                                                <div class="sib-card">
+                                                    <div>
+                                                        <div class="float-right nested-card-actions">
+                                                            <button class="button clear secondary" data-open="editInformationTypeAnalysisModal"><i class="fas fa-edit"></i> Edit</button>
+                                                            <button class="button clear secondary" onClick="sib.disableItem(this);"><i class="fas fa-ban"></i> Disable</button>
+                                                        </div>
+                                                        <h5>Corrective Action (Policy/Regulation)</h5>
+                                                        <div class="clear"></div>
+                                                        <div class="margin-top-1">
+                                                            <div class="callout warning values-not-set">
+                                                                <p>
+                                                                    No settings have been applied
+                                                                </p>
+                                                            </div>
+                                                            <div class="analysis-value hide">
+                                                                <div class="grid-x">
+                                                                    <div class="cell large-4">
+                                                                        <label>Confidentiality</label>
+                                                                        Low
+                                                                    </div>
+                                                                    <div class="cell large-4">
+                                                                        <label>Integrity</label>
+                                                                        Medium
+                                                                    </div>
+                                                                    <div class="cell large-4">
+                                                                        <label>Availability</label>
+                                                                        High
+                                                                    </div>
+                                                                    <div class="cell large-12 margin-top-1">
+                                                                        <label>Notes</label>
+                                                                        <p class="note-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="text-accordion">
+                                                                <span>+ View</span><span class="hide">- Hide</span> recommendedations from NIST SP 800-60v2r1
+                                                                <div class="text-accordion-content hide">
+                                                                    <div class="grid-x">
+                                                                        <div class="cell large-4">
+                                                                            <label>Confidentiality</label>
+                                                                            Low
+                                                                        </div>
+                                                                        <div class="cell large-4">
+                                                                            <label>Integrity</label>
+                                                                            Medium
+                                                                        </div>
+                                                                        <div class="cell large-4">
+                                                                            <label>Availability</label>
+                                                                            High
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="text-accordion margin-bottom-0">
+                                                                <span>+ View</span><span class="hide">- Hide</span> stakeholder analysis
+                                                                <div class="text-accordion-content hide padding-bottom-0">
+                                                                    <div class="flex-container collaborator-analysis">
+                                                                        <div class="flex-child-shrink user-image-placeholder">
+                                                                            <i class="fas fa-3x fa-user-circle"></i>
+                                                                        </div>
+                                                                        <div class="flex-child-grow">
+                                                                            <label>Troy Hollar</label>
+                                                                            <div class="grid-x margin-bottom-2">
+                                                                                <div class="cell large-4">
+                                                                                    <label class="inline">Primary Concern:</label> Availability 
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex-container collaborator-analysis">
+                                                                        <div class="flex-child-shrink user-image-placeholder">
+                                                                            <i class="fas fa-3x fa-user-circle"></i>
+                                                                        </div>
+                                                                        <div class="flex-child-grow">
+                                                                            <label>William Seccombe</label>
+                                                                            <p class="note-text">Activity not yet completed</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hide">
+                                                        <div class="float-right nested-card-actions">
+                                                            <button class="button clear secondary" onClick="sib.enableItem(this);">Enable</button>
+                                                        </div>
+                                                        <div class="flex-container">
+                                                            <div class="flex-child-shrink margin-right-1">
+                                                                <i class="fas fa-ban fa-2x"></i>
+                                                            </div>
+                                                            <div class="flex-child-grow">
+                                                                <p class="margin-top-0">
+                                                                    Information Type <span class="bold">Corrective Action (Policy/Regulation)</span> is disabled
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tabs-panel" id="it-panel-2">
+                                            <p>Two</p>
+                                            </div>
+                                            <div class="tabs-panel" id="it-panel-3">
+                                            <p>Three</p>
+                                            </div>
+                                            <div class="tabs-panel" id="it-panel-4">
+                                            <p>Four</p>
+                                            </div>
+                                            <div class="tabs-panel" id="it-panel-5">
+                                            <p>Five</p>
+                                            </div>
+                                            <div class="tabs-panel" id="it-panel-6">
+                                            <p>Six</p>
+                                            </div>
+                                            <div class="tabs-panel" id="it-panel-7">
+                                            <p>Seven</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Business Impact Assessment</a>
+                            <div class="accordion-content" data-tab-content>
+                                <h4 class="float-left">Business Impact Worksheet</h4>
+                                <button class="button secondary float-right" data-open="engageStakeholdersBusinessImpactsModal">Engage Stakeholders</button>
+                                <div class="clear"></div>
+                                <p class="margin-bottom-2 hide">Business impact assessments are designed to document stakeholder' concern of a particular business impact occurring. <a href="#" data-opne="learnMoreModal">Learn more</a></p>
+                                <div class="flex-container margin-top-1">
+                                    <div class="vertical-tabs-left-col flex-child-shrink">
+                                      <ul class="vertical tabs secondary" data-tabs id="business-impact-tabs">
+                                        <li class="tabs-title is-active"><a href="#bi-panel-1" aria-selected="true">Lost sales and/or income</a></li>
+                                        <li class="tabs-title"><a href="#bi-panel-2">Delayed sale and/or income</a></li>
+                                        <li class="tabs-title"><a href="#bi-panel-3">Reduction in enrollment</a></li>
+                                        <li class="tabs-title"><a href="#bi-panel-4">Loss of research opportunities</a></li>
+                                        <li class="tabs-title"><a href="#bi-panel-5">Missed revenue opportunities</a></li>
+                                        <li class="tabs-title"><a href="#bi-panel-6">Loss of existing awards</a></li>
+                                        <li class="tabs-title"><a href="#bi-panel-7">Loss of other performance-based funding</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="vertical-tabs-container">
+                                      <div class="tabs-content vertical" data-tabs-content="business-impact-tabs">
+                                        <div class="tabs-panel is-active" id="bi-panel-1">
+                                            <div class="sib-card">
+                                                <div>
+                                                    <div class="float-right nested-card-actions">
+                                                        <button class="button clear secondary" data-open="editBusinessImpactAnalysisModal"><i class="fas fa-edit"></i> Edit</button>
+                                                        <button class="button clear secondary" onClick="sib.disableItem(this);"><i class="fas fa-ban"></i> Disable</button>
+                                                    </div>
+                                                    <h5>Lost Sales and/or Income</h5>
+                                                    <div class="clear"></div>
+                                                    <div class="margin-top-1">
+                                                        <div class="callout warning concern-level-not-set">
+                                                            <p>
+                                                                Level of concern is not set.
+                                                            </p>
+                                                        </div>
+                                                        <div class="analysis-value hide">
+                                                            <div class="grid-x">
+                                                                <div class="cell large-12">
+                                                                    <label>Level of Concern</label>
+                                                                    Very concerned
+                                                                </div>
+                                                                <div class="cell large-12 margin-top-1">
+                                                                    <label>Notes</label>
+                                                                    <p class="note-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-accordion margin-bottom-0">
+                                                            <span>+ View</span><span class="hide">- Hide</span> stakeholder analysis
+                                                            <div class="text-accordion-content hide padding-bottom-0">
+                                                                <div class="flex-container  collaborator-analysis">
+                                                                    <div class="flex-child-shrink user-image-placeholder">
+                                                                        <i class="fas fa-3x fa-user-circle"></i>
+                                                                    </div>
+                                                                    <div class="flex-child-grow">
+                                                                        <label>Troy Hollar</label>
+                                                                        <div class="margin-bottom-2"><label class="inline">Level of concern:</label> None</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex-container  collaborator-analysis">
+                                                                    <div class="flex-child-shrink user-image-placeholder">
+                                                                        <i class="fas fa-3x fa-user-circle"></i>
+                                                                    </div>
+                                                                    <div class="flex-child-grow">
+                                                                        <label>William Seccombe</label>
+                                                                        <div><label class="inline">Level of concern:</label> None</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hide">
+                                                    <div class="float-right nested-card-actions">
+                                                        <button class="button clear secondary" onClick="sib.enableItem(this);">Enable</button>
+                                                    </div>
+                                                    <div class="flex-container">
+                                                        <div class="flex-child-shrink margin-right-1">
+                                                            <i class="fas fa-ban fa-2x"></i>
+                                                        </div>
+                                                        <div class="flex-child-grow">
+                                                            <p class="margin-top-0">
+                                                                Business Impact Assessment for <span class="bold">Lost Sales and/or Income</span> is disabled
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tabs-panel" id="bi-panel-2">
+                                          <p>Two</p>
+                                        </div>
+                                        <div class="tabs-panel" id="bi-panel-3">
+                                          <p>Three</p>
+                                        </div>
+                                        <div class="tabs-panel" id="bi-panel-4">
+                                          <p>Four</p>
+                                        </div>
+                                        <div class="tabs-panel" id="bi-panel-5">
+                                          <p>Five</p>
+                                        </div>
+                                        <div class="tabs-panel" id="bi-panel-6">
+                                          <p>Six</p>
+                                        </div>
+                                        <div class="tabs-panel" id="bi-panel-7">
+                                          <p>Seven</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="float-right">
+                        <button class="secondary clear button" onClick="sib.incrementProjectPhase();">Save &amp; Continue &nbsp;<i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="cyber-risk-project-page page-2 hide">
+                    <div class="callout info">
+                        <p>
+                            <span class="bold">Control assessment</span> is the second step of the cyberrisk management process.<br/><br/>
+                            During this step, potential vulnerabilities in your security practices are identified.<br/><br/>
+                            Security controls that benefit the resources included in the scope of your project are often implemented and controlled elsewhere in the organization. These are known as common controls because they are
+                            common across many parts of the organization. You may optionally select to inherit information about common controls from various groups who have opted to share this information with consumers of their
+                            services.
+                        </p>
+                    </div>
+                    <div>
+                        <button class="secondary button hollow margin-right-1" data-open="manageCommonControlGroupsModal">Manage Common Control Groups</button>
+                        <button class="secondary button clear margin-right-1"><i class="fas fa-sync"></i> Re-tailor Assessment</button>
+                    </div>
+                    <ul class="accordion secondary margin-top-1" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Audit &amp; Accountability</a>
+                            <div class="accordion-content" data-tab-content>
+                                <button class="button secondary float-right" data-open="engageStakeholdersAuditModal">Engage Stakeholders</button>
+                                <div class="clear"></div>
+                                
+                                <div class="flex-container margin-top-1">
+                                    <div class="vertical-tabs-left-col flex-child-shrink">
+                                      <ul class="vertical tabs secondary" data-tabs id="business-impact-tabs">
+                                        <li class="tabs-title is-active"><a href="#audit-panel-1" aria-selected="true">Policy and Procedures</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="vertical-tabs-container">
+                                      <div class="tabs-content vertical" data-tabs-content="business-impact-tabs">
+                                        <div class="tabs-panel is-active" id="audit-panel-1">
+                                            <p class="note-text margin-left-1">Comments you provide are included in generated documents such as security plans. To communicate between users without impacting generated documents, use Notes instead.</p>
+                                            <div class="sib-card margin-top-0">
+                                                <div>
+                                                    <div>
+                                                        <p>Develop, document, and disseminate to stakeholders, an audit and accountability policy</p>
+                                                        <div class="grid-x">
+                                                            <div class="cell large-6">
+                                                                <label>Control Status</label>
+                                                                <div>
+                                                                    <input type="checkbox" id="cs-1" class="sib-check secondary"/>
+                                                                    <label for="cs-1" class="inline"> Develop</label>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="checkbox" id="cs-2" class="sib-check secondary"/>
+                                                                    <label for="cs-2" class="inline"> Document</label>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="checkbox" id="cs-3" class="sib-check secondary"/>
+                                                                    <label for="cs-3" class="inline"> Disseminat</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell large-6">
+                                                                <label>Comments <span class="has-tip" data-tooltip title="Comments are added to security plans and should be worded accordingly. Since security plans are often shared with stakeholders without a need to know the details, choose wording that doesn’t expose too much information."><i class="fas fa-info-circle"></i></span></label>
+                                                                <div class="floated-label-wrapper">
+                                                                    <label>Comments for Implemented Controls</label>
+                                                                    <textarea placeholder="Comments for Implemented Controls"></textarea>
+                                                                </div>
+                                                                <div>
+                                                                    <label>Comments for Inherited Controls</label>
+                                                                    <p class="note-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-accordion margin-bottom-0">
+                                                            <span>+ View</span><span class="hide">- Hide</span> stakeholder input on Audit and Accountability
+                                                            <div class="text-accordion-content hide padding-bottom-0">
+                                                                <div class="">
+                                                                    <p>No user activities have been assigned. <a href="#" data-open="engageStakeholdersAuditModal" onClick="event.preventDefault();">Engage Stakeholders</a> to assign activities</p>
+                                                                </div>
+                                                                <div class="hide">
+                                                                    <div class="flex-container  collaborator-analysis">
+                                                                        <div class="flex-child-shrink user-image-placeholder">
+                                                                            <i class="fas fa-3x fa-user-circle"></i>
+                                                                        </div>
+                                                                        <div class="flex-child-grow">
+                                                                            <label>Troy Hollar</label>
+                                                                            <div class="margin-bottom-2"><label class="inline">Level of concern:</label> None</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex-container  collaborator-analysis">
+                                                                        <div class="flex-child-shrink user-image-placeholder">
+                                                                            <i class="fas fa-3x fa-user-circle"></i>
+                                                                        </div>
+                                                                        <div class="flex-child-grow">
+                                                                            <label>William Seccombe</label>
+                                                                            <div><label class="inline">Level of concern:</label> None</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-accordion margin-bottom-0">
+                                                            <span>+ View</span><span class="hide">- Hide</span> notes
+                                                            <div class="text-accordion-content hide padding-bottom-0">
+                                                                <div class="cell large-6">
+                                                                    <div>
+                                                                        <label>Notes for Implemented Controls </label> 
+                                                                        <p class="note-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <label>Notes for Inherited Controls </label> 
+                                                                        <p class="note-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hide">
+                                                    <div class="float-right nested-card-actions">
+                                                        <button class="button clear secondary" onClick="sib.enableItem(this);">Enable</button>
+                                                    </div>
+                                                    <div class="flex-container">
+                                                        <div class="flex-child-shrink margin-right-1">
+                                                            <i class="fas fa-ban fa-2x"></i>
+                                                        </div>
+                                                        <div class="flex-child-grow">
+                                                            <p class="margin-top-0">
+                                                                Business Impact Assessment for <span class="bold">Lost Sales and/or Income</span> is disabled
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="sib-card margin-top-3">
+                                                <div>
+                                                    <div>
+                                                        <p>The audit and accountability policy addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance.</p>
+                                                        <div class="grid-x">
+                                                            <div class="cell large-6">
+                                                                <label>Control Status</label>
+                                                                <div>
+                                                                    <input type="checkbox" id="csb-1" class="sib-check secondary"/>
+                                                                    <label for="csb-1" class="inline"> Purpose</label>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="checkbox" id="csb-2" class="sib-check secondary"/>
+                                                                    <label for="csb-2" class="inline"> Scope</label>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="checkbox" id="csb-3" class="sib-check secondary"/>
+                                                                    <label for="csb-3" class="inline"> Roles</label>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="checkbox" id="csb-4" class="sib-check secondary"/>
+                                                                    <label for="csb-4" class="inline"> Responsibilities</label>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="checkbox" id="csb-5" class="sib-check secondary"/>
+                                                                    <label for="csb-5" class="inline"> Management Commitment</label>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="checkbox" id="csb-6" class="sib-check secondary"/>
+                                                                    <label for="csb-6" class="inline"> Coordination Among Organizational Entities</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell large-6">
+                                                                <label>Comments <span class="has-tip" data-tooltip title="Comments are added to security plans and should be worded accordingly. Since security plans are often shared with stakeholders without a need to know the details, choose wording that doesn’t expose too much information."><i class="fas fa-info-circle"></i></span></label>
+                                                                <div class="floated-label-wrapper">
+                                                                    <label>Comments for Implemented Controls</label>
+                                                                    <textarea placeholder="Comments for Implemented Controls"></textarea>
+                                                                </div>
+                                                                <div>
+                                                                    <label>Comments for Inherited Controls</label>
+                                                                    <p class="note-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-accordion margin-bottom-0">
+                                                            <span>+ View</span><span class="hide">- Hide</span> stakeholder input on Audit and Accountability
+                                                            <div class="text-accordion-content hide padding-bottom-0">
+                                                                <div class="">
+                                                                    <p>No user activities have been assigned. <a href="#" data-open="engageStakeholdersAuditModal" onClick="event.preventDefault();">Engage Stakeholders</a> to assign activities</p>
+                                                                </div>
+                                                                <div class="hide">
+                                                                    <div class="flex-container  collaborator-analysis">
+                                                                        <div class="flex-child-shrink user-image-placeholder">
+                                                                            <i class="fas fa-3x fa-user-circle"></i>
+                                                                        </div>
+                                                                        <div class="flex-child-grow">
+                                                                            <label>Troy Hollar</label>
+                                                                            <div class="margin-bottom-2"><label class="inline">Level of concern:</label> None</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex-container  collaborator-analysis">
+                                                                        <div class="flex-child-shrink user-image-placeholder">
+                                                                            <i class="fas fa-3x fa-user-circle"></i>
+                                                                        </div>
+                                                                        <div class="flex-child-grow">
+                                                                            <label>William Seccombe</label>
+                                                                            <div><label class="inline">Level of concern:</label> None</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-accordion margin-bottom-0">
+                                                            <span>+ View</span><span class="hide">- Hide</span> notes
+                                                            <div class="text-accordion-content hide padding-bottom-0">
+                                                                <div class="cell large-6">
+                                                                    <div>
+                                                                        <label>Notes for Implemented Controls </label> 
+                                                                        <p class="note-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <label>Notes for Inherited Controls </label> 
+                                                                        <p class="note-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hide">
+                                                    <div class="float-right nested-card-actions">
+                                                        <button class="button clear secondary" onClick="sib.enableItem(this);">Enable</button>
+                                                    </div>
+                                                    <div class="flex-container">
+                                                        <div class="flex-child-shrink margin-right-1">
+                                                            <i class="fas fa-ban fa-2x"></i>
+                                                        </div>
+                                                        <div class="flex-child-grow">
+                                                            <p class="margin-top-0">
+                                                                Business Impact Assessment for <span class="bold">Lost Sales and/or Income</span> is disabled
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Incident Response</a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Maintenance</a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Risk Assessment</a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Contingency Planning</a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Physical &amp; Environmental Protection </a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Configuration Management</a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Assessment, Authorization, &amp; Monitoring</a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Assessment, Authorization, &amp; Monitoring </a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Awareness &amp; Training</a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Program Management</a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Identification &amp; Authentication</a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Access Control</a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">PII Processing &amp; Transparency</a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">System &amp; Services Acquisition</a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Planning</a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Supply Chain Risk Management </a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">System &amp; Communications Protection</a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">System &amp; Information Integrity</a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Personnel Security </a>
+                            <div class="accordion-content" data-tab-content>
+                                Content
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="padding-top-2">
+                        <div class="float-right">
+                            <button class="secondary clear button" onClick="sib.decrementProjectPhase();"><i class="fas fa-chevron-left"></i> &nbsp;Previous Step</button>
+                            <button class="secondary clear button" onClick="sib.incrementProjectPhase();">Save &amp; Continue &nbsp;<i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="cyber-risk-project-page page-3 hide">
+                    <div class="callout info">
+                        <p>
+                            <span class="bold">Risk Analysis</span> is the third step of the cyberrisk management process.<br/><br/>
+                            Risk is a measure of the extent to which an entity is threatened by a potential circumstance or event and is typically a function of the adverse impacts that would arise if the circumstance or event occurs and
+                            the likelihood of occurrence. Information security risks are those risks that arise from the loss of confidentiality, integrity, or availability of information or information systems and reflect the potential adverse
+                            impacts to organizational operations and assets, individuals, or other associated entities.<br/><br/>
+                            The objective of the Risk Analysis step of Risk Management is to produce a register of the risks that will be managed.
+                        </p>
+                    </div>
+                    <h4 class="">Risk Register</h4>
+                    <div class="riskRegisterDefaultMessage">
+                        <div class="flex-container">
+                            <div class="flex-child-shrink padding-right-1"><i class="fas fa-2x fa-question-circle"></i></div>
+                            <div>
+                                <h5>No risks have been added to the register</h5>
+                                Please add risks from the Recommended Risks table below.
+                            </div>
+                        </div>
+                    </div>
+                    <table class="static-table newRiskRow hide">
+                        <thead>
+                            <th><a href="#" class="child-row-control"><i class="fas fa-caret-right fa-lg hide"></i><i class="fas fa-caret-down fa-lg margin-top-1"></i></a></th>
+                            <th>Rating</th>
+                            <th>Risk Statement</th>
+                            <th>Actions</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="child-row-control"><a href="#"><i class="fas fa-caret-right hide fa-lg margin-top-1"></i><i class="fas fa-caret-down fa-lg margin-top-1"></i></a></td>
+                                <td><span class="risk-rating high square secondary">89</span></td>
+                                <td>Risk of reduction in student enrollment from misuse of resources due to the absence of a determination, using the university Data Classification Standard, of which data classifications will be supported by relevant systems and/or devices</td>
+                                <td><button class="button clear secondary deleteRiskStatementButton"><i class="fas fa-trash-alt"></i></button></td>
+                            </tr>
+                            <tr class="child-row odd">
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table class="fixed-table">
+                                        <thead>
+                                            <th>Date</th>
+                                            <th>Likelihood</th>
+                                            <th>Impact</th>
+                                            <th>Unintended Disclosure</th>
+                                            <th>Unauthorized Modification</th>
+                                            <th>Loss of Access</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="today"></span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="callout info margin-top-3">
+                        <p>
+                            The risk recommendations provided below are based on three components:
+                            <ol>
+                                <li><span class="bold">Business impacts identified</span> in the define step of the risk management cycle,</li>
+                                <li><span class="bold">Responses to questions you answered</span> in the assess step, and</li>
+                                <li><span class="bold">Quantitative assessment</span> of threat prevalence and frequency as interpreted by the SibylSoft Threat Assessment Team.</li>
+                            </ol>
+                            This information is combined to create risk statements with ratings as to the severity of each risk. If you haven't already done so, you can complete the business impact assessment on step one and ensure you've identified all implemented controls in step two to get the best possible recommendations from Sibylity.
+                        </p>
+                    </div>
+                    <h4 class="">Risk Reccomendations</h4>
+                    <table class="static-table">
+                        <thead>
+                            <th><a href="#" class="child-row-control"><i class="fas fa-caret-right fa-lg"></i><i class="fas fa-caret-down hide fa-lg"></i></a></th>
+                            <th>Rating</th>
+                            <th>Risk Statement</th>
+                            <th>Actions</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="child-row-control"><a href="#"><i class="fas fa-caret-right fa-lg"></i><i class="fas fa-caret-down hide fa-lg"></i></a></td>
+                                <td><span class="risk-rating high square secondary">89</span></td>
+                                <td>Risk of reduction in student enrollment from unintentional misuse of resources due to insufficient media protection governance or oversight</td>
+                                <td><button class="button clear secondary toggleRiskStatementButton"><i class="fas fa-plus"></i></button><button class="toggleRiskStatementButton button clear hide alert"><i class="fas fa-times"></i></button></td>
+                            </tr>
+                            <tr class="child-row hide odd">
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table class="fixed-table">
+                                        <thead>
+                                            <th>Date</th>
+                                            <th>Likelihood</th>
+                                            <th>Impact</th>
+                                            <th>Unintended Disclosure</th>
+                                            <th>Unauthorized Modification</th>
+                                            <th>Loss of Access</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="today"></span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="child-row-control"><a href="#"><i class="fas fa-caret-right fa-lg"></i><i class="fas fa-caret-down hide fa-lg"></i></a></td>
+                                <td><span class="risk-rating moderate square secondary">59</span></td>
+                                <td>Risk of lost sales and/or income from unintentional misuse of resources due to insufficient media protection governance or oversight.</td>
+                                <td><button class="button clear secondary toggleRiskStatementButton"><i class="fas fa-plus"></i></button><button class="toggleRiskStatementButton button clear hide alert"><i class="fas fa-times"></i></button></td>
+                            </tr>
+                            <tr class="child-row hide odd">
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table class="fixed-table">
+                                        <thead>
+                                            <th>Date</th>
+                                            <th>Likelihood</th>
+                                            <th>Impact</th>
+                                            <th>Unintended Disclosure</th>
+                                            <th>Unauthorized Modification</th>
+                                            <th>Loss of Access</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="today"></span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="child-row-control"><a href="#"><i class="fas fa-caret-right fa-lg"></i><i class="fas fa-caret-down hide fa-lg"></i></a></td>
+                                <td><span class="risk-rating moderate square secondary">59</span></td>
+                                <td>Risk of lost sales and/or income from unintentional misuse of resources due to insufficient planning governance or oversight.
+                                </td>
+                                <td><button class="button clear secondary toggleRiskStatementButton"><i class="fas fa-plus"></i></button><button class="toggleRiskStatementButton button clear hide alert"><i class="fas fa-times"></i></button></td>
+                            </tr>
+                            <tr class="child-row hide odd">
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table class="fixed-table">
+                                        <thead>
+                                            <th>Date</th>
+                                            <th>Likelihood</th>
+                                            <th>Impact</th>
+                                            <th>Unintended Disclosure</th>
+                                            <th>Unauthorized Modification</th>
+                                            <th>Loss of Access</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="today"></span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="child-row-control"><a href="#"><i class="fas fa-caret-right fa-lg"></i><i class="fas fa-caret-down hide fa-lg"></i></a></td>
+                                <td><span class="risk-rating moderate square secondary">59</span></td>
+                                <td>Risk of lost sales and/or income from unintentional misuse of resources due to insufficient awareness and training governance or oversight.
+                                </td>
+                                <td><button class="button clear secondary toggleRiskStatementButton"><i class="fas fa-plus"></i></button><button class="toggleRiskStatementButton button clear hide alert"><i class="fas fa-times"></i></button></td>
+                            </tr>
+                            <tr class="child-row hide odd">
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table class="fixed-table">
+                                        <thead>
+                                            <th>Date</th>
+                                            <th>Likelihood</th>
+                                            <th>Impact</th>
+                                            <th>Unintended Disclosure</th>
+                                            <th>Unauthorized Modification</th>
+                                            <th>Loss of Access</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="today"></span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="child-row-control"><a href="#"><i class="fas fa-caret-right fa-lg"></i><i class="fas fa-caret-down hide fa-lg"></i></a></td>
+                                <td><span class="risk-rating moderate square secondary">59</span></td>
+                                <td>Risk of lost sales and/or income from unintentional misuse of resources due to insufficient audit and accountability governance or oversight.
+                                </td>
+                                <td><button class="button clear secondary toggleRiskStatementButton"><i class="fas fa-plus"></i></button><button class="toggleRiskStatementButton button clear hide alert"><i class="fas fa-times"></i></button></td>
+                            </tr>
+                            <tr class="child-row hide odd">
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table class="fixed-table">
+                                        <thead>
+                                            <th>Date</th>
+                                            <th>Likelihood</th>
+                                            <th>Impact</th>
+                                            <th>Unintended Disclosure</th>
+                                            <th>Unauthorized Modification</th>
+                                            <th>Loss of Access</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="today"></span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="child-row-control"><a href="#"><i class="fas fa-caret-right fa-lg"></i><i class="fas fa-caret-down hide fa-lg"></i></a></td>
+                                <td><span class="risk-rating moderate square secondary">59</span></td>
+                                <td>Risk of lost sales and/or income from unintentional misuse of resources due to insufficient assessment, authorization, and monitoring governance or oversight.</td>
+                                <td><button class="button clear secondary toggleRiskStatementButton"><i class="fas fa-plus"></i></button><button class="toggleRiskStatementButton button clear hide alert"><i class="fas fa-times"></i></button></td>
+                            </tr>
+                            <tr class="child-row hide odd">
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table class="fixed-table">
+                                        <thead>
+                                            <th>Date</th>
+                                            <th>Likelihood</th>
+                                            <th>Impact</th>
+                                            <th>Unintended Disclosure</th>
+                                            <th>Unauthorized Modification</th>
+                                            <th>Loss of Access</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="today"></span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="child-row-control"><a href="#"><i class="fas fa-caret-right fa-lg"></i><i class="fas fa-caret-down hide fa-lg"></i></a></td>
+                                <td><span class="risk-rating moderate square secondary">59</span></td>
+                                <td>Risk of lost sales and/or income from unintentional misuse of resources due to insufficient configuration management governance or oversight.</td>
+                                <td><button class="button clear secondary toggleRiskStatementButton"><i class="fas fa-plus"></i></button><button class="toggleRiskStatementButton button clear hide alert"><i class="fas fa-times"></i></button></td>
+                            </tr>
+                            <tr class="child-row hide odd">
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table class="fixed-table">
+                                        <thead>
+                                            <th>Date</th>
+                                            <th>Likelihood</th>
+                                            <th>Impact</th>
+                                            <th>Unintended Disclosure</th>
+                                            <th>Unauthorized Modification</th>
+                                            <th>Loss of Access</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="today"></span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="child-row-control"><a href="#"><i class="fas fa-caret-right fa-lg"></i><i class="fas fa-caret-down hide fa-lg"></i></a></td>
+                                <td><span class="risk-rating low square secondary">39</span></td>
+                                <td>Risk of lost sales and/or income from unintentional misuse of resources due to insufficient maintenance governance or oversight.</td>
+                                <td><button class="button clear secondary toggleRiskStatementButton"><i class="fas fa-plus"></i></button><button class="toggleRiskStatementButton button clear hide alert"><i class="fas fa-times"></i></button></td>
+                            </tr>
+                            <tr class="child-row hide odd">
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table class="fixed-table">
+                                        <thead>
+                                            <th>Date</th>
+                                            <th>Likelihood</th>
+                                            <th>Impact</th>
+                                            <th>Unintended Disclosure</th>
+                                            <th>Unauthorized Modification</th>
+                                            <th>Loss of Access</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="today"></span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="child-row-control"><a href="#"><i class="fas fa-caret-right fa-lg"></i><i class="fas fa-caret-down hide fa-lg"></i></a></td>
+                                <td><span class="risk-rating low square secondary">39</span></td>
+                                <td>Risk of lost sales and/or income from unintentional technology failure due to insufficient physical and environmental protection governance or oversight.</td>
+                                <td><button class="button clear secondary toggleRiskStatementButton"><i class="fas fa-plus"></i></button><button class="toggleRiskStatementButton button clear hide alert"><i class="fas fa-times"></i></button></td>
+                            </tr>
+                            <tr class="child-row hide odd">
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table class="fixed-table">
+                                        <thead>
+                                            <th>Date</th>
+                                            <th>Likelihood</th>
+                                            <th>Impact</th>
+                                            <th>Unintended Disclosure</th>
+                                            <th>Unauthorized Modification</th>
+                                            <th>Loss of Access</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="today"></span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="child-row-control"><a href="#"><i class="fas fa-caret-right fa-lg"></i><i class="fas fa-caret-down hide fa-lg"></i></a></td>
+                                <td><span class="risk-rating low square secondary">39</span></td>
+                                <td>Risk of lost sales and/or income from unintentional technology failure due to insufficient contingency planning governance or oversight.</td>
+                                <td><button class="button clear secondary toggleRiskStatementButton"><i class="fas fa-plus"></i></button><button class="toggleRiskStatementButton button clear hide alert"><i class="fas fa-times"></i></button></td>
+                            </tr>
+                            <tr class="child-row hide odd">
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table class="fixed-table">
+                                        <thead>
+                                            <th>Date</th>
+                                            <th>Likelihood</th>
+                                            <th>Impact</th>
+                                            <th>Unintended Disclosure</th>
+                                            <th>Unauthorized Modification</th>
+                                            <th>Loss of Access</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="today"></span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="child-row-control"><a href="#"><i class="fas fa-caret-right fa-lg"></i><i class="fas fa-caret-down hide fa-lg"></i></a></td>
+                                <td><span class="risk-rating low square secondary">35</span></td>
+                                <td>Risk of lost sales and/or income from unintentional non-compliance due to insufficient access control governance or oversight.</td>
+                                <td><button class="button clear secondary toggleRiskStatementButton"><i class="fas fa-plus"></i></button><button class="toggleRiskStatementButton button clear hide alert"><i class="fas fa-times"></i></button></td>
+                            </tr>
+                            <tr class="child-row hide odd">
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table class="fixed-table">
+                                        <thead>
+                                            <th>Date</th>
+                                            <th>Likelihood</th>
+                                            <th>Impact</th>
+                                            <th>Unintended Disclosure</th>
+                                            <th>Unauthorized Modification</th>
+                                            <th>Loss of Access</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="today"></span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="child-row-control"><a href="#"><i class="fas fa-caret-right fa-lg"></i><i class="fas fa-caret-down hide fa-lg"></i></a></td>
+                                <td><span class="risk-rating low square secondary">35</span></td>
+                                <td>Risk of lost sales and/or income from unintentional non-compliance due to insufficient incident response governance or oversight.</td>
+                                <td><button class="button clear secondary toggleRiskStatementButton"><i class="fas fa-plus"></i></button><button class="toggleRiskStatementButton button clear hide alert"><i class="fas fa-times"></i></button></td>
+                            </tr>
+                            <tr class="child-row hide odd">
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table class="fixed-table">
+                                        <thead>
+                                            <th>Date</th>
+                                            <th>Likelihood</th>
+                                            <th>Impact</th>
+                                            <th>Unintended Disclosure</th>
+                                            <th>Unauthorized Modification</th>
+                                            <th>Loss of Access</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="today"></span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="child-row-control"><a href="#"><i class="fas fa-caret-right fa-lg"></i><i class="fas fa-caret-down hide fa-lg"></i></a></td>
+                                <td><span class="risk-rating low square secondary">32</span></td>
+                                <td>Risk of lost sales and/or income from intentional misuse of resources due to insufficient identification and authentication governance or oversight.</td>
+                                <td><button class="button clear secondary toggleRiskStatementButton"><i class="fas fa-plus"></i></button><button class="toggleRiskStatementButton button clear hide alert"><i class="fas fa-times"></i></button></td>
+                            </tr>
+                            <tr class="child-row hide odd">
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table class="fixed-table">
+                                        <thead>
+                                            <th>Date</th>
+                                            <th>Likelihood</th>
+                                            <th>Impact</th>
+                                            <th>Unintended Disclosure</th>
+                                            <th>Unauthorized Modification</th>
+                                            <th>Loss of Access</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="today"></span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary moderate">Moderate</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                                <td><span class="risk-rating secondary high">High</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="padding-top-2">
+                        <!--div class="float-left">
+                            <button class="secondary button margin-right-1">Get Recommendations</button>
+                        </div-->
+                        <div class="float-right">
+                            <button class="secondary clear button" onClick="sib.decrementProjectPhase();"><i class="fas fa-chevron-left"></i> &nbsp;Previous Step</button>
+                            <button class="secondary clear button" onClick="sib.incrementProjectPhase();">Save &amp; Continue &nbsp;<i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="cyber-risk-project-page page-4 hide">
+                    <div class="callout info">
+                        <p>
+                            <span class="bold">Security planning</span> is the fourth and final step of the cyberrisk management process. <br/><br/>
+                            During this planning and approval step, risk treatment decisions are considered and selected for each risk statement added during risk analysis. Proposed risk treatment decisions should be reviewed with risk owners to ensure they are consistent with risk tolerance goals. <br/><br/>
+                            The end objective of the Security Planning step of Risk Management is to produce an approved information security plan.
+                        </p>
+                        <!--button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                          <span aria-hidden="true">&times;</span>
+                        </button-->
+                    </div>
+                    <h4>Risk Treatment</h4>
+                    <table class="static-table">
+                        <thead>
+                            <th>Rating</th>
+                            <th>Risk Statement</th>
+                            <p class="note-text">Select the treatment that you reccommend for each risk that was added to the Risk Register in step 3.</p>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="risk-rating high square secondary">89</span></td>
+                                <td>Risk of reduction in student enrollment from misuse of resources due to the absence of a determination, using the university Data Classification Standard, of which data classifications will be supported by relevant systems and/or devices</td>
+                            </tr>
+                            <tr class="child-row odd">
+                                <td></td>
+                                <td>
+                                    <div class="flex-container">
+                                        <div class="flex-child-shrink" style="white-space: nowrap;">
+                                            <label>Treatment <span class="has-tip" data-allow-html="true" data-tooltip title="Select a treatment below to view examples and provide more information"><i class="fas fa-info-circle"></i></span></label>
+                                            <div>
+                                                <input type="radio" id="tr-1" class="sib-radio riskTreatmentOption transfer secondary" name="risk-treatment-1"/>
+                                                <label for="tr-1" class="inline">Transfer the Risk</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="tr-2" class="sib-radio riskTreatmentOption avoid secondary" name="risk-treatment-1"/>
+                                                <label for="tr-2" class="inline">Avoid the Risk</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="tr-3" class="sib-radio riskTreatmentOption accept secondary" name="risk-treatment-1"/>
+                                                <label for="tr-3" class="inline">Accept the Risk</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="tr-4" class="sib-radio riskTreatmentOption mitigate secondary" name="risk-treatment-1"/>
+                                                <label for="tr-4" class="inline">Mitigate the Risk</label>
+                                            </div>
+                                        </div>
+                                        <div class="padding-left-2" style="width: 100%;">
+                                            <div class="riskTreatments">
+                                                <div class="transfer hide">
+                                                    <div class="note-text">
+                                                        Risk Transfer Examples:
+                                                        <ul>
+                                                            <li>Purchase cybersecurity insurance.</li><li>Pursue legal options (e.g., business associate agreement (BAA)).</li>
+                                                            <li>Transfer risk to a vendor or service provider, ensuring the party can handle the risk.</li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="floated-label-wrapper">
+                                                        <label>Treatment Explanation<span class="required">*</span></label>
+                                                        <textarea placeholder="Explain how the risk will be transferred"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="avoid hide">
+                                                    <div class="note-text">
+                                                        Risk Avoidance Examples: 
+                                                        <ul>
+                                                            <li>Change project scope.</li>
+                                                            <li>Change project objectives.</li>
+                                                            <li>Clarify requirements to eliminate ambiguities and misunderstandings.</li>
+                                                            <li>Gain expertise to remove information security risks.</li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="floated-label-wrapper">
+                                                        <label>Treatment Explanation<span class="required">*</span></label>
+                                                        <textarea placeholder="Explain how the risk will be avoided"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="accept hide">      
+                                                    <div class="note-text">                                          
+                                                        Risk Acceptance Examples: 
+                                                        <ul>
+                                                            <li>The value to the business of accepting the risk outweighs the potential impact of the risk.</li>
+                                                            <li>The acceptance of risk is a strategy like any other and should be documented and communicated.</li>
+                                                            <li>Risk acceptance can be passive. In this case, the consequences are dealt with after the risk is realized.</li>
+                                                        </ul>
+                                                    </div>  
+                                                    <div class="floated-label-wrapper">
+                                                        <label>Treatment Explanation<span class="required">*</span></label>
+                                                        <textarea placeholder="Explain why the risk will be accepted"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="mitigate hide">
+                                                    <p class="note-text">Risk Mitigation: Technical, administrative, and physical controls implemented to reduce likelihood and/orminimize impact. Select from suggested mitigations or add your own.</p>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-1" class="sib-check secondary"/>
+                                                        <label for="mit-1" class="inline mitigationCheckboxLabel">
+                                                            <div class="">The media protection procedure review procedure shall be updated to require review at least annually and when a change is made that might impact the effectiveness or applicability of the procedures. </div>
+                                                        </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-1b" class="sib-check secondary"/>
+                                                        <label for="mit-1b" class="inline mitigationCheckboxLabel">
+                                                            <div class="">The media protection procedure review procedure shall be updated to require review at least annually. </div>
+                                                        </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-1c" class="sib-check secondary"/>
+                                                        <label for="mit-1c" class="inline mitigationCheckboxLabel">
+                                                            <div class="">The media protection policy review procedure shall be updated to require review at least annually.</div>
+                                                        </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-1d" class="sib-check secondary"/>
+                                                        <label for="mit-1d" class="inline mitigationCheckboxLabel">
+                                                            <div class="">The media protection policy review procedure shall be updated to require review at least annually and when a change is made that might impact the effectiveness or applicability of the policy.</div>
+                                                        </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-2" class="sib-check secondary"/>
+                                                        <label for="mit-2" class="inline mitigationCheckboxLabel"> <div class="">An media protection policy shall be developed.</div>
+                                                            </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-3" class="sib-check secondary"/>
+                                                        <label for="mit-3" class="inline mitigationCheckboxLabel"><div class="">The media protection policy shall be documented.</div>
+                                                            </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-4" class="sib-check secondary"/>
+                                                        <label for="mit-4" class="inline mitigationCheckboxLabel"><div class="">The media protection policy shall be disseminated to stakeholders.</div>
+                                                            </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-5" class="sib-check secondary"/>
+                                                        <label for="mit-5" class="inline mitigationCheckboxLabel"><div class="">The media protection policy shall be evaluated against standards and a determination will be made concerning its sufficiency. </div>
+                                                            </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-5b" class="sib-check secondary"/>
+                                                        <label for="mit-5b" class="inline mitigationCheckboxLabel"><div class="">The media protection policy shall be evaluated against guidelines and a determination will be made concerning its sufficiency. </div>
+                                                            </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-5c" class="sib-check secondary"/>
+                                                        <label for="mit-5c" class="inline mitigationCheckboxLabel"><div class="">The media protection policy shall be evaluated against regulations and a determination will be made concerning its sufficiency. </div>
+                                                            </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-5d" class="sib-check secondary"/>
+                                                        <label for="mit-5d" class="inline mitigationCheckboxLabel"><div class="">The media protection policy shall be evaluated against policies and a determination will be made concerning its sufficiency. </div>
+                                                            </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-5e" class="sib-check secondary"/>
+                                                        <label for="mit-5e" class="inline mitigationCheckboxLabel"><div class="">The media protection policy shall be evaluated against executive orders and a determination will be made concerning its sufficiency. </div>
+                                                            </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-5f" class="sib-check secondary"/>
+                                                        <label for="mit-5f" class="inline mitigationCheckboxLabel"><div class="">The media protection policy shall be evaluated against directives and a determination will be made concerning its sufficiency. </div>
+                                                            </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-5g" class="sib-check secondary"/>
+                                                        <label for="mit-5g" class="inline mitigationCheckboxLabel"><div class="">The media protection policy shall be evaluated against applicable laws and a determination will be made concerning its sufficiency. </div>
+                                                            </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-5h" class="sib-check secondary"/>
+                                                        <label for="mit-5h" class="inline mitigationCheckboxLabel"><div class="">The media protection policy shall be updated to identify and explain any relevant compliance drivers. </div>
+                                                            </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-5i" class="sib-check secondary"/>
+                                                        <label for="mit-5i" class="inline mitigationCheckboxLabel"><div class="">The media protection policy shall be updated to include an assertion of management commitment.</div>
+                                                        </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-6" class="sib-check secondary"/>
+                                                        <label for="mit-6" class="inline mitigationCheckboxLabel"><div class="">The media protection policy shall be updated to include listings of organizational collaborators involved in media protection and explanations of the roles they play.</div>
+                                                             </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-7" class="sib-check secondary"/>
+                                                        <label for="mit-7" class="inline mitigationCheckboxLabel"><div class="">The media protection policy shall be updated to include a listing of important roles.</div>
+                                                            </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-8" class="sib-check secondary"/>
+                                                        <label for="mit-8" class="inline mitigationCheckboxLabel"><div class="">The media protection policy shall be updated to include a description of the responsibilities associated with important roles.</div>
+                                                            </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-9" class="sib-check secondary"/>
+                                                        <label for="mit-9" class="inline mitigationCheckboxLabel"><div class="">The media protection policy shall be updated to include an explanation of its purpose.</div>
+                                                            </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-10" class="sib-check secondary"/>
+                                                        <label for="mit-10" class="inline mitigationCheckboxLabel"><div class="">The media protection policy shall be updated to include an explanation of its scope.</div>
+                                                        </label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-11" class="sib-check secondary"/>
+                                                        <label for="mit-11" class="inline mitigationCheckboxLabel"><div class="">An official shall be designated to manage the development, documentation, and dissemination of the media protection policy. </div></label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-11b" class="sib-check secondary"/>
+                                                        <label for="mit-11b" class="inline mitigationCheckboxLabel"><div class="">An official shall be designated to manage the development, documentation, and dissemination of the media protection procedures.</div></label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" id="mit-11c" class="sib-check secondary"/>
+                                                        <label for="mit-11c" class="inline mitigationCheckboxLabel"><div class="">Procedures shall be developed to facilitate the implementation of the media protection policy and associated media protection controls.</div></label>
+                                                    </div>
+                                                    <div class="floated-label-wrapper">
+                                                        <label>More Information<span class="required">*</span></label>
+                                                        <textarea placeholder="Clarify or add additional mitigations"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="padding-top-2">
+                        <div class="float-left">
+                            <button class="secondary hollow button margin-right-1" data-open="previewPlanModal"><i class="fas fa-eye"></i> &nbsp; Preview Plan</button>
+                            <button class="secondary button margin-right-1" data-open="requestPlanApprovalModal"><i class="fas fa-check"></i> &nbsp; Request Approval</button>
+                        </div>
+                        <div class="float-right">
+                            <button class="secondary clear button" onClick="sib.decrementProjectPhase();"><i class="fas fa-chevron-left"></i> &nbsp;Previous Step</button>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+          </div>
+        </div>
+        {{> footer }}
+    </section>
+  </div>
+</div>
+<!-- Modals -->
+{{> add-stakeholder }}
+{{> edit-security-categorization }}
+{{> edit-project-details }}
+{{> edit-business-impact-analysis }}
+{{> edit-information-type-analysis }}
+{{> learn-more }}
+{{> select-information-categories }}
+{{> engage-stakeholders-business-impacts }}
+{{> engage-stakeholders-information-types }}
+{{> engage-stakeholders-audit }}
+{{> manage-common-control-groups }}
+{{> preview-plan }}
+{{> request-plan-approval }}
+

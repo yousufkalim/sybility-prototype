@@ -1,0 +1,43 @@
+
+<div class="reveal" id="engageStakeholdersModal" data-reveal>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h5>Add Common Control Groups</h5>
+  <div class="modalContent">
+    <p class="note-text">Note: selected stakeholders will receive an invitation to complete activites designed to assist them in making meaningful contributions in these analyses. Return to the Project Stakeholders panel to add additional stakeholders, if needed. They will be able to participate based upon the stakeholder type you select for them.</p>
+    <div class="grid-x grid-margin-x">
+        <div class="cell large-12">
+          <label for="gn-input">Stakeholder Type</label>
+          <ul class="no-bullet">
+              <li>
+                  <input type="checkbox" id="informationTypeResourceOwner" class="sib-check secondary"/>
+                  <label for="informationTypeResourceOwner" class="inline">  Resource Owner</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="informationTypeApprovers" class="sib-check secondary"/>
+                  <label for="informationTypeApprovers" class="inline">  Approvers</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="informationTypeBusinessStakeholders" class="sib-check secondary"/>
+                  <label for="informationTypeBusinessStakeholders" class="inline">  Business Stakeholders</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="informationTypeTechnicalStakeholders" class="sib-check secondary"/>
+                  <label for="informationTypeTechnicalStakeholders" class="inline">  Technical Stakeholders</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="informationTypeUserStakeholders" class="sib-check secondary"/>
+                  <label for="informationTypeUserStakeholders" class="inline">  User Stakeholders</label>
+              </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+  <div class="modalFooter">
+    <div class="float-right">
+      <button class="button clear secondary" data-close>Cancel</button>
+      <button class="button primary secondary" data-close onClick="sib.displaySuccessToast('Stakeholder activities sent');">Engage</button>
+    </div>
+  </div>
+</div>

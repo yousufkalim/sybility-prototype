@@ -1,0 +1,17 @@
+<footer class="sib-footer">
+    <div class="text-center footer-links padding-left-2 padding-bottom-1">
+        <a class="small" href="http://sibylsoft.com">Sibylsoft.com</a> 
+        <a class="small" href="#" data-open="termsOfUseModal">Terms of Use</a> 
+        <a class="small" href="#" data-open="privacyPolicyModal">Privacy Policy</a>
+    </div>
+    <div class="text-center padding-bottom-1 small">
+        © 2021 Sibylsoft. All rights reserved.
+    </div>
+    <div class="text-center {{#ifpage 'login'}} hide {{/ifpage}}">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+</footer>
+{{> terms-of-use}}
+{{> privacy-policy}}

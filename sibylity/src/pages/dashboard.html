@@ -1,0 +1,266 @@
+
+<div class="flex-container">
+  <!--?php include 'components/leftnav.php'; ?-->
+  {{> leftnav}}
+  <div class="flex-child-grow">
+    <!--?php include 'components/topbar.php'; ?-->
+    {{> topbar}}
+    <section class="main dashboard-container">
+        <div class="grid-x">
+          <div class="cell large-8">
+            <div class="sib-card">
+              <h5>Overview</h5>
+              <div class="grid-x margin-top-3">
+                <div class="cell large-4">
+                    <div class="sc-gauge">
+                      <div class="sc-background">
+                        <div class="sc-percentage sc-50"></div>
+                        <div class="sc-mask"></div>
+                        <span class="sc-value">50%</span>
+                      </div>
+                      <span class="sc-min"></span>
+                      <span class="sc-max"></span>
+                      <p>
+                        Employees have <br/>
+                        Collaborated
+                      </p>
+                    </div>
+                </div>
+                <div class="cell large-4">
+                  <div class="sc-gauge">
+                    <div class="sc-background">
+                      <div class="sc-percentage sc-25"></div>
+                      <div class="sc-mask"></div>
+                      <span class="sc-value">24%</span>
+                    </div>
+                    <span class="sc-min"></span>
+                    <span class="sc-max"></span>
+                    <p>
+                      Identified Vulnerabilities Mitigated
+                    </p>
+                  </div>
+                </div>
+                <div class="cell large-4">
+                  <div class="sc-gauge">
+                    <div class="sc-background">
+                      <div class="sc-percentage sc-25"></div>
+                      <div class="sc-mask"></div>
+                      <span class="sc-value">26%</span>
+                    </div>
+                    <span class="sc-min"></span>
+                    <span class="sc-max"></span>
+                    <p>
+                      Activities Completed
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cell large-4">
+            <div class="sib-card position-relative accomplishments-cell">
+              <h5>Accomplishments</h5>
+              <div class="accomplishments-container">
+                <div class="trophy-container">
+                  <div class="value-container">
+                    <h3>53</h3>
+                  </div>
+                </div>
+              </div>
+                <p>Completed Activities</p>
+              <a href="workspace.html" class="float-right">View Workspace</a>
+            </div>
+          </div>
+        </div>
+        <div class="grid-x">
+          <div class="cell large-4">
+            <div class="sib-card">
+              <h5>Collaborator Lookup</h5>
+              <p>Want to get more help? These users can help. </p>
+              <div class="floated-label-wrapper">
+                <label class="show">Organization</label>
+                <select>
+                    <option value="" disabled>Organization</option>
+                    <option selected>Sibylsoft</option>
+                    <option>Organization 2</option>
+                    <option>Organization 3</option>
+                </select>
+              </div>
+              <div class="collaborator-list">
+                <ul class="no-bullet">
+                  <li>
+                    <div>
+                      <label>Sonya Lowry, Risk Manager</label>
+                      <p>sonya@sibylsoft.com</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <label>Teresa Banks, Resource Owner</label>
+                      <p>tbanks@sibylsoft.com</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <label>Troy Hollar, Administrator</label>
+                      <p>troy@sibylsoft.com</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <label>William Seccombe, Risk Manager</label>
+                      <p>will@sibylsoft.com</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <label>Scott Kuehnert, Risk Manager</label>
+                      <p>scott@sibylsoft.com</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="cell large-4">
+            <div class="sib-card">
+              <h5>Trends</h5>
+              <div class="floated-label-wrapper">
+                <label class="show">View</label>
+                <select>
+                    <option value="" disabled>View</option>
+                    <option selected>Total Users in Organization</option>
+                    <option>Number of outstanding tasks</option>
+                    <option>Usage within Organization over time</option>
+                </select>
+              </div>
+              <div>
+                <canvas id="users-chart" height="200"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="cell large-4">
+            <div class="sib-card">
+              <h5>Leaderboard</h5>
+              <div class="leaderboard-list">
+                <ul class="no-bullet">
+                  
+                  <li class="flex-container">
+                    <div class="flex-child-shrink">
+                      <span class="fa fa-star">
+                        <span class="num">15</span>
+                      </span>
+                    </div>
+                    <div class="padding-left-1">
+                      <label>William Seccombe, Risk Manager</label>
+                      <p>will@sibylsoft.com</p>
+                    </div>
+                  </li>
+                  <li class="flex-container">
+                    <div class="flex-child-shrink">
+                      <span class="fa fa-star">
+                        <span class="num">14</span>
+                      </span>
+                    </div>
+                    <div class="padding-left-1">
+                      <label>Scott Kuehnert, Risk Manager</label>
+                      <p>scott@sibylsoft.com</p>
+                    </div>
+                  </li>
+                  <li class="flex-container">
+                    <div class="flex-child-shrink">
+                      <span class="fa fa-star">
+                        <span class="num">12</span>
+                      </span>
+                    </div>
+                    <div class="padding-left-1">
+                      <label>Troy Hollar, Administrator</label>
+                      <p>troy@sibylsoft.com</p>
+                    </div>
+                  </li>
+                  <li class="flex-container">
+                    <div class="flex-child-shrink">
+                      <span class="fa fa-star">
+                        <span class="num">11</span>
+                      </span>
+                    </div>
+                    <div class="padding-left-1">
+                      <label>Teresa Banks, Resource Owner</label>
+                      <p>tbanks@sibylsoft.com</p>
+                    </div>
+                  </li>
+                  <li class="flex-container">
+                    <div class="flex-child-shrink">
+                      <span class="fa fa-star">
+                        <span class="num">9</span>
+                      </span>
+                    </div>
+                    <div class="padding-left-1">
+                      <label>William Seccombe, Risk Manager</label>
+                      <p>will@sibylsoft.com</p>
+                    </div>
+                  </li>
+                  <li class="flex-container">
+                    <div class="flex-child-shrink">
+                      <span class="fa fa-star">
+                        <span class="num">7</span>
+                      </span>
+                    </div>
+                    <div class="padding-left-1">
+                      <label>Troy Hollar, Administrator</label>
+                      <p>troy@sibylsoft.com</p>
+                    </div>
+                  </li>
+                  <li class="flex-container">
+                    <div class="flex-child-shrink">
+                      <span class="fa fa-star">
+                        <span class="num">6</span>
+                      </span>
+                    </div>
+                    <div class="padding-left-1">
+                      <label>Sonya Lowry, Risk Manager</label>
+                      <p>sonya@sibylsoft.com</p>
+                    </div>
+                  </li>
+                  <li class="flex-container">
+                    <div class="flex-child-shrink">
+                      <span class="fa fa-star">
+                        <span class="num">5</span>
+                      </span>
+                    </div>
+                    <div class="padding-left-1">
+                      <label>Scott Kuehnert, Risk Manager</label>
+                      <p>scott@sibylsoft.com</p>
+                    </div>
+                  </li>
+                  <li class="flex-container">
+                    <div class="flex-child-shrink">
+                      <span class="fa fa-star">
+                        <span class="num">3</span>
+                      </span>
+                    </div>
+                    <div class="padding-left-1">
+                      <label>Teresa Banks, Resource Owner</label>
+                      <p>tbanks@sibylsoft.com</p>
+                    </div>
+                  </li>
+                  <li class="flex-container">
+                    <div class="flex-child-shrink">
+                      <span class="fa fa-star">
+                        <span class="num">2</span>
+                      </span>
+                    </div>
+                    <div class="padding-left-1">
+                      <label>Sonya Lowry, Risk Manager</label>
+                      <p>sonya@sibylsoft.com</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{> footer }}
+    </section>
+  </div>
+</div>

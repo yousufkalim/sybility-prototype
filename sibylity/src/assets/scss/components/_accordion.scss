@@ -1,0 +1,54 @@
+.accordion {
+    .accordion-item {
+        &.is-active {
+            & > a {
+                font-weight: bold;
+            }
+        }
+
+        > a {
+            padding-left: 2.5rem;
+            font-size: 1rem;
+            color: $accordion-item-color;
+            background-color: unset;
+
+            &:hover {
+                background-color: inherit;
+                color: inherit;
+            }
+
+            &:before {
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 700;
+                left: 1rem;
+            }
+        }
+    }
+
+    &.secondary {
+        background-color: scale-color($secondary-color, $lightness: 90%);
+    }
+
+    .accordion-content {
+        padding-bottom: 2rem;
+    }
+}
+
+.text-accordion {
+    color: $anchor-color;
+    margin-bottom: 1rem;
+    cursor: pointer;
+
+    > span {
+        pointer-events: none;
+    }
+
+    .text-accordion-content {
+        cursor: default;
+    }
+
+    .text-accordion-content {
+        color: $body-font-color;
+        padding: 1rem;
+    }
+}

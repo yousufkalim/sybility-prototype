@@ -1,0 +1,57 @@
+
+<div class="reveal" id="editProjectModal" data-reveal>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h5>Edit Project Details</h5>
+    <div class="modalContent">
+      <p class="note-text">All fields are required.</p>
+      <div class="grid-x grid-margin-x">
+          <div class="cell large-12">
+              <div class="floated-label-wrapper">
+                  <label for="gn-input" class="show">Project Name</label>
+                  <input type="text" id="gn-input" name="Project Name" placeholder="Project Name" value="Human Resources Process and Data">
+              </div>
+          </div>
+          <div class="cell large-12">
+            <div class="floated-label-wrapper">
+                <label class="show">Responsible Group</label>
+                <select>
+                    <option value="" disabled>Responsible Group</option>
+                    <option selected>Human Resources</option>
+                    <option>Group 2</option>
+                    <option>Group 3</option>
+                </select>
+            </div>
+        </div>
+        <div class="cell large-12">
+            <div class="floated-label-wrapper">
+                <label class="show">Resource Owner</label>
+                <select>
+                    <option value="" disabled selected>Resource Owner</option>
+                    <option selected>Will Seccombe</option>
+                    <option>User 2</option>
+                    <option>User 3</option>
+                </select>
+            </div>
+          </div>
+          <div class="cell large-12">
+            <div class="floated-label-wrapper">
+                <label class="show">Cyber-Risk Manager</label>
+                <select>
+                    <option value="" disabled selected>Cyber-Risk Manager</option>
+                    <option selected>Teresa Banks</option>
+                    <option>User 2</option>
+                    <option>User 3</option>
+                </select>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="modalFooter">
+      <div class="float-right">
+        <button class="button clear secondary" data-close>Cancel</button>
+        <button class="button primary secondary" data-close onClick="sib.displaySuccessToast('Project details updated');">Save</button>
+      </div>
+    </div>
+  </div>

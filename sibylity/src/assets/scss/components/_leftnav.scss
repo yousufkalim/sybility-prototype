@@ -1,0 +1,110 @@
+.sib-leftnav {
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    min-height: 100vh;//100%;
+    box-shadow: 8px 0 10px rgba(167, 162, 162, 0.1);
+    min-width: 17rem;
+    transition: min-width 0.5s ease-out;
+
+    &.collapsed {
+        min-width: 0rem;
+        .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
+            content: '';
+            display: none;
+            border: none;
+        }
+        .accordion-menu .is-accordion-submenu-parent[aria-expanded='true'] > a::after {
+            content: '';
+            display: none;
+            border: none;
+        }
+        .logo-navbar {
+            display: none;
+        }
+        .logo-compact-navbar {
+            max-width: 40%;
+            margin: auto;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        i {
+            display: block;
+            text-align: center;
+            margin-right: 0;
+        }
+
+        li a[role=menuitem] {
+            padding-left: 1rem;
+            text-align: center;
+        }
+    }
+
+    .logo-compact-navbar {
+        display: none;
+    }
+
+    .logo-navbar {
+        max-width: 60%;
+        margin-left: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        display: block;
+    }
+
+    i {
+        margin-right: 1rem;
+    }
+
+    .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
+
+        right: 2rem;
+        font-weight: 700;
+        font-family: "Font Awesome 5 Free";
+        content: "\f053";
+        color: $primary-color;
+        border: 0;
+        top: calc(50% - 0.25rem);
+    }
+
+    .accordion-menu .is-accordion-submenu-parent[aria-expanded='true'] > a::after {
+        transform: rotate(0deg);
+        right: 2rem;
+        font-weight: 700;
+        font-family: "Font Awesome 5 Free";
+        content: "\f078";
+        color: $primary-color;
+        border: 0;
+        top: calc(50% - 0.25rem);
+    }
+
+    li {
+        cursor: pointer;
+
+        a[role=menuitem] {
+            color: #666666;
+            padding-left: 2rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        &.is-selected {
+            background-color: scale-color($primary-color, $lightness: 90%); //lighten($primary-color, 50%);
+            
+            a[role=menuitem]  {
+                color: $primary-color;
+                font-weight: bold;
+            }
+
+            &:hover {
+                background-color: scale-color($primary-color, $lightness: 90%);
+            }
+        }
+
+        ul li a[role=menuitem] {
+            padding-left: 4.25rem;
+        }
+    }
+}

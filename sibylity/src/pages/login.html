@@ -1,0 +1,38 @@
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+          <div class="login-wrapper">
+            <div class="callout alert visibility-hidden" data-closable>
+              <h5>Authentication Failed</h5>
+              <p>Incorrect email address or password. Please check your information and try again.</p>
+              <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="sib-card login-card">
+                <img class="logo-login" src="./assets/img/logo-Sibylity.svg"/>
+                <h6 class="small">Log In</h6>
+                <p>to access the Sibylity Dashboard</p>
+                <form action="dashboard.html" method="GET">
+                  <div class="floated-label-wrapper margin-top-2">
+                    <label for="email-input">Email</label>
+                    <input type="text" id="email-input" name="email input" placeholder="Email">
+                  </div>
+                  <div class="floated-label-wrapper">
+                    <label for="password-input">Password</label>
+                    <input type="password" id="password-input" name="password input" placeholder="Password">
+                    <button class="button secondary clear viewPasswordButton no-hover" type="button"><i class="fas fa-eye"></i><i class="fas fa-eye-slash hide"></i></button>
+                  </div>
+                  <div class="float-right">
+                    <a class="small" href="forgot-password-1.html">Forgot Password?</a>
+                  </div>
+                  <input class="button expanded login-button" type="submit" value="Log In">
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{> footer }}
+    {{> terms-of-use }}
+    {{> privacy-policy }}

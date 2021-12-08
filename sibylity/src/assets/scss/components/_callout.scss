@@ -1,0 +1,61 @@
+.callout {
+    border-radius: 10px;
+    margin: 0 0 1rem 0;
+    
+    &.info {
+        background-color: #F3F8FC;
+        color: #0D3C61;
+
+        &:before {
+            content: '\f05a';
+            color: $secondary-color;
+        }
+
+        label, p {
+            color: #0D3C61;
+        }
+    }
+
+    &.alert {
+        background-color: #FDEBE9;
+        color: #611915;
+
+        &:before {
+            content: '\f12a';
+            color: $alert-color;
+            margin-left: 0.5rem;
+        }
+        
+        label, p {
+            color: #611915;
+        }
+    }
+
+    &.success {
+        background-color: #EDF6ED;
+        color: #1E4620;
+
+        &:before {
+            content: '\f058';
+            color: $success-color;
+        }
+        
+        label, p {
+            color: #1E4620;
+        }
+    }
+
+    &.warning {
+        background-color: #FFF4E5;
+        color: #663B00;
+        
+        &:before {
+            content: '\f071';
+            color: $warning-color;
+        }
+        
+        label, p {
+            color: #663B00;;
+        }
+    }
+}

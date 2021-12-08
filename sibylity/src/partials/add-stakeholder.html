@@ -1,0 +1,41 @@
+
+<div class="reveal" id="addStakeholderModal" data-reveal>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h5>Add Stakeholder</h5>
+  <div class="modalContent">
+    <p class="note-text">All required fields are marked with asterisks (<span class="required">*</span>)</p>
+    <div class="grid-x">
+        <div class="cell large-12">
+          <div class="floated-label-wrapper">
+            <label>User *</label>
+            <select>
+                <option value="" disabled selected>User <span class="required">*</span></option>
+                <option>User 1</option>
+                <option>User 2</option>
+                <option>User 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="cell large-12">
+          <div class="floated-label-wrapper">
+            <label>Stakeholder Type *</label>
+            <select>
+                <option value="" disabled selected>User Role <span class="required">*</span></option>
+                <option>Business Stakeholder</option>
+                <option>Technical Stakeholder</option>
+                <option>User Stakeholder</option>
+            </select>
+          </div>
+        </div>
+        <div class="cell large-12">
+          <label class="inline"><input type="checkbox"/> This user will have designated cybersecurity responsibilities <span class="has-tip" data-tooltip title="xx"><i class="fas fa-info-circle"></i></span></label>
+        </div>
+    </div>
+  </div>
+  <div class="modalFooter float-right">
+    <button class="button secondary clear" data-close >Cancel</button>
+    <button class="button secondary" data-close onClick="sib.displaySuccessToast('Stakeholder added'); sib.toggleStakeholdersTables();">Add</button>
+  </div>
+</div>

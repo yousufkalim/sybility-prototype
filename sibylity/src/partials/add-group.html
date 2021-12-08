@@ -1,0 +1,91 @@
+
+<div class="reveal large" id="addGroupModal" data-reveal>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h5>Add Group</h5>
+    <div class="modalContent">
+      <p class="note-text">All required fields are marked with asterisks (<span class="required">*</span>)</p>
+      <div class="grid-x grid-margin-x">
+          <div class="cell large-12">
+              <div class="floated-label-wrapper">
+                  <label for="gn-input">Group Name <span class="required">*</span></label>
+                  <input type="text" id="gn-input" name="Group Name" placeholder="Group Name *">
+              </div>
+          </div>
+          <div class="cell large-6">
+            <div class="floated-label-wrapper">
+                <label for="gc-input">Group Code <span class="required">*</span></label>
+                <input type="text" id="gc-input" name="Group Code" placeholder="Group Code *">
+            </div>
+        </div>
+          <div class="cell large-6">
+            <div class="floated-label-wrapper">
+                <label>Parent Group</label>
+                <select>
+                    <option value="" disabled selected>Parent Group</option>
+                    <option>None</option>
+                    <option>Parent Group 1</option>
+                    <option>Parent Group 2</option>
+                    <option>Parent Group 3</option>
+                </select>
+            </div>
+          </div>
+         
+          <div class="cell large-12 padding-top-1">
+                <h5 class="float-left margin-top-1">Members</h5>
+                <div class="membersTableContainer">
+                  <button class="button hollow float-right table-add-button" data-open="addMemberModal">Add Member</button>
+                  <table id="membersTable" class="display dataTable">
+                      <thead>
+                          <tr>
+                              <th>User</th>
+                              <th>Role(s)</th>
+                              <th>Status</th>
+                              <th>Actions</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                  </table>
+               </div>
+               <div class="membersTableEnteredContainer hide">
+                  <button class="button hollow float-right table-add-button" data-open="addMemberModal">Add Member</button>
+                  <table id="membersTableEntered" class="display dataTable">
+                      <thead>
+                          <tr>
+                              <th>User</th>
+                              <th>Role(s)</th>
+                              <th>Status</th>
+                              <th>Actions</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>Airi Satou</td>
+                              <td>Group Admin, <br/>Cyber-Risk Manager</td>
+                              <td>Pending</td>
+                              <td>
+                              <button class="button clear" data-open="roleDeletionConfirmationModal"><i class="fas fa-trash"></i></button>
+                              </td>
+                          </tr>
+                          <!--tr>
+                              <td>Colleen Hurst</td>
+                              <td>Cyber-Risk Manager</td>
+                              <td>Pending</td>
+                              <td>
+                                  <button class="button clear" data-open="roleDeletionConfirmationModal"><i class="fas fa-trash"></i></button>
+                              </td>
+                          </tr-->
+                      </tbody>
+                  </table>
+               </div>
+          </div>
+      </div>
+    </div>
+    <div class="modalFooter float-right">
+      <button class="button clear" data-close>Cancel</button>
+      <button class="button primary" data-close onClick="sib.displaySuccessToast('Group created');">Save</button>
+    </div>
+  </div>
+  {{> add-member }}

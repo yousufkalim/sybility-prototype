@@ -1,0 +1,23 @@
+<!--div class="title-bar" data-responsive-toggle="top-bar" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle="top-bar"></button>
+  <div class="title-bar-title">Menu</div>
+</div-->
+
+<div class="top-bar sib-top-bar">
+  <div class="top-bar-left">
+    <button class="button clear" type="button" onClick="sib.collapseLeftNav();"><i class="fas fa-bars"></i></button>
+  </div>
+  <div class="top-bar-right">
+    <button class="button clear" type="button" data-toggle="user-menu" data-options="align:down"><i class="fas fa-lg fa-user-circle"></i></button>
+    <div class="dropdown-pane" id="user-menu" data-dropdown data-auto-focus="true">
+      <ul class="vertical menu drop-down" data-close-on-click>
+        <li><a href="#" role="menuitem" data-open="userProfileModal" data-close>User Profile</a></li>
+        <li><a href="#" role="menuitem" data-open="applicationSettingsModal" data-close>Notification Settings</a></li>
+        <li><a href="login.html" role="menuitem" data-close>Log Out</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{{> user-profile}}
+{{> application-settings}}

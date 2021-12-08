@@ -1,0 +1,36 @@
+
+<div class="reveal" id="editCommonControlsGroupModal" data-reveal>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h5>Edit Common Controls Group Details</h5>
+    <div class="modalContent">
+      <p class="note-text">All fields are required.</p>
+      <div class="grid-x grid-margin-x">
+          <div class="cell large-12">
+              <div class="floated-label-wrapper disabled">
+                  <label for="gn-input" class="show">Group Name</label>
+                  <input type="text" id="gn-input" name="Project Name" placeholder="Project Name" value="Human Resources Process and Data" disabled>
+              </div>
+          </div>
+          <div class="cell large-12">
+            <div class="floated-label-wrapper disabled">
+                <label for="gn-input" class="show">Group Code</label>
+                <input type="text" id="gn-input" name="Project Name" placeholder="Project Name" value="Human Resources Process and Data" disabled>
+            </div>
+          </div>
+          <div class="cell large-12">
+            <div class="floated-label-wrapper">
+                <label>Description</label>
+                <textarea placeholder="Control Group Description"></textarea>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="modalFooter">
+      <div class="float-right">
+        <button class="button clear secondary" data-close>Cancel</button>
+        <button class="button primary secondary" data-close onClick="sib.displaySuccessToast('Common Control Group details updated');">Save</button>
+      </div>
+    </div>
+  </div>

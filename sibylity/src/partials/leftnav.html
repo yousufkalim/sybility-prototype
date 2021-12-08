@@ -1,0 +1,36 @@
+<div class="flex-child-shrink sib-leftnav">
+  <img class="logo-navbar" src="assets/img/logo-Sibylity.svg"/>
+  <img class="logo-compact-navbar" src="assets/img/logo-SibylSoft-icon.svg"/>
+  <ul class="vertical menu hide-for-small" data-responsive-menu="drilldown medium-accordion">
+    
+    <li {{#ifpage 'dashboard'}} class="is-selected" {{/ifpage}}>
+      <a href="dashboard.html" class="hide-for-small"><i class="fas fa-chart-area"></i> Dashboard</a>
+    </li>
+    <li {{#ifpage 'workspace'}} class="is-selected" {{/ifpage}}>
+      <a href="workspace.html"><i class="fas fa-toolbox"></i> Workspace</a>
+    </li>
+    <li>
+      <a href="#"><i class="fas fa-cogs"></i>Cyber-Risk</a>
+      <ul class="vertical menu {{#ifpage 'projects' 'controls' 'edit-project'}}is-active{{/ifpage}}">
+        <li {{#ifpage 'projects' 'edit-project'}} class="is-selected" {{/ifpage}}><a href="projects.html" role="menuitem">Projects</a></li>
+        <li {{#ifpage 'controls'}} class="is-selected" {{/ifpage}}><a href="controls.html" role="menuitem">Controls</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#"><i class="fas fa-lock"></i> Administrator</a>
+      <ul class="vertical menu {{#ifpage 'users' 'groups' 'settings'}}is-active{{/ifpage}}">
+        <li {{#ifpage 'users'}} class="is-selected" {{/ifpage}}><a href="users.html" role="menuitem">Users</a></li>
+        <li {{#ifpage 'groups'}} class="is-selected" {{/ifpage}}><a href="groups.html" role="menuitem">Groups</a></li>
+        <li {{#ifpage 'settings'}} class="is-selected" {{/ifpage}}><a href="settings.html" role="menuitem">Settings</a></li>
+      </ul>
+    </li>
+    <!--li>
+      <a href="#"><i class="fas fa-user"></i> Account Settings</a>
+      <ul class="vertical menu">
+        <li><a href="#" role="menuitem">User Profile</a></li>
+        <li><a href="#" role="menuitem">Application Settings</a></li>
+        <li><a href="#" role="menuitem">Logout</a></li>
+      </ul>
+    </li-->
+  </ul>
+</div>

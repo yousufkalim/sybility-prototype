@@ -1,0 +1,55 @@
+
+<div class="reveal" id="editSecurityCategorizationModal" data-reveal>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h5>Edit Security Categorization</h5>
+  <div class="modalContent">
+    <p class="note-text">All required fields are marked with asterisks (<span class="required">*</span>)</p>
+    <div class="grid-x">
+        <div class="cell large-12">
+          <div class="floated-label-wrapper">
+            <label>Confidentiality *</label>
+            <select>
+                <option value="" disabled selected>Confidentiality <span class="required">*</span></option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="cell large-12">
+          <div class="floated-label-wrapper">
+            <label>Integrity *</label>
+            <select>
+                <option value="" disabled selected>Integrity <span class="required">*</span></option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="cell large-12">
+            <div class="floated-label-wrapper">
+              <label>Availability *</label>
+              <select>
+                  <option value="" disabled selected>Availability <span class="required">*</span></option>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+              </select>
+            </div>
+          </div>
+        <div class="cell large-12">
+            <div class="floated-label-wrapper">
+                <label>Comments</label>
+                <textarea placeholder="Comments"></textarea>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="modalFooter float-right">
+    <button class="button clear secondary" data-close>Cancel</button>
+    <button class="button primary secondary" data-close onClick="sib.displaySuccessToast('Security Categorization updated');">Save</button>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+
+<div class="reveal large" id="editUserModal" data-reveal>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h5>Edit User</h5>
+  <div class="modalContent">
+    <div class="grid-x grid-margin-x">
+        <div class="cell large-12">
+            <div class="floated-label-wrapper">
+                <label for="fn-input" class="show">Name <span class="required">*</span></label>
+                <input type="text" id="fn-input" name="Name" placeholder="Name *" value="Airi Satou">
+            </div>
+        </div>
+        <div class="cell large-12">
+            <div class="floated-label-wrapper">
+                <label for="pn-input">Preferred Name</label>
+                <input type="text" id="pn-input" name="Preferred Name" placeholder="Preferred Name">
+            </div>
+        </div>
+        <div class="cell large-6">
+            <div class="floated-label-wrapper">
+                <label for="title-input" class="show">Title</label>
+                <input type="text" id="title-input" name="Title" placeholder="Title" value="Accountant">
+            </div>
+        </div>
+        <div class="cell large-6">
+            <div class="floated-label-wrapper">
+                <label for="department-input" class="show">Department</label>
+                <input type="text" id="department-input" name="Department" placeholder="Department" value="Department">
+            </div>
+        </div>
+        <div class="cell large-12">
+            <div class="floated-label-wrapper">
+                <label for="email-input" class="show">Email <span class="required">*</span></label>
+                <input type="text" id="email-input" name="Email" placeholder="Email *" value="asatou@company.com">
+            </div>
+        </div>
+        <div class="cell large-12 padding-top-1">
+            <h5 class="float-left margin-top-1">User Roles</h5>
+            <div class="rolesTableEnteredContainer">
+                <button class="button hollow float-right table-add-button" data-open="addRoleModal">Add User Role</button>
+                <table id="rolesTableEntered" class="display dataTable">
+                    <thead>
+                        <tr>
+                            <th>Group</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Incident Response Services</td>
+                            <td>Group Admin</td>
+                            <td>Pending</td>
+                            <td>
+                                <button class="button clear" data-open="roleDeletionConfirmationModal"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="modalFooter float-right">
+    <button class="button clear" data-close>Cancel</button>
+    <button class="button primary" data-close onClick="sib.displaySuccessToast('User updated');">Save</button>
+  </div>
+</div>
+{{> add-role }}

@@ -1,0 +1,56 @@
+
+<div class="reveal" id="editInformationTypeAnalysisModal" data-reveal>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h5>Edit Information Type Analysis</h5>
+  <div class="modalContent">
+    <p class="note-text">All required fields are marked with asterisks (<span class="required">*</span>)</p>
+    <div class="grid-x">
+        <div class="cell large-12">
+            <div class="floated-label-wrapper">
+                <label>Confidentiality <span class="required">*</span></label>
+                <select>
+                    <option value="" selected disabled>Confidentiality *</option>
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                </select>
+            </div>
+        </div>
+        <div class="cell large-12">
+            <div class="floated-label-wrapper">
+                <label>Integrity <span class="required">*</span></label>
+                <select>
+                    <option value="" selected disabled>Integrity *</option>
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                </select>
+            </div>
+        </div>
+        <div class="cell large-12">
+            <div class="floated-label-wrapper">
+                <label>Availability <span class="required">*</span></label>
+                <select>
+                    <option value="" selected disabled>Availability *</option>
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                </select>
+            </div>
+        </div>
+        <div class="cell large-12">
+            <div class="floated-label-wrapper">
+                <label>Notes</label>
+                <textarea placeholder="Notes"></textarea>
+                <p class="help-text contextual-hint">Include any notes that might help explain the selections made.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="modalFooter float-right">
+    <button class="button clear secondary" data-close>Cancel</button>
+    <button class="button primary secondary" data-close onClick="sib.displaySuccessToast('Information Type Analysis saved'); sib.showITAnalysisValue();">Save</button>
+  </div>
+</div>

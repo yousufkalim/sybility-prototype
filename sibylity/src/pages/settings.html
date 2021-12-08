@@ -1,0 +1,86 @@
+
+<div class="flex-container">
+  {{> leftnav}}
+  <div class="flex-child-grow">
+    {{> topbar}}
+    <section class="main">
+        <div class="grid-x">
+          <div class="cell large-12">
+            <div class="sib-card">
+              <h5>Organization Settings</h5>
+              <ul class="accordion margin-top-1" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                <li class="accordion-item is-active" data-accordion-item>
+                  <a href="#" class="accordion-title">User Policies</a>
+                  <div class="accordion-content padding-bottom-3" data-tab-content>
+                    <h4>User Profile Settings</h4>
+                    <label>User-Editable Fields</label>
+                    <div>
+                      <div>
+                        <input type="checkbox" id="fullName" class="sib-check"/>
+                        <label for="fullName" class="inline">Full Name</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="preferredName" class="sib-check"/>
+                        <label for="preferredName" class="inline">Preferred Name</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="email" class="sib-check"/>
+                        <label for="email" class="inline">Email</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="title" class="sib-check"/>
+                        <label for="title" class="inline">Title</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="department" class="sib-check"/>
+                        <label for="department" class="inline">Department</label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item is-active" data-accordion-item>
+                  <a href="#" class="accordion-title">Cyber-Risk Policies</a>
+                  <div class="accordion-content" data-tab-content>
+                    <h4>Access Control Settings</h4>
+                    <div>
+                      <div>
+                        <label>Are user stakeholders permitted to participate in risk management activities</label>
+                      <div>
+                        <input type="radio" id="stakeholders-risk-management-yes" class="sib-radio" name="permitted"/>
+                        <label for="stakeholders-risk-management-yes" class="inline">Yes</label>
+                      </div>
+                      <div>
+                        <input type="radio" id="stakeholders-risk-management-no" class="sib-radio" name="permitted"/>
+                        <label for="stakeholders-risk-management-no" class="inline">No</label>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="margin-top-2">
+                      <label>Which of the following stakeholder types are permitted access to security plans?</label>
+                      <div>
+                        <input type="checkbox" id="business-stakeholders" class="sib-check"/>
+                        <label for="business-stakeholders" class="inline">Business Stakeholders</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="technical-stakeholders" class="sib-check"/>
+                        <label for="technical-stakeholders" class="inline">Technical Stakeholders</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="user-stakeholders" class="sib-check"/>
+                        <label for="user-stakeholders" class="inline">User Stakeholders</label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="form-footer">
+                <button class="primary button" onClick="sib.displaySuccessToast('Settings saved');">Save</button>
+                <button class="clear button">Discard Changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{> footer }}
+    </section>
+  </div>
+</div>

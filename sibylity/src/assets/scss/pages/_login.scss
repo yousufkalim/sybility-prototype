@@ -1,0 +1,42 @@
+
+
+.login-wrapper {
+    max-width: 30rem;
+    margin: auto;
+
+    .login-card {
+        padding: 3rem;
+        padding-bottom: 2rem;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        border: 1px solid #E8E8E8;
+
+        h5, h6, p {
+            text-align: center;
+        }
+
+        .login-button {
+            margin-top: 5rem;
+        }
+        .logo-login {
+            max-width: 200px;
+            margin: auto;
+            margin-bottom: 2rem;
+            display: block;
+        } 
+    }
+
+    .callout {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.viewPasswordButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    i {
+        pointer-events: none;
+    }
+}

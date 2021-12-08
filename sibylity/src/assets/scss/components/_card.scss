@@ -1,0 +1,28 @@
+.sib-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); 
+    padding: 2rem;
+    margin: 1rem;
+
+    .sib-card {
+        border: 1px solid $light-gray;
+        margin-right: 0;
+
+        &.disabled {
+            background-color: scale-color($light-gray, $lightness: 75%);//$sib-table-stripe;
+            color: $dark-gray; 
+
+            p {
+                line-height: 2rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.tab-sub-card {
+    &:not(:firt-child) {
+        margin-top: 7rem;
+    }
+}

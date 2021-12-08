@@ -1,0 +1,117 @@
+button.button {
+    //text-transform: uppercase;
+
+    &.primary {
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.20);
+    }
+
+    &.clear:hover {
+        background-color: scale-color($primary-color, $lightness: 95%); //rgba(206, 92, 29, 0.1);
+    }
+
+    &.link {
+        font-weight: normal;
+        color: $anchor-color;
+        padding: 0;
+        margin: 0;
+        background-color: unset;
+    }
+
+    &.no-hover {
+        &:hover {
+            background-color: unset !important;
+        }
+    }
+
+    &.secondary {
+        background-color: $secondary-color;
+        color: white;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.20);
+
+        &.clear, &.hollow {
+            color: $secondary-color;
+            background: none;
+            box-shadow: none;
+
+            &:hover {
+                background-color: scale-color($secondary-color, $lightness: 95%); //rgba(206, 92, 29, 0.1);
+            }
+        }
+
+        &.hollow {
+            border-color: $secondary-color;
+        }
+    }
+}
+
+.float-right button.button {
+    margin-left: 0.5rem;
+}
+ 
+.float-left button.button {
+    margin-right: 0.5rem;
+}
+
+.button-group {
+    border-color: $primary-color; 
+
+    &.no-gaps .button + .button {
+        background: white;
+        margin-left: -3px;
+        border-radius: 0;
+        border-left-width: 1px;
+        border-left-style: solid;
+        border-left-color: unset;
+
+        &:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .selected {
+            background-color: $primary-color;
+        }
+    }
+    
+    .button:hover {
+        background-color: scale-color($primary-color, $lightness: 95%);
+    }
+
+    &.no-gaps .button.selected {
+        background-color: $primary-color;
+        color: white;
+
+        &:hover {
+            background-color: $button-background-hover;
+            color: white;
+        }
+    }
+
+    &.secondary {
+        border-color: $secondary-color;
+        
+        .button {
+            color: $secondary-color; 
+            border-color: $secondary-color;
+            background: white;
+        }
+
+        .button:hover {
+            background-color: scale-color($secondary-color, $lightness: 95%);
+            color: $secondary-color; 
+        }
+        &.no-gaps .button.selected {
+            background-color: $secondary-color;
+            color: white;
+    
+            &:hover {
+                background-color: scale-color($secondary-color, $lightness: -15%);
+                color: white;
+            }
+        }
+    }
+}
+
+.nested-card-actions {
+    margin-top: -0.5rem;
+}

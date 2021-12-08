@@ -1,0 +1,33 @@
+
+<div class="reveal" id="editBusinessImpactAnalysisModal" data-reveal>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h5>Edit Business Impact Analysis</h5>
+  <div class="modalContent">
+    <p class="note-text">All required fields are marked with asterisks (<span class="required">*</span>)</p>
+    <div class="grid-x">
+        <div class="cell large-12">
+        <label>Level of Concern <span class="required">*</span></label>
+            <div class="button-group toggle-group no-gaps secondary">
+                <a class="button hollow selected">None</a>
+                <a class="button hollow">Some</a>
+                <a class="button hollow">Moderate</a>
+                <a class="button hollow">Very</a>
+                <a class="button hollow">Extreme</a>
+            </div>
+        </div>
+        <div class="cell large-12">
+            <div class="floated-label-wrapper">
+                <label>Notes</label>
+                <textarea placeholder="Notes"></textarea>
+                <p class="help-text contextual-hint">Include any notes that might help explain the selections made.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="modalFooter float-right">
+    <button class="button clear secondary" data-close>Cancel</button>
+    <button class="button primary secondary" data-close onClick="sib.displaySuccessToast('Business Impact Analysis saved'); sib.showBIAnalysisValue();">Save</button>
+  </div>
+</div>

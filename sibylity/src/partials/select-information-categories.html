@@ -1,0 +1,593 @@
+
+<div class="reveal large fixed-height-modal" id="selectInformationCategoriesModal" data-reveal>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h5>Select Information Categories</h5>
+  <div class="modalContent">
+    <p class="float-left">Select relevant information categories to add to the Information Type Worksheet</p>
+    <table id="informationTypeWorksheetTable" class="display dataTable fixed" style="width: 100%;">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="selectAllDataTypes" class="sib-check secondary" onClick="sib.toggleTableCheckboxes(this);"/><label for="selectAllDataTypes"></label></th>
+                <th style="width: 12rem">Information Category</th>
+                <th>Data Types</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" id="selectDataType1" class="sib-check secondary"/><label for="selectDataType1"></label></td>
+                <td>Controls and Oversight</td>
+                <td>
+                    <ul>
+                        <li>Corrective Action (Policy/Regulation)</li>
+                        <li>Program Evaluation</li>
+                        <li>Program Monitoring</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType2" class="sib-check secondary"/><label for="selectDataType2"></label></td>
+                <td>Financial Management</td>
+                <td>
+                    <div class="grid-x">
+                        <div class="cell large-6">
+                            <ul>
+                                <li>Asset and Liability Management</li>
+                                <li>Accounting</li>
+                                <li>Cost Accounting/ Performance Measurement</li>
+                                <li>Reporting and Information</li>
+                                <li>Payments</li>
+                            </ul>
+                        </div>
+                        <div class="cell large-6">
+                            <ul>
+                                <li>Funds Control</li>
+                                <li>Collections and Receivables</li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType3" class="sib-check secondary"/><label for="selectDataType3"></label></td>
+                <td>Human Resource Management</td>
+                <td>
+                    <div class="grid-x">
+                        <div class="cell large-6">
+                            <ul>
+                                <li>HR Strategy</li>
+                                <li>Compensation Management</li>
+                                <li>Employee Relations</li>
+                                <li>Human Resources Development</li>
+                                <li>Staff Acquisition</li>
+                            </ul>
+                        </div>
+                        <div class="cell large-6">
+                            <ul>
+                                <li>Benefits Management</li>
+                                <li>Labor Relations</li>
+                                <li>Organization and Position Management</li>
+                                <li>Employee Performance Management</li>
+                                <li>Separation Management</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType4" class="sib-check secondary"/><label for="selectDataType4"></label></td>
+                <td>Supply Chain Management</td>
+                <td>
+                    <ul>
+                        <li>Goods Acquisition</li>
+                        <li>Services Acquisition</li>
+                        <li>Inventory Control</li>
+                        <li>Logistics Management</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType5" class="sib-check secondary"/><label for="selectDataType5"></label></td>
+                <td>Information & Technology Management</td>
+                <td>
+                    <div class="grid-x">
+                        <div class="cell large-6">
+                            <ul>
+                                <li>System Development</li>
+                                <li>IT Infrastructure Maintenance</li>
+                                <li>Information Management</li>
+                                <li>Lifecycle/Change Management</li>
+                                <li>Information System Security</li>
+                            </ul>
+                        </div>
+                        <div class="cell large-6">
+                            <ul>
+                                <li>System and Network Monitoring</li>
+                                <li>System Maintenance</li>
+                                <li>Record Retention</li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType6" class="sib-check secondary"/><label for="selectDataType6"></label></td>
+                <td>Defense & National Security  </td>
+                <td>
+                    <div class="grid-x">
+                        <div class="cell large-6">
+                            <ul>
+                                <li>Strategic National & Theater Defense</li>
+                                <li>Operational Defense</li>
+                                <li>Tactical Defense</li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType7" class="sib-check secondary"/><label for="selectDataType7"></label></td>
+                <td>Homeland Security</td>
+                <td>
+                    <ul>
+                        <li>Border and Transportation Security</li>
+                        <li>Executive Functions of the EOP</li>
+                        <li>Key Asset and Critical Infrastructure Protection</li>
+                        <li>Catastrophic Defense</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType8" class="sib-check secondary"/><label for="selectDataType8"></label></td>
+                <td>Intelligence Operations</td>
+                <td>
+                    <div class="grid-x">
+                        <div class="cell large-6">
+                            <ul>
+                                <li>Intelligence Planning</li>
+                                <li>Intelligence Dissemination</li>
+                                <li>Intelligence Collection</li>
+                                <li>Intelligence Processing</li>
+                                <li>Intelligence Analysis & Production</li>
+                            </ul>
+                        </div>
+                        <div class="cell large-6">
+                            <ul>
+                                <li>Foreign Intelligence</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType9" class="sib-check secondary"/><label for="selectDataType9"></label></td>
+                <td>Disaster Management</td>
+                <td>
+                    <ul>
+                        <li>Disaster Monitoring and Prediction</li>
+                        <li>Emergency Response</li>
+                        <li>Disaster Preparedness and Planning</li>
+                        <li>Disaster Repair and Restoration</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType10" class="sib-check secondary"/><label for="selectDataType10"></label></td>
+                <td>International Affairs & Commerce</td>
+                <td>
+                    <ul>
+                        <li>Foreign Affairs</li>
+                        <li>International Development and Humanitarian Aid</li>
+                        <li>Global Trade</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType11" class="sib-check secondary"/><label for="selectDataType11"></label></td>
+                <td>Natural Resources</td>
+                <td>
+                    <ul>
+                        <li>Water Resource Management</li>
+                        <li>Agricultural Innovation and Services</li>
+                        <li>Conservation</li>
+                        <li>Marine and Land Management</li>
+                        <li>Recreational Resource Management and Tourism</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType12" class="sib-check secondary"/><label for="selectDataType12"></label></td>
+                <td>Regulatory Development</td>
+                <td>
+                    <ul>
+                        <li>Public Comment Tracking</li>
+                        <li>Policy and Guidance Development</li>
+                        <li>Rule Publication</li>
+                        <li>Regulatory Creation</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType13" class="sib-check secondary"/><label for="selectDataType13"></label></td>
+                <td>Energy</td>
+                <td>
+                    <div class="grid-x">
+                        <div class="cell large-6">
+                            <ul>
+                                <li>Energy Supply</li>
+                                <li>Energy Production</li>
+                                <li>Energy Conservation and Preparedness</li>
+                                <li>Radioactive Materials</li>
+                                <li>Highly Flammable Fuels</li>
+                            </ul>
+                        </div>
+                        <div class="cell large-6">
+                            <ul>
+                                <li>Transmission</li>
+                                <li>Channels</li>
+                                <li>or Control Processes</li>
+                                <li>Energy Resource Management</li>
+                                <li>Mission-Critical Energy Supply Procedures</li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType14" class="sib-check secondary"/><label for="selectDataType14"></label></td>
+                <td>Environmental Management</td>
+                <td>
+                    <ul>
+                        <li>Environmental Monitoring and Forecasting</li>
+                        <li>Environmental Remediation</li>
+                        <li>Pollution Prevention and Control</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType15" class="sib-check secondary"/><label for="selectDataType15"></label></td>
+                <td>Economic Development</td>
+                <td>
+                    <ul>
+                        <li>Business and Industry Development</li>
+                        <li>Industry Sector Income Stabilization</li>
+                        <li>Intellectual Property Protection</li>
+                        <li>Financial Sector Oversight</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType16" class="sib-check secondary"/><label for="selectDataType16"></label></td>
+                <td>Community & Social Services</td>
+                <td>
+                    <ul>
+                        <li>Homeownership Promotion</li>
+                        <li>Postal Services</li>
+                        <li>Community and Regional Development</li>
+                        <li>Social Services</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType17" class="sib-check secondary"/><label for="selectDataType17"></label></td>
+                <td>Transportation</td>
+                <td>
+                    <ul>
+                        <li>Ground Transportation</li>
+                        <li>Space Operations</li>
+                        <li>Water Transportation</li>
+                        <li>Air Transportation</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType18" class="sib-check secondary"/><label for="selectDataType18"></label></td>
+                <td>Education</td>
+                <td>
+                    <div class="grid-x">
+                        <div class="cell large-6">
+                            <ul>
+                                <li>Elementary</li>
+                                <li>Secondary</li>
+                                <li>and Vocational Education</li>
+                                <li>Cultural and Historic Exhibition</li>
+                                <li>Higher Education</li>
+                            </ul>
+                        </div>
+                        <div class="cell large-6">
+                            <ul>
+                                <li>Cultural and Historic Preservation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType19" class="sib-check secondary"/><label for="selectDataType19"></label></td>
+                <td>Workforce Management</td>
+                <td>
+                    <ul>
+                        <li>Training and Employment</li>
+                        <li>Labor Rights Management</li>
+                        <li>Worker Safety</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType20" class="sib-check secondary"/><label for="selectDataType20"></label></td>
+                <td>Health</td>
+                <td>
+                    <ul>
+                        <li>Health Care Administration</li>
+                        <li>Access to Care</li>
+                        <li>Health Care Delivery Services</li>
+                        <li>Population Health Mgmt and Consumer Safety</li>
+                        <li>Health Care Research and Practitioner Education</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType21" class="sib-check secondary"/><label for="selectDataType21"></label></td>
+                <td>Income Security</td>
+                <td>
+                    <ul>
+                        <li>General Retirement and Disability</li>
+                        <li>Food and Nutrition Assistance</li>
+                        <li>Unemployment Compensation</li>
+                        <li>Survivor Compensation</li>
+                        <li>Housing Assistance</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType22" class="sib-check secondary"/><label for="selectDataType22"></label></td>
+                <td>Law Enforcement</td>
+                <td>
+                    <div class="grid-x">
+                        <div class="cell large-6">
+                            <ul>
+                                <li>Criminal Apprehension</li>
+                                <li>Leadership Protection</li>
+                                <li>Crime Prevention</li>
+                                <li>Criminal Investigation and Surveillance</li>
+                                <li>Property Protection</li>
+                            </ul>
+                        </div>
+                        <div class="cell large-6">
+                            <ul>
+                                <li>Trade Law Enforcement</li>
+                                <li>Citizen Protection</li>
+                                <li>Substance Control</li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType23" class="sib-check secondary"/><label for="selectDataType23"></label></td>
+                <td>Planning & Budgeting</td>
+                <td>
+                    <div class="grid-x">
+                        <div class="cell large-6">
+                            <ul>
+                                <li>Budget Formulation</li>
+                                <li>Strategic Planning</li>
+                                <li>Management Improvement</li>
+                                <li>Capital Planning</li>
+                                <li>Budget Execution</li>
+                            </ul>
+                        </div>
+                        <div class="cell large-6">
+                            <ul>
+                                <li>Budgeting & Performance Integration</li>
+                                <li>Enterprise Architecture</li>
+                                <li>Workforce Planning</li>
+                                <li>Tax and Fiscal Policy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType24" class="sib-check secondary"/><label for="selectDataType24"></label></td>
+                <td>Litigation & Judicial Activities</td>
+                <td>
+                    <ul>
+                        <li>Judicial Hearings</li>
+                        <li>Legal Prosecution and Litigation</li>
+                        <li>Legal Defense</li>
+                        <li>Resolution Facilitation</li>
+                        <li>Legal Investigation</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType25" class="sib-check secondary"/><label for="selectDataType25"></label></td>
+                <td>Federal Correctional Activities</td>
+                <td>
+                    <ul>
+                        <li>Criminal Incarceration</li>
+                        <li>Criminal Rehabilitation</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType26" class="sib-check secondary"/><label for="selectDataType26"></label></td>
+                <td>General Sciences & Innovation  </td>
+                <td>
+                    <ul>
+                        <li>Scientific and Technological Research and Innovation</li>
+                        <li>Space Exploration and Innovation</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType27" class="sib-check secondary"/><label for="selectDataType27"></label></td>
+                <td>Knowledge Creation & Management</td>
+                <td>
+                    <ul>
+                        <li>General Purpose Data and Statistics</li>
+                        <li>Advising and Consulting</li>
+                        <li>Research and Development</li>
+                        <li>Knowledge Dissemination</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType28" class="sib-check secondary"/><label for="selectDataType28"></label></td>
+                <td>Regulatory Compliance & Enforcement</td>
+                <td>
+                    <ul>
+                        <li>Inspections and Auditing</li>
+                        <li>Standards Setting/Reporting Guideline Development</li>
+                        <li>Permits and Licensing</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType29" class="sib-check secondary"/><label for="selectDataType29"></label></td>
+                <td>Public Goods Creation & Management</td>
+                <td>
+                    <ul>
+                        <li>Construction</li>
+                        <li>Manufacturing</li>
+                        <li>Information Infrastructure Management</li>
+                        <li>Public Resources</li>
+                        <li>Facility and Infrastructure Management</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType30" class="sib-check secondary"/><label for="selectDataType30"></label></td>
+                <td>Federal Financial Assistance</td>
+                <td>
+                    <ul>
+                        <li>Federal Grants (Non-State)</li>
+                        <li>Tax Credits</li>
+                        <li>Direct Transfers to Individuals</li>
+                        <li>Subsidies</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType31" class="sib-check secondary"/><label for="selectDataType31"></label></td>
+                <td>Credit and Insurance</td>
+                <td>
+                    <ul>
+                        <li>Direct Loans</li>
+                        <li>Loan Guarantees</li>
+                        <li>General Insurance</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType32" class="sib-check secondary"/><label for="selectDataType32"></label></td>
+                <td>Transfers to State/ Local Governments</td>
+                <td>
+                    <ul>
+                        <li>Formula Grants</li>
+                        <li>State Loans</li>
+                        <li>Project/Competitive Grants</li>
+                        <li>Earmarked Grants</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType33" class="sib-check secondary"/><label for="selectDataType33"></label></td>
+                <td>Internal Risk Management and Mitigation</td>
+                <td>
+                    <ul>
+                        <li>Contingency Planning</li>
+                        <li>Continuity of Operations</li>
+                        <li>Service Recovery</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType34" class="sib-check secondary"/><label for="selectDataType34"></label></td>
+                <td>Revenue Collection</td>
+                <td>
+                    <ul>
+                        <li>Debt Collection</li>
+                        <li>User Fee Collection</li>
+                        <li>Federal Asset Sales</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType35" class="sib-check secondary"/><label for="selectDataType35"></label></td>
+                <td>Public Affairs</td>
+                <td>
+                    <ul>
+                        <li>Official Information Dissemination</li>
+                        <li>Product Outreach</li>
+                        <li>Customer Services</li>
+                        <li>Public Relations</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType36" class="sib-check secondary"/><label for="selectDataType36"></label></td>
+                <td>Legislative Relations</td>
+                <td>
+                    <ul>
+                        <li>Legislation Tracking</li>
+                        <li>Congressional Liason Operations</li>
+                        <li>Legislation Testimony</li>
+                        <li>Proposal Development</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType37" class="sib-check secondary"/><label for="selectDataType37"></label></td>
+                <td>General Government</td>
+                <td>
+                    <div class="grid-x">
+                        <div class="cell large-4">
+                            <ul>
+                                <li>Central Fiscal Operations</li>
+                                <li>Central Property Management</li>
+                                <li>Central Records and Statistics Management</li>
+                                <li>Entitlement Event Information</li>
+                                <li>Legislative Functions</li>
+                            </ul>
+                        </div>
+                        <div class="cell large-4">
+                            <li>Central Personnel Management</li>
+                            <li>Income Information</li>
+                            <li>Representative Payee Information</li>
+                            <li>Executive Functions</li>
+                            <li>Taxation Management</li>
+                        </div>
+                        <div class="cell large-4">
+                            <li>Personal Identity and Authentication</li>
+                            <li>General Information</li>
+                        </div>
+                    </div>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selectDataType38" class="sib-check secondary"/><label for="selectDataType38"></label></td>
+                <td>Administrative Management</td>
+                <td>
+                    <ul>
+                        <li>Facilities Fleet and Equipment Mgmt</li>
+                        <li>Travel</li>
+                        <li>Security Management</li>
+                        <li>Help Desk Services</li>
+                        <li>Workplace Policy Development and Management</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+  </div>
+  <div class="modalFooter float-right">
+    <button class="button clear secondary" data-close>Cancel</button>
+    <button class="button primary secondary" data-close onClick="sib.displaySuccessToast('Information category selections saved'); sib.toggleInformationTypeWorksheet();">Save</button>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+
+<div class="reveal" id="userProfileModal" data-reveal>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h5>User Profile</h5>
+  <div class="modalContent">
+    <div class="grid-x">
+        <div class="cell large-4 text-center padding-right-1 position-relative">
+            <i class="fas fa-user-circle fa-9x profilePlaceholder"></i>
+            <button class="button link margin-top-1"><i class="fas fa-upload"></i> Upload Image</button>
+            <button class="button link margin-top-1"><i class="fas fa-trash"></i> Delete Image</button>
+            <!--button class="button primary deleteImageButton" style="
+                position: absolute;
+                top: 0;
+                right: 0.5rem;
+                margin: 0;
+                /* padding: 0; */
+                margin-top: 0;
+                border-radius: 100%;
+            "><i class="fas fa-trash"></i><span class="show-for-sr"> Delete Image</span></button-->
+        </div>
+        <div class="cell large-8">
+            <div>
+                <label for="email-input" class="margin-top-0">Name</label>
+                <p>George Harrison</p>
+            </div>
+            <div class="floated-label-wrapper">
+                <label for="email-input">Preferred Name</label>
+                <input type="text" id="email-input" name="email input" placeholder="Preferred Name">
+            </div>
+            <div>
+                <label for="email-input">Title</label>
+                <p>Director of Information Security</p>
+            </div>
+            <div>
+                <label for="email-input">Department</label>
+                <p>Information Security Office</p>
+            </div>
+            <div>
+                <label for="email-input">Email</label>
+                <p>gHarrison@customer.com</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="modalFooter float-right">
+    <button class="button clear" data-close>Cancel</button>
+    <button class="button primary" data-close>Save</button>
+  </div>
+</div>

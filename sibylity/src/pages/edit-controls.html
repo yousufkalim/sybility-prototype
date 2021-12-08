@@ -1,0 +1,304 @@
+
+<div class="flex-container">
+  {{> leftnav}}
+  <div class="flex-child-grow">
+    {{> topbar}}
+    <section class="main">
+        <div class="grid-x">
+          <div class="cell large-12">
+            <div class="subpage-header">
+                <button class="button secondary clear float-right" data-open="editCommonControlsGroupModal"><i class="fas fa-edit"></i> Edit</button>
+                <h4>Common Control Management</h4>
+                <div class="flex-container subpage-header-fields">
+                    <div>
+                        <label>Group Name</label>
+                        <p>Incident Response Services</p>
+                    </div>
+                    <div>
+                        <label>Group Code</label>
+                        <p>COR</p>
+                    </div>
+                    <div>
+                        <label>Description</label>
+                        <p class="margin-bottom-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <a href="#" data-open="viewFullControlDescriptionModal">View full Description</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="sib-card">
+                <div class="">
+                    <div class="callout info">
+                        <p><span class="bold">Common Controls</span> are security controls that are implemented to support multiple information resources.</p>
+                        <p>When Risk Managers work to assess resources independently, assessment of common controls may result in duplication of effort and considerable extra work by control owners and Risk Managers alike.</p>
+                        <p>Sibylity allows Risk Managers assessing resource-specific security controls to inherit the status of controls that are not resource-specific from Groups that make such information available. To share the status of common controls offered by your Group, update this assessment to reflect that status. When you are ready, select to share your assessment. It will be made available to other Risk Managers in your organization for their use in their own assessments.</p>
+                    </div>
+                    <ul class="accordion secondary margin-top-1" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Contingency Planning</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                <div class="flex-container margin-top-1">
+                                    <div class="vertical-tabs-left-col flex-child-shrink">
+                                      <ul class="vertical tabs secondary" data-tabs id="business-impact-tabs">
+                                        <li class="tabs-title is-active"><a href="#audit-panel-1" aria-selected="true">Policy and Procedures</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="vertical-tabs-container">
+                                      <div class="tabs-content vertical" data-tabs-content="business-impact-tabs">
+                                        <div class="tabs-panel is-active" id="audit-panel-1">
+                                            <p class="note-text margin-left-1">Comments you provide are included in generated documents such as security plans. To communicate between users without impacting generated documents, use Notes instead.</p>
+                                            <div class="sib-card margin-top-0">
+                                                <div>
+                                                    <div>
+                                                        <p>Develop, document, and disseminate to stakeholders, an access control policy</p>
+                                                        <div class="grid-x">
+                                                            <div class="cell large-6">
+                                                                <label>Control Status</label>
+                                                                <div>
+                                                                    <input type="checkbox" id="cs-1" class="sib-check secondary"/>
+                                                                    <label for="cs-1" class="inline"> Develop</label>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="checkbox" id="cs-2" class="sib-check secondary"/>
+                                                                    <label for="cs-2" class="inline"> Document</label>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="checkbox" id="cs-3" class="sib-check secondary"/>
+                                                                    <label for="cs-3" class="inline"> Disseminat</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell large-6">
+                                                                <label>Comments</label>
+                                                                <div class="floated-label-wrapper">
+                                                                    <label>Comments for Implemented Controls</label>
+                                                                    <textarea placeholder="Comments for Implemented Controls"></textarea>
+                                                                </div>
+                                                                <div class="floated-label-wrapper">
+                                                                    <label>Comments for Inherited Controls</label>
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hide">
+                                                    <div class="float-right nested-card-actions">
+                                                        <button class="button clear secondary" onClick="sib.enableItem(this);">Enable</button>
+                                                    </div>
+                                                    <div class="flex-container">
+                                                        <div class="flex-child-shrink margin-right-1">
+                                                            <i class="fas fa-ban fa-2x"></i>
+                                                        </div>
+                                                        <div class="flex-child-grow">
+                                                            <p class="margin-top-0">
+                                                                Business Impact Assessment for <span class="bold">Lost Sales and/or Income</span> is disabled
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="sib-card margin-top-3">
+                                                <div>
+                                                    <div>
+                                                        <p>The audit and accountability policy addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance.</p>
+                                                        <div class="grid-x">
+                                                            <div class="cell large-6">
+                                                                <label>Control Status</label>
+                                                                <div>
+                                                                    <input type="checkbox" id="csb-1" class="sib-check secondary"/>
+                                                                    <label for="csb-1" class="inline"> Purpose</label>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="checkbox" id="csb-2" class="sib-check secondary"/>
+                                                                    <label for="csb-2" class="inline"> Scope</label>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="checkbox" id="csb-3" class="sib-check secondary"/>
+                                                                    <label for="csb-3" class="inline"> Roles</label>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="checkbox" id="csb-4" class="sib-check secondary"/>
+                                                                    <label for="csb-4" class="inline"> Responsibilities</label>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="checkbox" id="csb-5" class="sib-check secondary"/>
+                                                                    <label for="csb-5" class="inline"> Management Commitment</label>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="checkbox" id="csb-6" class="sib-check secondary"/>
+                                                                    <label for="csb-6" class="inline"> Coordination Among Organizational Entities</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell large-6">
+                                                                <label>Comments</label>
+                                                                <div class="floated-label-wrapper">
+                                                                    <label>Comments for Implemented Controls</label>
+                                                                    <textarea placeholder="Comments for Implemented Controls"></textarea>
+                                                                </div>
+                                                                <div class="floated-label-wrapper">
+                                                                    <label>Comments for Inherited Controls</label>
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hide">
+                                                    <div class="float-right nested-card-actions">
+                                                        <button class="button clear secondary" onClick="sib.enableItem(this);">Enable</button>
+                                                    </div>
+                                                    <div class="flex-container">
+                                                        <div class="flex-child-shrink margin-right-1">
+                                                            <i class="fas fa-ban fa-2x"></i>
+                                                        </div>
+                                                        <div class="flex-child-grow">
+                                                            <p class="margin-top-0">
+                                                                Business Impact Assessment for <span class="bold">Lost Sales and/or Income</span> is disabled
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Awareness and Training</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                Awareness content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Maintenance</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Risk Assessment</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Contingency Planning</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Media Protection</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Physical and Environmental Protection</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Configuration Management</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Assessment, Authorization, and Monitoring</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Awareness and Training</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title"> Program Management</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Identification and Authentication</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Access Control</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">PII Processing and Transparency</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">System and Services Acquisition</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Planning</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Supply Chain Risk Management</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">System and Communications Protection</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">System and Information Integrity</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Personnel Security</a>
+                            <div class="accordion-content padding-bottom-3 padding-top-3" data-tab-content>
+                                 Content
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="">
+                        <button class="secondary button" data-open="saveCommonControlsConfirmationModal">Save</button>
+                        <button class="secondary clear button">Discard Changes</button>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+          </div>
+        </div>
+        {{> footer }}
+    </section>
+  </div>
+</div>
+
+{{> edit-common-controls-group-details }}
+{{> view-full-control-description }}
+{{> save-common-controls-confirmation }}
+
+

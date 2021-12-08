@@ -1,0 +1,123 @@
+
+<div class="flex-container">
+  {{> leftnav}}
+  <div class="flex-child-grow">
+    {{> topbar}}
+    <section class="main">
+        <div class="grid-x">
+          <div class="cell large-12">
+            <div class="sib-card">
+              <h5>User Activities</h5>
+              <div class="button-group toggle-group no-gaps">
+                <a class="button hollow selected active-activities">Active</a>
+                <a class="button hollow completed-activities">Completed</a>
+              </div>
+                <div class="flex-container active-activities-container">
+                  <div class="vertical-tabs-left-col flex-child-shrink">
+                    <ul class="vertical tabs" data-tabs id="workspace-tabs">
+                      <li class="tabs-title is-active"><a href="#panel1v" aria-selected="true">Assessment for Control Family AC</a></li>
+                      <li class="tabs-title"><a href="#panel2v">Assessment for Control Family IA</a></li>
+                      <li class="tabs-title"><a href="#panel3v">Assessment for Control Family PC</a></li>
+                      <li class="tabs-title"><a href="#panel4v">Assessment for Control Family RA</a></li>
+                      <li class="tabs-title"><a href="#panel5v">Assessment for Control Family CM</a></li>
+                      <li class="tabs-title"><a href="#panel6v">Business Impact Analysis</a></li>
+                      <li class="tabs-title"><a href="#panel7v">Data Type Analysis</a></li>
+                    </ul>
+                  </div>
+                  <div class="vertical-tabs-container">
+                    <div class="tabs-content vertical" data-tabs-content="workspace-tabs">
+                      <div class="tabs-panel is-active" id="panel1v">
+                        <label>Control Assessment</label>
+                        <p>William Seccombe has asked you to participate in a control assessment for Northwest Electric.</p>
+                        <p>By assessing which potential business impacts are most detrimental to the organization in the event of a security breach, risk managers can make more informed risk handling decisions and can right-size the mitigation plan so that business priorities are not unnecessarily encumbered.</p>
+                        <p>You will be asked 7 questions about your knowledge of implemented controls. This will take approximately 5 minutes.</p>
+                        <div class="activity-wizard">
+                          <div class="activity-wizard-header flex-container">
+                            <h6 class="flex-child-grow">Develop, document, and disseminate to stakeholders an access control policy</h6>
+                            <span class="flex-child-shrink">2 of 7</span>
+                          </div>
+                          <div class="activity-wizard-content">
+                            <label>Has this control status been through the following processes?</label>
+                            <div class="padding-left-1 padding-top-1">
+                              <div class="inline-switch-container">
+                                <label>Developed</label>
+                                <div class="switch">
+                                  <input class="switch-input" id="developed-switch" type="checkbox" name="exampleSwitch">
+                                  <label class="switch-paddle" for="developed-switch">
+                                    <span class="show-for-sr">Developed</span>
+                                    <span class="switch-active" aria-hidden="true">Yes</span>
+                                    <span class="switch-inactive" aria-hidden="true">No</span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="inline-switch-container">
+                                <label>Disseminated</label>
+                                <div class="switch">
+                                  <input class="switch-input" id="disseminated-switch" type="checkbox" name="exampleSwitch2">
+                                  <label class="switch-paddle" for="disseminated-switch">
+                                    <span class="show-for-sr">Disseminated</span>
+                                    <span class="switch-active" aria-hidden="true">Yes</span>
+                                    <span class="switch-inactive" aria-hidden="true">No</span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="inline-switch-container">
+                                <label>Documented</label>
+                                <div class="switch">
+                                  <input class="switch-input" id="Documented-switch" type="checkbox" name="exampleSwitch3">
+                                  <label class="switch-paddle" for="Documented-switch">
+                                    <span class="show-for-sr">Documented</span>
+                                    <span class="switch-active" aria-hidden="true">Yes</span>
+                                    <span class="switch-inactive" aria-hidden="true">No</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="float-right">
+                              <button class="button clear"><i class="fas fa-chevron-left"></i> Previous</button>
+                              <button class="button primary">Next <i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <div class="clear"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs-panel" id="panel2v">
+                        <p>Two</p>
+                      </div>
+                      <div class="tabs-panel" id="panel3v">
+                        <p>Three</p>
+                      </div>
+                      <div class="tabs-panel" id="panel4v">
+                        <p>Four</p>
+                      </div>
+                      <div class="tabs-panel" id="panel5v">
+                        <p>Five</p>
+                      </div>
+                      <div class="tabs-panel" id="panel6v">
+                        <p>Six</p>
+                      </div>
+                      <div class="tabs-panel" id="panel7v">
+                        <p>Seven</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="completed-activities-container hide">
+                  <label>Completed Activities (7)</label>
+                  <ul class="no-bullet margin-left-1">
+                    <li><i class="fas fa-check success"></i> Assessment for Control Family AC</li>
+                    <li><i class="fas fa-check success"></i> Assessment for Control Family IA</li>
+                    <li><i class="fas fa-check success"></i> Assessment for Control Family PC</li>
+                    <li><i class="fas fa-check success"></i> Assessment for Control Family RA</li>
+                    <li><i class="fas fa-check success"></i> Assessment for Control Family CM</li>
+                    <li><i class="fas fa-check success"></i> Business Impact Analysis</li>
+                    <li><i class="fas fa-check success"></i> AData Type Analysis</li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+        {{> footer }}
+    </section>
+  </div>
+</div>

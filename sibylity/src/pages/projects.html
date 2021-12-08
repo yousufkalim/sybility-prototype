@@ -1,0 +1,104 @@
+
+<div class="flex-container">
+  {{> leftnav}}
+  <div class="flex-child-grow">
+    {{> topbar}}
+    <section class="main">
+        <div class="grid-x">
+          <div class="cell large-12">
+            <div class="sib-card">
+              <h5>Cyber-Risk Projects</h5>
+              <button class="button secondary float-right table-add-button" data-open="addProjectModal">Add Project</button>
+              <table id="projectsTable" class="display dataTable">
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Responsible Group</th>
+                        <th>Status</th>
+                        <th>Status Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CUI Research Environment</td>
+                        <td>Research Support Services</td>
+                        <td>Submitted</td>
+                        <td><span class="today" data-offset="-75"></span></td>
+                        <td>
+                          {{> cyber-risk-actions-submitted}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Inter-Library Loan System</td>
+                        <td>Library</td>
+                        <td>In Progress</td>
+                        <td><span class="today" data-offset="-105"></span></td>
+                        <td>
+                          {{> cyber-risk-actions-in-progress}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Marketing CRM Stack</td>
+                        <td>University of Corellia</td>
+                        <td>Archived</td>
+                        <td><span class="today" data-offset="-95"></span></td>
+                        <td>
+                          {{> cyber-risk-actions-archived}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Marketing CRM Stack v2</td>
+                        <td>University of Corellia</td>
+                        <td>Completed</td>
+                        <td><span class="today" data-offset="-65"></span></td>
+                        <td>
+                          {{> cyber-risk-actions-completed}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Old Inter-Library Loan System</td>
+                        <td>Library</td>
+                        <td>Archived</td>
+                        <td><span class="today" data-offset="-45"></span></td>
+                        <td>
+                          {{> cyber-risk-actions-archived}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Patron Resources</td>
+                        <td>Library</td>
+                        <td>Archived</td>
+                        <td><span class="today" data-offset="-25"></span></td>
+                        <td>
+                          {{> cyber-risk-actions-archived}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Student Information System</td>
+                        <td>Office of the Registrar</td>
+                        <td>Submitted</td>
+                        <td><span class="today" data-offset="-5"></span></td>
+                        <td>
+                          {{> cyber-risk-actions-submitted}}
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        {{> footer }}
+    </section>
+  </div>
+</div>
+
+{{> add-project }}
+{{> project-clone-confirmation}}
+{{> recall-project-approval-request-confirmation}}
+{{> project-clone-deletion-confirmation}}
+{{> project-deletion-confirmation}}
+{{> review-approvals}}
+
+
+

@@ -1,0 +1,21 @@
+span.fa-star {
+    position: relative;
+    font-size: 2em;
+    color: $medium-gray;
+    cursor: pointer;
+    overflow: visible;
+    margin-top: 1rem;
+  }
+  
+  span.num {
+    position: absolute;
+    font-size: 0.5em;
+    top: -1px;
+    color: #fff;
+    right: 2px;
+    display: block;
+    background-color: $primary-color;
+    border-radius: 20px;
+    font-family: $body-font-family;
+    padding: 0.15rem;
+  }

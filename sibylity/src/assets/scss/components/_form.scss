@@ -1,0 +1,51 @@
+div:not(.floated-label-wrapper) > label, p > label {
+    font-weight: 700;
+    font-size: 1rem;
+
+    &.inline {
+        font-weight: normal;
+        margin-top: 0;
+        display: inline-block;
+    } 
+}
+
+select {
+    &:disabled {
+        color: $dark-gray;
+    }
+    [disabled] {
+        color: $dark-gray;
+    }
+    &:invalid {
+        color: $dark-gray;
+    }
+    option:first-child{
+        color: $dark-gray;
+    }
+}
+
+.required {
+    color: #c60000;
+}
+
+.form-footer {
+    margin-top: 2rem;
+}
+
+.fieldset {
+    position: relative;
+
+    legend {
+        position: absolute;
+        top: -0.75rem;
+        background-color: white;
+    }
+
+    & > p {
+        margin-top: 0.5rem;
+    }
+}
+
+label.inline {
+    display: inline;
+}

@@ -1,0 +1,23 @@
+.menu {
+    &.vertical {
+        background: white;
+    }
+    
+    li {
+        cursor: pointer;
+
+        &:hover {
+            background-color: scale-color($primary-color, $lightness: 97%); 
+        }
+        
+        a[role=menuitem] {
+            color: #666666;
+            cursor: pointer;
+        }
+    }
+}
+
+div.dropdown-pane {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 0;
+}

@@ -1,0 +1,114 @@
+
+<div class="flex-container">
+  {{> leftnav}}
+  <div class="flex-child-grow">
+    {{> topbar}}
+    <section class="main">
+        <div class="grid-x">
+          <div class="cell large-12">
+            <div class="sib-card">
+              <h5>Group Management</h5>
+              <button class="button primary float-right table-add-button" data-open="addGroupModal">Add Group</button>
+              <table id="groupTable" class="display dataTable">
+                <thead>
+                  <tr>
+                      <th>Code</th>
+                      <th>Name</th>
+                      <th>Parent Code</th>
+                      <th>Parent Name</th>
+                      <th>Status</th>
+                      <th>Actions</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>IR</td>
+                      <td>Incident Response Services</td>
+                      <td>COR</td>
+                      <td>University of Corelia</td>
+                      <td>Activated</td>
+                      <td>
+                        {{> group-actions}}
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>ISO</td>
+                      <td>Information Security Governance Services</td>
+                      <td>COR</td>
+                      <td>University of Corelia</td>
+                      <td>Activated</td>
+                      <td>
+                        {{> group-actions}}
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>LIB</td>
+                      <td>Library</td>
+                      <td>COR</td>
+                      <td>University of Corelia</td>
+                      <td>Activated</td>
+                      <td>
+                        {{> group-actions}}
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>NET</td>
+                      <td>Networking Services</td>
+                      <td>COR</td>
+                      <td>University of Corelia</td>
+                      <td>Activated</td>
+                      <td>
+                        {{> group-actions}}
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>PERS</td>
+                      <td>Personnel Management Services</td>
+                      <td>COR</td>
+                      <td>University of Corelia</td>
+                      <td>Pending</td>
+                      <td>
+                        {{> group-actions}}
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>REGTR</td>
+                      <td>Office of the Registrar</td>
+                      <td>COR</td>
+                      <td>University of Corelia</td>
+                      <td>Activated</td>
+                      <td>
+                        {{> group-actions}}
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>RSRCH</td>
+                      <td>Research Support Services</td>
+                      <td>COR</td>
+                      <td>University of Corelia</td>
+                      <td>Pending</td>
+                      <td>
+                        {{> group-actions}}
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>COR</td>
+                      <td>University of Corellia</td>
+                      <td>COR</td>
+                      <td>University of Corelia</td>
+                      <td>Activated</td>
+                      <td>
+                        {{> group-actions}}
+                      </td>
+                  </tr>
+              </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        {{> footer }}
+    </section>
+  </div>
+</div>
+{{> add-group }}
+{{> edit-group }}

@@ -1,0 +1,194 @@
+
+<div class="flex-container">
+  {{> leftnav}}
+  <div class="flex-child-grow">
+    {{> topbar}}
+    <section class="main">
+        <div class="grid-x">
+          <div class="cell large-12">
+            <div class="sib-card">
+              <h5>User Management</h5>
+              <button class="button primary float-right table-add-button" data-open="inviteUserModal">Invite User</button>
+              <table id="usersTable" class="display dataTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Title</th>
+                        <th>Department</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>Governance, Risk, and Compliance Office</td>
+                        <td>tnixon@company.com</td>
+                        <td>Pending</td>
+                        <td>
+                          {{> user-actions}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>Operations</td>
+                        <td>gwinters@company.com</td>
+                        <td>Pending</td>
+                        <td>
+                          {{> user-actions}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ashton Cox</td>
+                        <td>Junior Technical Author</td>
+                        <td>Information Security Office</td>
+                        <td>acox@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          {{> user-actions}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cedric Kelly</td>
+                        <td>Senior Javascript Developer</td>
+                        <td>Human Resources</td>
+                        <td>ckelly@company.com</td>
+                        <td>Pending</td>
+                        <td>
+                          {{> user-actions}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Airi Satou</td>
+                        <td>Accountant</td>
+                        <td>Department</td>
+                        <td>asatou@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          {{> user-actions}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Brielle Williamson</td>
+                        <td>Integration Specialist</td>
+                        <td>Information Security Office</td>
+                        <td>bwill@company.com</td>
+                        <td>Pending</td>
+                        <td>
+                          {{> user-actions}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Herrod Chandler</td>
+                        <td>Sales Assistant</td>
+                        <td>Human Resources</td>
+                        <td>hchandler@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          {{> user-actions}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Rhona Davidson</td>
+                        <td>Integration Specialist</td>
+                        <td>Information Security Office</td>
+                        <td>rDavidson@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          {{> user-actions}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Colleen Hurst</td>
+                        <td>Javascript Developer</td>
+                        <td>Human Resources</td>
+                        <td>churst@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          {{> user-actions}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sonya Frost</td>
+                        <td>Software Engineer</td>
+                        <td>Information Security Office</td>
+                        <td>sfrostcompany.com</td>
+                        <td>Activated</td>
+                        <td>
+                          {{> user-actions}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jena Gaines</td>
+                        <td>Office Manager</td>
+                        <td>Governance, Risk, and Compliance Office</td>
+                        <td>jGaines@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          {{> user-actions}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Quinn Flynn</td>
+                        <td>Support Lead</td>
+                        <td>Information Security Office</td>
+                        <td>qflynn@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          {{> user-actions}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Charde Marshall</td>
+                        <td>Regional Director</td>
+                        <td>Human Resources</td>
+                        <td>cmarshall@company.com</td>
+                        <td>Pending</td>
+                        <td>
+                          {{> user-actions}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Haley Kennedy</td>
+                        <td>Senior Marketing Designer</td>
+                        <td>Department</td>
+                        <td>hkennedy@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          {{> user-actions}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tatyana Fitzpatrick</td>
+                        <td>Regional Director</td>
+                        <td>Information Security Office</td>
+                        <td>tfitz@company.com</td>
+                        <td>Pending</td>
+                        <td>
+                          {{> user-actions}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Michael Silva</td>
+                        <td>Marketing Designer</td>
+                        <td>Human Resources</td>
+                        <td>msilva@company.com</td>
+                        <td>Activated</td>
+                        <td>
+                          {{> user-actions}}
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        {{> footer }}
+    </section>
+  </div>
+</div>
+{{> invite-user }}
+{{> edit-user }}

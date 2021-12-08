@@ -1,0 +1,53 @@
+
+<div class="reveal" id="manageCommonControlGroupsModal" data-reveal>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h5>Manage Common Control Groups</h5>
+  <div class="modalContent">
+    <p class="note-text">Select common control groups to include in your control assessment</p>
+    <div class="grid-x grid-margin-x">
+        <div class="cell large-12">
+          <label for="gn-input">Common Control Groups </label>
+          <ul class="no-bullet">
+              <li>
+                  <input type="checkbox" id="ccg1" class="sib-check secondary"/>
+                  <label for="ccg1" class="inline">NET - Networking Services</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="ccg2" class="sib-check secondary"/>
+                  <label for="ccg2" class="inline">ISO - Information Security Governance Services</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="ccg3" class="sib-check secondary"/>
+                  <label for="ccg3" class="inline">VEND - Vendor and Contract Management Services</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="ccg4" class="sib-check secondary"/>
+                  <label for="ccg4" class="inline">IR - Incident Response Services</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="ccg5" class="sib-check secondary"/>
+                  <label for="ccg5" class="inline">UPERS - Personnel Management Services</label>
+              </li>
+              <li>
+                <input type="checkbox" id="ccg6" class="sib-check secondary"/>
+                <label for="ccg66" class="inline">REGTR - Office of the Registrar</label>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+  <div class="modalFooter">
+    <div class="float-right">
+      <button class="button clear secondary" data-close>Cancel</button>
+      <button class="button primary secondary" data-close onClick="sib.displaySuccessToast('Common control groups saved');">Save</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
